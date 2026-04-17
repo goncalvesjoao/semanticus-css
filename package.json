@@ -1,8 +1,8 @@
 {
-  "name": "semanticus-css",
+  "name": "@goncalvesjoao/semanticus-css",
   "version": "0.0.0",
   "description": "lightweight semantic-first CSS framework enhanced with atomic utility classes",
-  "author": "goncalvesjoao",
+  "author": "Joao Goncalves",
   "style": "./dist/semanticus-css.css",
   "main": "./dist/semanticus-css.css",
   "unpkg": "./dist/semanticus-css.min.css",
