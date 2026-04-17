@@ -1,5 +1,9 @@
 # Semanticus CSS
 
+[![npm version](https://img.shields.io/npm/v/@goncalvesjoao/semanticus-css)](https://www.npmjs.com/package/@goncalvesjoao/semanticus-css)
+[![license](https://img.shields.io/npm/l/@goncalvesjoao/semanticus-css)](LICENSE)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@goncalvesjoao/semanticus-css)](https://bundlephobia.com/package/@goncalvesjoao/semanticus-css)
+
 **Semanticus CSS** lightweight semantic-first CSS framework enhanced with atomic utility classes.
 
 It is designed for developers who want:
