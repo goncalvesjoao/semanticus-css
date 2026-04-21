@@ -1,13 +1,13 @@
 /**
  * Link variants
  */
-:where(a:not([role=button])),
-[role=link] {
+:where(a:not([role="button"])),
+[role="link"] {
   &.secondary {
     --color-text: var(--color-secondary);
     --underline: var(--color-secondary-underline);
 
-    &:is([aria-current]:not([aria-current=false]), :hover, :active, :focus) {
+    &:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
       --color-text: var(--color-secondary-hover);
       --underline: var(--color-secondary-hover-underline);
     }
@@ -17,7 +17,7 @@
     --color-text: var(--color-contrast);
     --underline: var(--color-contrast-underline);
 
-    &:is([aria-current]:not([aria-current=false]), :hover, :active, :focus) {
+    &:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
       --color-text: var(--color-contrast-hover);
       --underline: var(--color-contrast-hover-underline);
     }

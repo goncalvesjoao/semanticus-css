@@ -1,35 +1,42 @@
 .border-primary {
   --border-opacity: 1;
+
   border-color: rgba(var(--primary-rgb), var(--border-opacity)) !important;
 }
 
 .border-secondary {
   --border-opacity: 1;
+
   border-color: rgba(var(--secondary-rgb), var(--border-opacity)) !important;
 }
 
 .border-success {
   --border-opacity: 1;
+
   border-color: rgba(var(--success-rgb), var(--border-opacity)) !important;
 }
 
 .border-info {
   --border-opacity: 1;
+
   border-color: rgba(var(--info-rgb), var(--border-opacity)) !important;
 }
 
 .border-warning {
   --border-opacity: 1;
+
   border-color: rgba(var(--warning-rgb), var(--border-opacity)) !important;
 }
 
 .border-danger {
   --border-opacity: 1;
+
   border-color: rgba(var(--danger-rgb), var(--border-opacity)) !important;
 }
 
 .border-contrast {
   --border-opacity: 1;
+
   border-color: rgba(var(--contrast-rgb), var(--border-opacity)) !important;
 }
 
