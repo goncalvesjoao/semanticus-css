@@ -1,0 +1,39 @@
+.border-1 {
+  border-width: var(--border-width-1) !important;
+}
+
+.border-2 {
+  border-width: var(--border-width-2) !important;
+}
+
+.border-3 {
+  border-width: var(--border-width-3) !important;
+}
+
+.border-4 {
+  border-width: var(--border-width-4) !important;
+}
+
+.border-5 {
+  border-width: var(--border-width-5) !important;
+}
+
+.border-opacity-10 {
+  --border-opacity: 0.1;
+}
+
+.border-opacity-25 {
+  --border-opacity: 0.25;
+}
+
+.border-opacity-50 {
+  --border-opacity: 0.5;
+}
+
+.border-opacity-75 {
+  --border-opacity: 0.75;
+}
+
+.border-opacity-100 {
+  --border-opacity: 1;
+}

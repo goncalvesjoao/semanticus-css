@@ -3,8 +3,8 @@ Copyright (c) 2026 Joao Goncalves
 
 ================================================================================
 
-This project is a derivative work that incorporates concepts and code from
-the following projects, used under the MIT License:
+This project incorporates concepts and code adapted from
+the following MIT-licensed projects:
 
 --------------------------------------------------------------------------------
 Pico CSS
@@ -14,17 +14,16 @@ https://picocss.com/
 The semantic CSS patterns and component structures in this project were
 inspired by and derived from Pico CSS.
 
---------------------------------------------------------------------------------
-Tachyons
-Copyright (c) 2014 Adam Morse
-https://tachyons.io/
+Bootstrap
+Copyright (c) 2011-2026 The Bootstrap Authors
+https://getbootstrap.com/
 
 The utility-first CSS architecture and naming conventions in this project
-were inspired by and derived from Tachyons.
+were inspired by and adapted from Bootstrap's utilities system.
 
 --------------------------------------------------------------------------------
 
-Both Pico CSS and Tachyons are licensed under the MIT License:
+Both Pico CSS and Bootstrap are licensed under the MIT License:
 
 MIT License
 

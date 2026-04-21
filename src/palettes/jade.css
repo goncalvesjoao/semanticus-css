@@ -1,0 +1,56 @@
+/*
+  Semanticus CSS Palette: Jade
+  Overrides primary color variables for the jade palette
+*/
+
+/* Light theme - Jade */
+[data-theme="light"],
+:root:not([data-theme="dark"]),
+:host(:not([data-theme="dark"])) {
+  --color-text-selection: rgba(96, 206, 155, 0.25);
+  --color-primary: #199363;
+  --color-primary-bg: #199363;
+  --color-primary-border: var(--color-primary-bg);
+  --color-primary-underline: rgba(25, 147, 99, 0.5);
+  --color-primary-hover: #147a51;
+  --color-primary-hover-bg: #16885b;
+  --color-primary-hover-border: var(--color-primary-hover-bg);
+  --color-primary-hover-underline: var(--color-primary-hover);
+  --color-primary-focus: rgba(96, 206, 155, 0.5);
+  --color-primary-inverse: #fff;
+  --switch-thumb-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+/* Dark theme - Jade */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]),
+  :host(:not([data-theme])) {
+    --color-text-selection: rgba(110, 231, 175, 0.1875);
+    --color-primary: #6ee7af;
+    --color-primary-bg: #199363;
+    --color-primary-border: var(--color-primary-bg);
+    --color-primary-underline: rgba(110, 231, 175, 0.5);
+    --color-primary-hover: #93edc3;
+    --color-primary-hover-bg: #1ea672;
+    --color-primary-hover-border: var(--color-primary-hover-bg);
+    --color-primary-hover-underline: var(--color-primary-hover);
+    --color-primary-focus: rgba(110, 231, 175, 0.375);
+    --color-primary-inverse: #fff;
+    --switch-thumb-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+[data-theme="dark"] {
+  --color-text-selection: rgba(110, 231, 175, 0.1875);
+  --color-primary: #6ee7af;
+  --color-primary-bg: #199363;
+  --color-primary-border: var(--color-primary-bg);
+  --color-primary-underline: rgba(110, 231, 175, 0.5);
+  --color-primary-hover: #93edc3;
+  --color-primary-hover-bg: #1ea672;
+  --color-primary-hover-border: var(--color-primary-hover-bg);
+  --color-primary-hover-underline: var(--color-primary-hover);
+  --color-primary-focus: rgba(110, 231, 175, 0.375);
+  --color-primary-inverse: #fff;
+  --switch-thumb-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}

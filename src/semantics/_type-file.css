@@ -1,0 +1,26 @@
+/**
+ * Input type file
+ */
+[type=file] {
+  --color-text: var(--color-text-muted);
+  margin-left: calc(var(--outline-width) * -1);
+  padding: calc(var(--form-element-spacing-vertical) * 0.5) 0;
+  padding-left: var(--outline-width);
+  border: 0;
+  border-radius: 0;
+  background: none;
+
+  &::file-selector-button {
+    margin-right: calc(var(--spacing) / 2);
+    padding: calc(var(--form-element-spacing-vertical) * 0.5) var(--form-element-spacing-horizontal);
+  }
+
+  &:is(:hover, :active, :focus)::file-selector-button {
+    --color-background: var(--color-secondary-hover-bg);
+    --border-color: var(--color-secondary-hover-border);
+  }
+
+  &:focus::file-selector-button {
+    --shadow-lg: var(--button-shadow-hover, 0 0 0 rgba(0, 0, 0, 0)), 0 0 0 var(--outline-width) var(--color-secondary-focus);
+  }
+}

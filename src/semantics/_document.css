@@ -1,0 +1,18 @@
+/**
+ * Document
+ * Semantic document-level styles (variables applied)
+ */
+
+:where(:root),
+:where(:host) {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-family: var(--font-family);
+  text-underline-offset: var(--text-underline-offset);
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+  tab-size: 4;
+}

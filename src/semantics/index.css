@@ -1,0 +1,14 @@
+/**
+ * Semanticus CSS Semantics
+ * Variables + Normalize + Semantic HTML components
+ * Perfect for semantic-first development without utility classes
+ */
+
+/* Variables */
+@import '../_variables.css';
+
+/* Normalize */
+@import '../_normalize.css';
+
+/* Semantic Components */
+@import "./modules.css";

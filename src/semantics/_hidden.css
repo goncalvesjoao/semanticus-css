@@ -1,0 +1,7 @@
+/**
+ * Hidden elements
+ */
+[hidden],
+template {
+  display: none !important;
+}

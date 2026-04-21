@@ -1,0 +1,56 @@
+/*
+  Semanticus CSS Palette: Fuchsia
+  Overrides primary color variables for the fuchsia palette
+*/
+
+/* Light theme - Fuchsia */
+[data-theme="light"],
+:root:not([data-theme="dark"]),
+:host(:not([data-theme="dark"])) {
+  --color-text-selection: rgba(247, 72, 183, 0.25);
+  --color-primary: #c1208b;
+  --color-primary-bg: #c1208b;
+  --color-primary-border: var(--color-primary-bg);
+  --color-primary-underline: rgba(193, 32, 139, 0.5);
+  --color-primary-hover: #98176d;
+  --color-primary-hover-bg: #ac1c7c;
+  --color-primary-hover-border: var(--color-primary-hover-bg);
+  --color-primary-hover-underline: var(--color-primary-hover);
+  --color-primary-focus: rgba(247, 72, 183, 0.5);
+  --color-primary-inverse: #fff;
+  --switch-thumb-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+/* Dark theme - Fuchsia */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]),
+  :host(:not([data-theme])) {
+    --color-text-selection: rgba(249, 131, 199, 0.1875);
+    --color-primary: #f983c7;
+    --color-primary-bg: #c1208b;
+    --color-primary-border: var(--color-primary-bg);
+    --color-primary-underline: rgba(249, 131, 199, 0.5);
+    --color-primary-hover: #f9b1d8;
+    --color-primary-hover-bg: #ed2aac;
+    --color-primary-hover-border: var(--color-primary-hover-bg);
+    --color-primary-hover-underline: var(--color-primary-hover);
+    --color-primary-focus: rgba(249, 131, 199, 0.375);
+    --color-primary-inverse: #fff;
+    --switch-thumb-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+[data-theme="dark"] {
+  --color-text-selection: rgba(249, 131, 199, 0.1875);
+  --color-primary: #f983c7;
+  --color-primary-bg: #c1208b;
+  --color-primary-border: var(--color-primary-bg);
+  --color-primary-underline: rgba(249, 131, 199, 0.5);
+  --color-primary-hover: #f9b1d8;
+  --color-primary-hover-bg: #ed2aac;
+  --color-primary-hover-border: var(--color-primary-hover-bg);
+  --color-primary-hover-underline: var(--color-primary-hover);
+  --color-primary-focus: rgba(249, 131, 199, 0.375);
+  --color-primary-inverse: #fff;
+  --switch-thumb-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}

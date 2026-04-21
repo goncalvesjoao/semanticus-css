@@ -1,0 +1,48 @@
+.focus-ring:focus {
+  outline: 0;
+  box-shadow: var(--focus-ring-x, 0) var(--focus-ring-y, 0) var(--focus-ring-blur, 0) var(--focus-ring-width) var(--focus-ring-color);
+}
+
+.shadow {
+  box-shadow: var(--box-shadow) !important;
+}
+
+.shadow-sm {
+  box-shadow: var(--box-shadow-sm) !important;
+}
+
+.shadow-lg {
+  box-shadow: var(--box-shadow-lg) !important;
+}
+
+.shadow-none {
+  box-shadow: none !important;
+}
+
+.focus-ring-primary {
+  --focus-ring-color: rgba(var(--primary-rgb), var(--focus-ring-opacity));
+}
+
+.focus-ring-secondary {
+  --focus-ring-color: rgba(var(--secondary-rgb), var(--focus-ring-opacity));
+}
+
+.focus-ring-success {
+  --focus-ring-color: rgba(var(--success-rgb), var(--focus-ring-opacity));
+}
+
+.focus-ring-info {
+  --focus-ring-color: rgba(var(--info-rgb), var(--focus-ring-opacity));
+}
+
+.focus-ring-warning {
+  --focus-ring-color: rgba(var(--warning-rgb), var(--focus-ring-opacity));
+}
+
+.focus-ring-danger {
+  --focus-ring-color: rgba(var(--danger-rgb), var(--focus-ring-opacity));
+}
+
+.focus-ring-contrast {
+  --focus-ring-color: rgba(var(--contrast-rgb), var(--focus-ring-opacity));
+}

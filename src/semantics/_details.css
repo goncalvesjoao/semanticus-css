@@ -1,0 +1,292 @@
+/**
+ * Accordion (<details>)
+ */
+details {
+  display: block;
+  margin-bottom: var(--spacing);
+
+  & summary {
+    line-height: 1rem;
+    list-style-type: none;
+    cursor: pointer;
+    transition: color var(--transition);
+
+    &:not([role]) {
+      color: var(--accordion-closed-summary);
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::marker {
+      display: none;
+    }
+
+    &::-moz-list-bullet {
+      list-style-type: none;
+    }
+
+    &::after {
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      margin-inline-start: calc(var(--spacing, 1rem) * 0.5);
+      float: right;
+      transform: rotate(-90deg);
+      background-image: var(--icon-chevron);
+      background-position: right center;
+      background-size: 1rem auto;
+      background-repeat: no-repeat;
+      content: "";
+      transition: transform var(--transition);
+    }
+
+    &:focus {
+      outline: none;
+
+      &:not([role]) {
+        color: var(--accordion-active-summary);
+      }
+    }
+
+    &:focus-visible:not([role]) {
+      outline: var(--outline-width) solid var(--color-primary-focus);
+      outline-offset: calc(var(--spacing, 1rem) * 0.5);
+      color: var(--color-primary);
+    }
+
+    &[role=button] {
+      width: 100%;
+      text-align: left;
+
+      &:focus-visible {
+        outline: var(--outline-width) solid var(--color-primary-focus);
+        outline-offset: calc(var(--spacing, 1rem) * 0.5);
+      }
+
+      &::after {
+        height: calc(1rem * var(--line-height, 1.5));
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+
+  &[open] > summary {
+    margin-bottom: var(--spacing);
+
+    &:not([role]):not(:focus) {
+      color: var(--accordion-open-summary);
+    }
+
+    &::after {
+      transform: rotate(0);
+    }
+  }
+}
+
+[dir=rtl] details summary {
+  text-align: right;
+
+  &::after {
+    float: left;
+    background-position: left center;
+  }
+}
+
+/**
+ * Dropdown (details with summary[aria-haspopup="menu"])
+ */
+details:has(> summary[aria-haspopup="menu"]) {
+  position: relative;
+  border-bottom: none;
+
+  & > summary::after,
+  & > button::after,
+  & > a::after {
+    display: block;
+    width: 1rem;
+    height: calc(1rem * var(--line-height, 1.5));
+    margin-inline-start: 0.25rem;
+    margin-left: auto;
+    float: right;
+    transform: rotate(0deg) translateX(0.2rem);
+    background-image: var(--icon-chevron);
+    background-position: right center;
+    background-size: 1rem auto;
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  & summary:not([role="button"]) {
+    --outline-width: 0.0625rem;
+  }
+
+  & > :where(summary:not([role])) {
+    display: flex;
+    align-items: center;
+    height: calc(1rem * var(--line-height) + var(--form-element-spacing-vertical) * 2 + var(--border-width) * 2);
+    padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
+    border: var(--border-width) solid var(--form-border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--form-bg);
+    color: var(--form-placeholder-color);
+    line-height: inherit;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
+  }
+
+  & > :where(summary:not([role]):active, summary:not([role]):focus) {
+    border-color: var(--form-active-border);
+    background-color: var(--form-active-bg);
+  }
+
+  & > :where(summary:not([role]):focus) {
+    box-shadow: 0 0 0 var(--outline-width) var(--form-focus);
+  }
+
+  & > :where(summary:not([role]):focus-visible) {
+    outline: none;
+  }
+
+  & > :where(summary:not([role])[aria-invalid=false]) {
+    --form-border-color: var(--form-valid-border);
+    --form-active-border: var(--form-valid-focus);
+    --form-focus: var(--form-valid-focus);
+  }
+
+  & > :where(summary:not([role])[aria-invalid=true]) {
+    --form-border-color: var(--form-invalid-border);
+    --form-active-border: var(--form-invalid-focus);
+    --form-focus: var(--form-invalid-focus);
+  }
+
+  & > :where(summary + ul[role="menu"]) {
+    display: flex;
+    z-index: 99;
+    position: absolute;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    min-width: fit-content;
+    margin: 0;
+    margin-top: var(--outline-width);
+    padding: 0;
+    border: var(--border-width) solid var(--dropdown-border);
+    border-radius: var(--border-radius);
+    background-color: var(--dropdown-bg);
+    box-shadow: var(--dropdown-shadow);
+    color: var(--dropdown-text);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity var(--transition), transform 0s ease-in-out 1s;
+  }
+
+  & > :where(summary + ul[role="menu"][dir=rtl]) {
+    right: 0;
+    left: auto;
+  }
+
+  & > summary + ul[role="menu"] li {
+    width: 100%;
+    margin-bottom: 0;
+    padding: calc(var(--form-element-spacing-vertical) * 0.5) var(--form-element-spacing-horizontal);
+    list-style: none;
+
+    &:first-of-type {
+      margin-top: calc(var(--form-element-spacing-vertical) * 0.5);
+    }
+
+    &:last-of-type {
+      margin-bottom: calc(var(--form-element-spacing-vertical) * 0.5);
+    }
+
+    & a {
+      display: block;
+      margin: calc(var(--form-element-spacing-vertical) * -0.5) calc(var(--form-element-spacing-horizontal) * -1);
+      padding: calc(var(--form-element-spacing-vertical) * 0.5) var(--form-element-spacing-horizontal);
+      overflow: hidden;
+      border-radius: 0;
+      color: var(--dropdown-text);
+      text-decoration: none;
+      text-overflow: ellipsis;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &:focus-visible,
+      &[aria-current]:not([aria-current=false]) {
+        background-color: var(--dropdown-hover-bg);
+      }
+    }
+
+    & label {
+      width: 100%;
+    }
+
+    &:has(label):hover {
+      background-color: var(--dropdown-hover-bg);
+    }
+  }
+
+  &[open] > summary {
+    margin-bottom: 0;
+  }
+
+  &[open] > summary + ul[role="menu"] {
+    transform: scaleY(1);
+    opacity: 1;
+    transition: opacity var(--transition), transform 0s ease-in-out 0s;
+  }
+
+  &[open] > summary::before {
+    display: block;
+    z-index: 1;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    background: none;
+    content: "";
+    cursor: default;
+  }
+}
+
+nav details:has(> summary[aria-haspopup="menu"]) {
+  margin-bottom: 0;
+  display: inline;
+  margin: calc(var(--nav-element-spacing-vertical) * -1) 0;
+
+  & > summary::after {
+    transform: rotate(0deg) translateX(0rem);
+  }
+
+  & > :where(summary:not([role])) {
+    display: flex;
+    align-items: center;
+    height: calc(1rem * var(--line-height) + var(--nav-link-spacing-vertical) * 2);
+    padding: calc(var(--nav-link-spacing-vertical) - var(--border-width) * 2) var(--nav-link-spacing-horizontal);
+  }
+
+  & > :where(summary:not([role]):focus-visible) {
+    box-shadow: 0 0 0 var(--outline-width) var(--color-primary-focus);
+  }
+
+  & summary:focus-visible {
+    --outline-width: 0.125rem;
+  }
+
+  /* Styles for dropdowns with role="button" inside nav */
+  & > summary[role="button"] {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: calc(1rem * var(--line-height) + var(--nav-link-spacing-vertical) * 2);
+    padding: calc(var(--nav-link-spacing-vertical) - var(--border-width) * 2) var(--nav-link-spacing-horizontal);
+  }
+}
+
+label > details:has(> summary[aria-haspopup="menu"]) {
+  margin-top: calc(var(--spacing) * 0.25);
+}

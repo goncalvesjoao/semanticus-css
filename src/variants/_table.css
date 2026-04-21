@@ -1,0 +1,9 @@
+/**
+ * Table variants
+ */
+table.striped tbody tr:nth-child(odd) {
+  & th,
+  & td {
+    background-color: var(--table-row-stripe-bg);
+  }
+}

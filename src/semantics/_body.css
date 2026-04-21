@@ -1,0 +1,10 @@
+body {
+  width: 100%;
+  margin: 0;
+
+  & > header,
+  & > main,
+  & > footer {
+    padding-block: var(--block-spacing-vertical);
+  }
+}

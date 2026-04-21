@@ -1,0 +1,244 @@
+/*!
+ * Adapted from Bootstrap v5.3.8 utilities (https://getbootstrap.com/)
+ * Copyright (c) 2011-2026 The Bootstrap Authors
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+/* ==========================================================================
+   Theme-independent variables
+   ========================================================================== */
+
+:root,
+:host {
+  /* Gradient */
+  --gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+
+  /* Borders & radii */
+  --border-style: solid;
+  --border-radius-sm: var(--border-radius);
+  --border-radius-lg: calc(var(--border-radius) * 2);
+  --border-radius-xl: calc(var(--border-radius) * 4);
+  --border-radius-xxl: calc(var(--border-radius) * 8);
+  --border-radius-pill: 50rem;
+
+  /* Border-width scale */
+  --border-width-1: var(--border-width);
+  --border-width-2: calc(var(--border-width) * 2);
+  --border-width-3: calc(var(--border-width) * 3);
+  --border-width-4: calc(var(--border-width) * 4);
+  --border-width-5: calc(var(--border-width) * 5);
+
+  /* Spacing scale */
+  --spacer-0: 0;
+  --spacer-1: calc(var(--spacing) * 0.25);
+  --spacer-2: calc(var(--spacing) * 0.5);
+  --spacer-3: var(--spacing);
+  --spacer-4: calc(var(--spacing) * 1.5);
+  --spacer-5: calc(var(--spacing) * 3);
+
+  /* Font-size scale */
+  --fs-1: calc(1.375rem + 1.5vw);
+  --fs-2: calc(1.325rem + 0.9vw);
+  --fs-3: calc(1.3rem + 0.6vw);
+  --fs-4: calc(1.275rem + 0.3vw);
+  --fs-5: 1.25rem;
+  --fs-6: 1rem;
+
+  /* Focus ring */
+  --focus-ring-width: var(--outline-width);
+  --focus-ring-opacity: 0.25;
+
+  /* Auto-switching mappings (resolved at computed-value time via Semanticus CSS) */
+  --emphasis-color: var(--color-contrast);
+  --secondary-color: var(--color-text-muted);
+  --border-color: var(--color-border-muted);
+  --box-shadow: var(--shadow-md);
+  --box-shadow-sm: var(--shadow-sm);
+  --box-shadow-lg: var(--shadow-lg);
+  --focus-ring-color: var(--color-primary-focus);
+
+  /* Status inverse colors (readable text on status-colored backgrounds) */
+  --color-success-inverse: #fff;
+  --color-info-inverse: #fff;
+  --color-warning-inverse: #000;
+  --color-danger-inverse: #fff;
+}
+
+/* ==========================================================================
+   Light theme (default)
+   ========================================================================== */
+
+[data-theme="light"],
+:root:not([data-theme="dark"]),
+:host(:not([data-theme="dark"])) {
+  /* RGB channels */
+  --primary-rgb: 1, 114, 173;
+  --secondary-rgb: 93, 107, 137;
+  --contrast-rgb: 24, 28, 37;
+
+  /* Text emphasis (darker/hover shades in light) */
+  --primary-text-emphasis: #015887;
+  --secondary-text-emphasis: #48536b;
+  --success-text-emphasis: #20603b;
+  --info-text-emphasis: #025d5d;
+  --warning-text-emphasis: #694d00;
+  --danger-text-emphasis: #9b2318;
+  --contrast-text-emphasis: #495057;
+
+  /* Subtle backgrounds (low opacity) */
+  --primary-bg-subtle: rgba(1, 114, 173, 0.1);
+  --secondary-bg-subtle: rgba(93, 107, 137, 0.1);
+  --success-bg-subtle: rgba(43, 122, 76, 0.1);
+  --info-bg-subtle: rgba(4, 120, 120, 0.1);
+  --warning-bg-subtle: rgba(255, 191, 0, 0.1);
+  --danger-bg-subtle: rgba(197, 47, 33, 0.1);
+  --contrast-bg-subtle: #ced4da;
+
+  /* Subtle borders (medium opacity) */
+  --primary-border-subtle: rgba(1, 114, 173, 0.35);
+  --secondary-border-subtle: rgba(93, 107, 137, 0.35);
+  --success-border-subtle: rgba(43, 122, 76, 0.35);
+  --info-border-subtle: rgba(4, 120, 120, 0.35);
+  --warning-border-subtle: rgba(255, 191, 0, 0.35);
+  --danger-border-subtle: rgba(197, 47, 33, 0.35);
+  --contrast-border-subtle: #adb5bd;
+
+  /* Body & emphasis RGB */
+  --body-color-rgb: 55, 60, 68;
+  --body-bg-rgb: 255, 255, 255;
+  --emphasis-color-rgb: 24, 28, 37;
+
+  /* Secondary surfaces */
+  --secondary-bg-rgb: 233, 236, 239;
+
+  /* Link RGB */
+  --link-color-rgb: 1, 114, 173;
+  --link-hover-color-rgb: 1, 88, 135;
+
+  /* Link hover RGB (per-variant) */
+  --secondary-hover-color-rgb: 72, 83, 107;
+  --success-hover-color-rgb: 32, 96, 59;
+  --info-hover-color-rgb: 2, 93, 93;
+  --warning-hover-color-rgb: 232, 174, 1;
+  --danger-hover-color-rgb: 155, 35, 24;
+  --contrast-hover-color-rgb: 249, 250, 251;
+}
+
+/* ==========================================================================
+   Dark theme (system preference)
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]),
+  :host(:not([data-theme])) {
+    /* RGB channels */
+    --primary-rgb: 1, 170, 255;
+    --secondary-rgb: 150, 158, 175;
+    --contrast-rgb: 248, 249, 250;
+
+    /* Text emphasis (lighter/hover shades in dark) */
+    --primary-text-emphasis: #79c0ff;
+    --secondary-text-emphasis: #b3b9c5;
+    --success-text-emphasis: #93deb5;
+    --info-text-emphasis: #25dddd;
+    --warning-text-emphasis: #e8ae01;
+    --danger-text-emphasis: #f5b7a8;
+    --contrast-text-emphasis: #f8f9fa;
+
+    /* Subtle backgrounds */
+    --primary-bg-subtle: rgba(1, 170, 255, 0.15);
+    --secondary-bg-subtle: rgba(150, 158, 175, 0.15);
+    --success-bg-subtle: rgba(110, 213, 157, 0.15);
+    --info-bg-subtle: rgba(10, 194, 194, 0.15);
+    --warning-bg-subtle: rgba(255, 191, 0, 0.15);
+    --danger-bg-subtle: rgba(243, 143, 121, 0.15);
+    --contrast-bg-subtle: #2a3140;
+
+    /* Subtle borders */
+    --primary-border-subtle: rgba(1, 170, 255, 0.35);
+    --secondary-border-subtle: rgba(150, 158, 175, 0.35);
+    --success-border-subtle: rgba(110, 213, 157, 0.35);
+    --info-border-subtle: rgba(10, 194, 194, 0.35);
+    --warning-border-subtle: rgba(255, 191, 0, 0.35);
+    --danger-border-subtle: rgba(243, 143, 121, 0.35);
+    --contrast-border-subtle: #2a3140;
+
+    /* Body & emphasis RGB */
+    --body-color-rgb: 194, 199, 208;
+    --body-bg-rgb: 19, 23, 31;
+    --emphasis-color-rgb: 223, 227, 235;
+
+    /* Secondary surfaces */
+    --secondary-bg-rgb: 42, 49, 64;
+
+    /* Link RGB */
+    --link-color-rgb: 1, 170, 255;
+    --link-hover-color-rgb: 121, 192, 255;
+
+    /* Link hover RGB (per-variant) */
+    --secondary-hover-color-rgb: 179, 185, 197;
+    --success-hover-color-rgb: 147, 222, 181;
+    --info-hover-color-rgb: 37, 221, 221;
+    --warning-hover-color-rgb: 232, 174, 1;
+    --danger-hover-color-rgb: 245, 183, 168;
+    --contrast-hover-color-rgb: 255, 255, 255;
+  }
+}
+
+/* ==========================================================================
+   Dark theme (explicit)
+   ========================================================================== */
+
+[data-theme="dark"] {
+  /* RGB channels */
+  --primary-rgb: 1, 170, 255;
+  --secondary-rgb: 150, 158, 175;
+  --contrast-rgb: 248, 249, 250;
+
+  /* Text emphasis (lighter/hover shades in dark) */
+  --primary-text-emphasis: #79c0ff;
+  --secondary-text-emphasis: #b3b9c5;
+  --success-text-emphasis: #93deb5;
+  --info-text-emphasis: #25dddd;
+  --warning-text-emphasis: #e8ae01;
+  --danger-text-emphasis: #f5b7a8;
+  --contrast-text-emphasis: #f8f9fa;
+
+  /* Subtle backgrounds */
+  --primary-bg-subtle: rgba(1, 170, 255, 0.15);
+  --secondary-bg-subtle: rgba(150, 158, 175, 0.15);
+  --success-bg-subtle: rgba(110, 213, 157, 0.15);
+  --info-bg-subtle: rgba(10, 194, 194, 0.15);
+  --warning-bg-subtle: rgba(255, 191, 0, 0.15);
+  --danger-bg-subtle: rgba(243, 143, 121, 0.15);
+  --contrast-bg-subtle: #2a3140;
+
+  /* Subtle borders */
+  --primary-border-subtle: rgba(1, 170, 255, 0.35);
+  --secondary-border-subtle: rgba(150, 158, 175, 0.35);
+  --success-border-subtle: rgba(110, 213, 157, 0.35);
+  --info-border-subtle: rgba(10, 194, 194, 0.35);
+  --warning-border-subtle: rgba(255, 191, 0, 0.35);
+  --danger-border-subtle: rgba(243, 143, 121, 0.35);
+  --contrast-border-subtle: #2a3140;
+
+  /* Body & emphasis RGB */
+  --body-color-rgb: 194, 199, 208;
+  --body-bg-rgb: 19, 23, 31;
+  --emphasis-color-rgb: 223, 227, 235;
+
+  /* Secondary surfaces */
+  --secondary-bg-rgb: 42, 49, 64;
+
+  /* Link RGB */
+  --link-color-rgb: 1, 170, 255;
+  --link-hover-color-rgb: 121, 192, 255;
+
+  /* Link hover RGB (per-variant) */
+  --secondary-hover-color-rgb: 179, 185, 197;
+  --success-hover-color-rgb: 147, 222, 181;
+  --info-hover-color-rgb: 37, 221, 221;
+  --warning-hover-color-rgb: 232, 174, 1;
+  --danger-hover-color-rgb: 245, 183, 168;
+  --contrast-hover-color-rgb: 255, 255, 255;
+}

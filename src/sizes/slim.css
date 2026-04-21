@@ -1,0 +1,9 @@
+/*
+  Semanticus CSS Size: Slim
+*/
+:root,
+:host {
+  --font-size: 1rem;
+  --form-element-spacing-vertical: 0.35rem;
+  --form-element-spacing-horizontal: 0.75rem;
+}

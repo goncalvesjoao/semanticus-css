@@ -1,0 +1,35 @@
+/**
+ * Semanticus CSS Semantics Modules
+ * Just the semantic component styles (no variables, no normalize)
+ * Used by the full version which imports variables/normalize separately
+ */
+
+@import "./_aria-busy.css";
+@import "./_article.css";
+@import "./_body.css";
+@import "./_button.css";
+@import "./_code.css";
+@import "./_details.css";
+@import "./_dialog.css";
+@import "./_document.css";
+@import "./_embedded.css";
+@import "./_figure.css";
+@import "./_hidden.css";
+@import "./_hr.css";
+@import "./_input.css";
+@import "./_links.css";
+@import "./_main.css";
+@import "./_nav.css";
+@import "./_progress.css";
+@import "./_role-group-search.css";
+@import "./_role-toolbar.css";
+@import "./_role-tooltip.css";
+@import "./_section.css";
+@import "./_table.css";
+@import "./_type-checkbox-radio.css";
+@import "./_type-color.css";
+@import "./_type-date.css";
+@import "./_type-file.css";
+@import "./_type-range.css";
+@import "./_type-search.css";
+@import "./_typography.css";

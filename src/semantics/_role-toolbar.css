@@ -1,0 +1,17 @@
+/**
+ * Minimal grid system with auto-layout columns
+ */
+[role="toolbar"] {
+  grid-column-gap: var(--grid-column-gap);
+  grid-row-gap: var(--grid-row-gap);
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 425px) {
+    grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
+  }
+
+  & > * {
+    min-width: 0;
+  }
+}
