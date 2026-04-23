@@ -4,6 +4,9 @@
 :root,
 :host {
   --font-size: 1rem;
-  --form-element-spacing-vertical: 0.35rem;
-  --form-element-spacing-horizontal: 0.75rem;
+  --spacing: 0.75rem;
+  --block-spacing-vertical: 1.2rem;
+  --block-spacing-horizontal: 1.2rem;
+  --form-element-spacing-vertical: 0.4rem;
+  --form-element-spacing-horizontal: 0.6rem;
 }
