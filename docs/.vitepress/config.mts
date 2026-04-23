@@ -321,7 +321,7 @@ export default defineConfig({
       ]
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/goncalvesjoao/semanticus-css' }
+      { icon: 'github', link: 'https://github.com/semanticus/semanticus-css' }
     ],
     search: {
       provider: 'local'

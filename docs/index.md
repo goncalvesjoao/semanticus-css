@@ -17,7 +17,7 @@ hero:
       link: /docs/
     - theme: alt
       text: GitHub
-      link: https://github.com/goncalvesjoao/semanticus-css
+      link: https://github.com/semanticus/semanticus-css
 
 features:
   - icon:

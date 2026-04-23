@@ -1,8 +1,8 @@
 # Semanticus CSS
 
-[![npm version](https://img.shields.io/npm/v/@goncalvesjoao/semanticus-css)](https://www.npmjs.com/package/@goncalvesjoao/semanticus-css)
-[![license](https://img.shields.io/npm/l/@goncalvesjoao/semanticus-css)](LICENSE)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@goncalvesjoao/semanticus-css)](https://bundlephobia.com/package/@goncalvesjoao/semanticus-css)
+[![npm version](https://img.shields.io/npm/v/@semanticus/semanticus-css)](https://www.npmjs.com/package/@semanticus/semanticus-css)
+[![license](https://img.shields.io/npm/l/@semanticus/semanticus-css)](LICENSE)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@semanticus/semanticus-css)](https://bundlephobia.com/package/@semanticus/semanticus-css)
 
 **Semanticus** is a lightweight CSS framework that prioritizes semantic HTML and ARIA-focused accessibility, with a small set of atomic utilities.
 
@@ -23,16 +23,16 @@ Enable authors to write clean, semantic HTML that looks great by default, guide 
 ### Option 1: CDN (quick start)
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@goncalvesjoao/semanticus-css@0.2.1/dist/semanticus.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@semanticus/semanticus-css@0.2.1/dist/semanticus.css">
 
 <!-- costumize it with a palette or size variation if needed -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@goncalvesjoao/semanticus-css@0.2.1/dist/semanticus.palette.blue.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@goncalvesjoao/semanticus-css@0.2.1/dist/semanticus.size.slim.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@semanticus/semanticus-css@0.2.1/dist/semanticus.palette.blue.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@semanticus/semanticus-css@0.2.1/dist/semanticus.size.slim.css">
 ```
 
 ### Option 2: Install manually
 
-Download the [distribution files](https://registry.npmjs.org/@goncalvesjoao%2Fsemanticus-css/-/semanticus-css-0.2.1.tgz), move the ones you need to your **stylesheets** folder and include them in your HTML `<head>`:
+Download the [distribution files](https://registry.npmjs.org/@semanticus%2Fsemanticus-css/-/semanticus-css-0.2.1.tgz), move the ones you need to your **stylesheets** folder and include them in your HTML `<head>`:
 
 ```html
 <link rel="stylesheet" href="/css/semanticus.css">
@@ -45,20 +45,20 @@ Download the [distribution files](https://registry.npmjs.org/@goncalvesjoao%2Fse
 ### Option 3: NPM
 
 ```bash
-npm install semanticus-css
+npm install @semanticus/semanticus-css
 ```
 
 ```js
-import 'semanticus-css';
+import '@semanticus/semanticus-css';
 
 // Or import individual modules
-import 'semanticus-css/semantics';
-import 'semanticus-css/variants';
-import 'semanticus-css/utilities';
+import '@semanticus/semanticus-css/semantics';
+import '@semanticus/semanticus-css/variants';
+import '@semanticus/semanticus-css/utilities';
 
 // Or add a palette / size on top
-import 'semanticus-css/palettes/blue';
-import 'semanticus-css/sizes/slim';
+import '@semanticus/semanticus-css/palettes/blue';
+import '@semanticus/semanticus-css/sizes/slim';
 ```
 
 > **Note:** The `import` syntax requires a bundler that supports CSS imports (e.g., Vite, Webpack, Rollup, or Parcel).

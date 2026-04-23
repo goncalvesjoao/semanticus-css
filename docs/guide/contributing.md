@@ -61,7 +61,7 @@ If your contribution is user-facing, please update the documentation:
 - Clone the repository
 
 ```bash
-git clone https://github.com/goncalvesjoao/semanticus-css.git
+git clone https://github.com/semanticus/semanticus-css.git
 ```
 
 - Move into the project directory
