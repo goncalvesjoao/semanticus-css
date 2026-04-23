@@ -1,6 +1,6 @@
 {
-  "name": "@goncalvesjoao/semanticus-css",
-  "version": "0.2.1",
+  "name": "@semanticus/semanticus-css",
+  "version": "0.3.0",
   "description": "lightweight CSS framework that prioritizes semantic HTML and ARIA-focused accessibility, with a small set of atomic utilities",
   "author": "Joao Goncalves",
   "style": "./dist/semanticus.css",
@@ -26,11 +26,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/goncalvesjoao/semanticus-css.git"
+    "url": "https://github.com/semanticus/semanticus-css.git"
   },
-  "homepage": "https://github.com/goncalvesjoao/semanticus-css#readme",
+  "homepage": "https://semanticus.design",
   "bugs": {
-    "url": "https://github.com/goncalvesjoao/semanticus-css/issues"
+    "url": "https://github.com/semanticus/semanticus-css/issues"
   },
   "keywords": [
     "css",
