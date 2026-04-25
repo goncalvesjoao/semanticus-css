@@ -4,6 +4,9 @@
  * Can be applied to any element (article, div, section, etc.)
  */
 .card {
+  --block-spacing-vertical: calc(var(--spacing) * var(--responsive-multiplier));
+  --block-spacing-horizontal: calc(var(--spacing) * var(--responsive-multiplier));
+
   margin-bottom: var(--block-spacing-vertical);
   padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
   border-radius: var(--border-radius);
@@ -12,6 +15,7 @@
 
   & > header,
   & > footer {
+    width: calc(100% + var(--block-spacing-horizontal) * 2);
     margin-right: calc(var(--block-spacing-horizontal) * -1);
     margin-left: calc(var(--block-spacing-horizontal) * -1);
     padding: calc(var(--block-spacing-vertical) * 0.66) var(--block-spacing-horizontal);

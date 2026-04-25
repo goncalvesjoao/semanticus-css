@@ -31,6 +31,6 @@
   }
 
   @media (--breakpoint-xxl) {
-    max-width: 1450px;
+    max-width: 1440px;
   }
 }

@@ -25,7 +25,7 @@ const example1Html = `<div style="min-height: 215px;">
   </dialog>
 </div>
 `;
-const example2Html = `<div style="min-height: 250px;">
+const example2Html = `<div style="min-height: 300px;">
   <dialog open>
     <article>
       <h2>Confirm Your Membership</h2>
@@ -47,7 +47,7 @@ const example2Html = `<div style="min-height: 250px;">
   </dialog>
 </div>
 `;
-const example3Html = `<div style="min-height: 250px;">
+const example3Html = `<div style="min-height: 270px;">
   <!-- Trigger button -->
   <a href="#modal-example" role="button">Open Modal</a>
 

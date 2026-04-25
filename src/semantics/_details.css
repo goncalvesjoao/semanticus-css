@@ -164,7 +164,7 @@ details:has(> summary[aria-haspopup="menu"]) {
 
   & > :where(summary + ul[role="menu"]) {
     display: flex;
-    z-index: 99;
+    z-index: var(--max-z-index);
     position: absolute;
     left: 0;
     flex-direction: column;
@@ -253,10 +253,13 @@ details:has(> summary[aria-haspopup="menu"]) {
   }
 }
 
+label > details:has(> summary[aria-haspopup="menu"]) {
+  margin-top: calc(var(--spacing) * 0.25);
+}
+
 nav details:has(> summary[aria-haspopup="menu"]) {
   margin-bottom: 0;
   display: inline;
-  margin: calc(var(--nav-element-spacing-vertical) * -1) 0;
 
   & > summary::after {
     transform: rotate(0deg) translateX(0rem);
@@ -265,7 +268,7 @@ nav details:has(> summary[aria-haspopup="menu"]) {
   & > :where(summary:not([role])) {
     display: flex;
     align-items: center;
-    height: calc(1rem * var(--line-height) + var(--nav-link-spacing-vertical) * 2);
+    height: auto;
     padding: calc(var(--nav-link-spacing-vertical) - var(--border-width) * 2) var(--nav-link-spacing-horizontal);
   }
 
@@ -282,11 +285,7 @@ nav details:has(> summary[aria-haspopup="menu"]) {
     display: flex;
     align-items: center;
     width: auto;
-    height: calc(1rem * var(--line-height) + var(--nav-link-spacing-vertical) * 2);
+    height: auto;
     padding: calc(var(--nav-link-spacing-vertical) - var(--border-width) * 2) var(--nav-link-spacing-horizontal);
   }
-}
-
-label > details:has(> summary[aria-haspopup="menu"]) {
-  margin-top: calc(var(--spacing) * 0.25);
 }

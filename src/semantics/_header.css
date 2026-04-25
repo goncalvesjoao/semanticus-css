@@ -1,0 +1,12 @@
+/**
+ * Header
+ */
+header {
+  --typography-spacing-vertical: 0;
+  --typography-headings-top: 0;
+  --block-spacing-vertical: calc(var(--spacing) * var(--responsive-multiplier));
+  --block-spacing-horizontal: calc(var(--spacing) * var(--responsive-multiplier));
+
+  width: 100%;
+  padding-block: var(--block-spacing-vertical);
+}

@@ -12,52 +12,51 @@
 
 const fs = require('fs');
 const path = require('path');
-const { transform } = require('lightningcss');
-
-const sizes = [
-  'slim'
-];
+const { spawnSync } = require('child_process');
 
 const srcDir = path.join(__dirname, '..', 'src', 'sizes');
 const distDir = path.join(__dirname, '..', 'dist');
 
-// Ensure dist/sizes directory exists
-if (!fs.existsSync(distDir)) {
-  fs.mkdirSync(distDir, { recursive: true });
-}
+if (!fs.existsSync(distDir)) fs.mkdirSync(distDir, { recursive: true });
 
-console.log('Building Semanticus CSS sizes...\n');
+console.log('Building Semanticus CSS sizes (bundled with LightningCSS)...\n');
+
+const files = fs.readdirSync(srcDir).filter((f) => f.endsWith('.css'));
+if (files.length === 0) {
+  console.log('No size files found in', srcDir);
+  process.exit(0);
+}
 
 let successCount = 0;
 
-for (const size of sizes) {
-  const srcFile = path.join(srcDir, `${size}.css`);
-  const distFile = path.join(distDir, `semanticus.size.${size}.css`);
+for (const file of files) {
+  const name = path.basename(file, '.css');
+  const srcPath = path.join('src', 'sizes', file);
+  const outPath = path.join(distDir, `semanticus.size.${name}.css`);
 
-  try {
-    // Read source file
-    let content = fs.readFileSync(srcFile, 'utf8');
+  // Use npx to run the locally installed lightningcss CLI with bundling enabled
+  const args = [
+    'lightningcss',
+    '--bundle',
+    '--minify',
+    '--browserslist',
+    srcPath,
+    '-o',
+    outPath,
+    '--custom-media',
+  ];
 
-    // Remove the base variables import since sizes are now overlays
-    // The @import '../_base.css'; line should be removed
-    content = content.replace(/\/\* Import base variables \*\/\s*@import '\.\.\/_(base|semantics|index)\.css';\s*/g, '');
+  const res = spawnSync('npx', args, { encoding: 'utf8' });
 
-    // Minify with LightningCSS
-    const result = transform({
-      filename: `${size}.css`,
-      code: Buffer.from(content),
-      minify: true,
-    });
-
-    // Write minified content to dist
-    fs.writeFileSync(distFile, result.code.toString());
-
-    console.log(`  ✓ ${distFile}`);
-    successCount++;
-  } catch (error) {
-    console.error(`  ✗ Failed to build size ${size}:`, error.message);
+  if (res.error || res.status !== 0) {
+    console.error(`  ✗ Failed to build size ${name}:`);
+    if (res.stdout) console.error(res.stdout);
+    if (res.stderr) console.error(res.stderr);
     process.exit(1);
   }
+
+  console.log(`  ✓ ${outPath}`);
+  successCount++;
 }
 
 console.log(`\n✓ ${successCount} size variants built successfully!`);

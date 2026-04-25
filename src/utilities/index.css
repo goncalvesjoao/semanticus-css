@@ -4,8 +4,8 @@
  * Perfect for utility-first development without semantic components
  */
 
-/* Global variables */
-@import '../_variables.css';
+/* Variables */
+@import './_variables.css';
 
 /* Normalize */
 @import '../_normalize.css';

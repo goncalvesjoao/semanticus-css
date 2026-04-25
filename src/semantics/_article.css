@@ -1,6 +1,12 @@
 /**
- * Article (<article>)
- * Represents a self-contained composition that can stand alone
- * and be independently distributed (blog post, widget, etc.)
- * Styling is provided by the .card class
+ * Article fills up the available width, and stretches to fill the available height.
+ * Stacks its children vertically.
  */
+article {
+  --block-spacing-vertical: calc(var(--spacing) * var(--responsive-multiplier));
+  --block-spacing-horizontal: calc(var(--spacing) * var(--responsive-multiplier));
+
+  width: 100%;
+  padding-block: var(--block-spacing-vertical);
+  padding-inline: var(--block-spacing-horizontal);
+}

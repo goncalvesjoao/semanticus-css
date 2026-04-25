@@ -4,39 +4,42 @@
  * Used on buttons and accordion elements
  */
 
-/* Buttons */
-:is(button, [type="submit"], [type="button"], [role="button"]) {
-  &.ghost {
-    --color-background: transparent;
-    --color-text: var(--color-primary);
-    --border-color: var(--color-primary);
+.ghost {
+  --color-background: transparent;
 
-    &:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
-      --color-background: transparent;
-      --color-text: var(--color-primary-hover);
-      --border-color: var(--color-primary-hover);
-    }
+  background-color: var(--color-background) !important;
+}
 
-    &.secondary {
-      --color-text: var(--color-secondary);
-      --border-color: var(--color-secondary);
+:is(button, [type="submit"], [type="button"], [role="button"]).ghost {
+  --color-background: transparent;
+  --color-text: var(--color-primary);
+  --border-color: var(--color-primary);
+}
 
-      &:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
-        --color-text: var(--color-secondary-hover);
-        --border-color: var(--color-secondary-hover);
-      }
-    }
+:is(button, [type="submit"], [type="button"], [role="button"]).ghost:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
+  --color-background: transparent;
+  --color-text: var(--color-primary-hover);
+  --border-color: var(--color-primary-hover);
+}
 
-    &.contrast {
-      --color-text: var(--color-contrast);
-      --border-color: var(--color-contrast);
+:is(.panel, button, [type="submit"], [type="button"], [role="button"]).ghost.secondary {
+  --color-text: var(--color-secondary);
+  --border-color: var(--color-secondary);
+}
 
-      &:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
-        --color-text: var(--color-contrast-hover);
-        --border-color: var(--color-contrast-hover);
-      }
-    }
-  }
+:is(button, [type="submit"], [type="button"], [role="button"]).ghost.secondary:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
+  --color-text: var(--color-secondary-hover);
+  --border-color: var(--color-secondary-hover);
+}
+
+:is(.panel, button, [type="submit"], [type="button"], [role="button"]).ghost.contrast {
+  --color-text: var(--color-contrast);
+  --border-color: var(--color-contrast);
+}
+
+:is(button, [type="submit"], [type="button"], [role="button"]).ghost.contrast:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
+  --color-text: var(--color-contrast-hover);
+  --border-color: var(--color-contrast-hover);
 }
 
 /* Reset buttons */

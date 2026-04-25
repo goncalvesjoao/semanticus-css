@@ -41,6 +41,7 @@ dialog {
   /* Modal content box - styled like a card */
   /* Works with: <dialog><article>...</article></dialog> */
   & > article {
+    position: relative;
     width: 100%;
     max-height: calc(100vh - var(--spacing) * 2);
     margin: var(--spacing);
@@ -60,6 +61,7 @@ dialog {
 
     /* Header styling */
     & > header {
+      width: calc(100% + var(--block-spacing-horizontal) * 2);
       margin: calc(var(--block-spacing-vertical) * -1) calc(var(--block-spacing-horizontal) * -1) var(--block-spacing-vertical);
       padding: calc(var(--block-spacing-vertical) * 0.66) var(--block-spacing-horizontal);
       background-color: var(--card-section-bg);
@@ -74,6 +76,7 @@ dialog {
 
     /* Footer styling */
     & > footer {
+      width: calc(100% + var(--block-spacing-horizontal) * 2);
       margin: var(--block-spacing-vertical) calc(var(--block-spacing-horizontal) * -1) calc(var(--block-spacing-vertical) * -1);
       padding: calc(var(--block-spacing-vertical) * 0.66) var(--block-spacing-horizontal);
       background-color: var(--card-section-bg);
@@ -91,22 +94,16 @@ dialog {
       }
     }
 
-    /* Close button in header */
-    & > header :is(a, button)[rel=prev] {
-      margin: 0;
-      margin-left: var(--spacing);
-      padding: 0;
-      float: right;
-    }
-
     /* Close button styling */
-    & :is(a, button)[rel=prev] {
+    & :is(a, button)[rel=prev]:not([role=button]) {
+      margin: 0;
+      padding: 0;
+      position: absolute;
       display: block;
       width: 1rem;
       height: 1rem;
-      margin-top: calc(var(--spacing) * -1);
-      margin-bottom: var(--spacing);
-      margin-left: auto;
+      top: calc(var(--block-spacing-vertical) * .66);
+      right: var(--block-spacing-horizontal);
       border: none;
       border-radius: 0;
       background-image: var(--icon-close);
@@ -117,13 +114,10 @@ dialog {
       box-shadow: none;
       opacity: 0.5;
       transition: opacity var(--transition);
-    }
 
-    & :is(a, button)[rel=prev]:is([aria-current]:not([aria-current=false]), :hover, :active, :focus) {
-      --color-background: transparent;
-      --border-color: transparent;
-      box-shadow: none;
-      opacity: 1;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 

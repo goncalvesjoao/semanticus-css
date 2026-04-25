@@ -96,8 +96,6 @@ const variableGroups = [
   {
     label: 'Navigation',
     vars: [
-      { name: '--nav-element-spacing-vertical', label: 'Nav Spacing (V)', desc: 'Vertical padding for nav container items.', type: 'text', lightDefault: '1rem', scope: 'root', selectors: 'nav, nav li' },
-      { name: '--nav-element-spacing-horizontal', label: 'Nav Spacing (H)', desc: 'Horizontal padding for nav container items.', type: 'text', lightDefault: '0.5rem', scope: 'root', selectors: 'nav, nav li' },
       { name: '--nav-link-spacing-vertical', label: 'Nav Link Spacing (V)', desc: 'Vertical padding inside nav links.', type: 'text', lightDefault: '0.5rem', scope: 'root', selectors: 'nav li a' },
       { name: '--nav-link-spacing-horizontal', label: 'Nav Link Spacing (H)', desc: 'Horizontal padding inside nav links.', type: 'text', lightDefault: '0.5rem', scope: 'root', selectors: 'nav li a' },
     ]

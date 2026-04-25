@@ -4,7 +4,7 @@ Quick reference for AI agents working on this codebase.
 
 ## What This Is
 
-**Semanticus CSS** is a lightweight, semantic CSS framework (~22 KB gzipped) that combines:
+**Semanticus CSS** is a lightweight, semantic CSS framework (~24 KB gzipped) that combines:
 - **Semantic-first** HTML element styling (PicoCSS-inspired)
 - **Atomic utility classes** (Bootstrap Utilities-inspired)
 - Zero JavaScript dependency
@@ -15,7 +15,7 @@ The framework is organized into 5 layers, all in `src/`:
 
 | Layer | Path | Purpose |
 |-------|------|---------|
-| Variables | `src/_variables.css` | Global CSS custom properties (colors, spacing, typography, theming) |
+| Variables | `src/variables/_all.css` | Global CSS custom properties (colors, spacing, typography, theming) |
 | Normalize | `src/_normalize.css` | CSS reset / normalize |
 | Semantics | `src/semantics/` | Styles for raw HTML elements + ARIA roles (buttons, inputs, nav, dialog, typography, etc.) |
 | Variants | `src/variants/` | Class-based extensions (`.container`, button variants, table variants, etc.) |

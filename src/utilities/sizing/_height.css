@@ -29,3 +29,7 @@
 .min-vh-100 {
   min-height: 100vh !important;
 }
+
+.min-svh-100 {
+  min-height: 100svh !important;
+}

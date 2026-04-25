@@ -1,0 +1,15 @@
+.hframe {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: stretch;
+}
+
+.vframe {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+}

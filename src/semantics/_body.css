@@ -1,10 +1,8 @@
+/**
+ * Body fills up the available width, and has the same height as the viewport.
+ * Stacks its children vertically.
+ */
 body {
   width: 100%;
-  margin: 0;
-
-  & > header,
-  & > main,
-  & > footer {
-    padding-block: var(--block-spacing-vertical);
-  }
+  min-height: 100svh;
 }

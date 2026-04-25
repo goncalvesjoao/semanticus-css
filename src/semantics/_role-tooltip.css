@@ -15,7 +15,7 @@
 
 [role="tooltip"] {
   display: block;
-  z-index: 99;
+  z-index: var(--max-z-index);
   position: absolute;
   bottom: 100%;
   left: 50%;

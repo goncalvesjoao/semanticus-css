@@ -5,7 +5,7 @@
  */
 
 /* Global variables */
-@import './_variables.css';
+@import './variables/_all.css';
 
 /* Normalize */
 @import './_normalize.css';
@@ -13,8 +13,8 @@
 /* Semantics */
 @import './semantics/modules.css';
 
-/* Variants */
-@import './variants/modules.css';
-
 /* Utilities */
 @import './utilities/modules.css';
+
+/* Variants */
+@import './variants/modules.css';

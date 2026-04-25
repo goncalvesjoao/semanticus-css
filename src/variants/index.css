@@ -3,7 +3,7 @@
  * Class-based variant styles that extend semantic
  */
 
-/* Global variables */
-@import '../_variables.css';
+/* Shared variables */
+@import '../variables/_shared.css';
 
 @import "./modules.css";

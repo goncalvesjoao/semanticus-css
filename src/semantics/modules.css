@@ -6,6 +6,7 @@
 
 @import "./_aria-busy.css";
 @import "./_article.css";
+@import "./_aside.css";
 @import "./_body.css";
 @import "./_button.css";
 @import "./_code.css";
@@ -14,6 +15,8 @@
 @import "./_document.css";
 @import "./_embedded.css";
 @import "./_figure.css";
+@import "./_footer.css";
+@import "./_header.css";
 @import "./_hidden.css";
 @import "./_hr.css";
 @import "./_input.css";

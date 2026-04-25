@@ -1,3 +1,10 @@
+/**
+ * Main fills up the available width, and has a height defined by its content.
+ * Stacks its children vertically.
+ */
 main {
-  display: block;
+  --block-spacing-vertical: calc(var(--spacing) * var(--responsive-multiplier));
+  --block-spacing-horizontal: calc(var(--spacing) * var(--responsive-multiplier));
+
+  width: 100%;
 }

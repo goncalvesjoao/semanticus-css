@@ -17,13 +17,10 @@
   }
 }
 
-/* Buttons */
-:is(button, [type="submit"], [type="button"], [role="button"]).secondary {
+:is(.panel, button, [type="submit"], [type="button"], [role="button"]).secondary {
   --color-background: var(--color-secondary-bg);
   --border-color: var(--color-secondary-border);
   --color-text: var(--color-secondary-inverse);
-
-  cursor: pointer;
 }
 
 :is(button, [type="submit"], [type="button"], [role="button"]).secondary:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {

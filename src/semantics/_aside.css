@@ -1,0 +1,16 @@
+/**
+ * Aside its width changes according to breakpoints (see src/variables/_shared.css),
+ * its height grows to fill the available space,
+ * and stacks its children in a column with space between them (like a <nav> would).
+ * In case of a single child, this child will fill the entire height.
+ */
+aside {
+  padding-inline: var(--block-spacing-horizontal);
+  width: var(--sidebar-width) !important;
+
+  :where(ol, ul, li) {
+    align-items: stretch !important;
+    display: flex;
+    flex-direction: column;
+  }
+}
