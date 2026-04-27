@@ -104,6 +104,43 @@ Modern browsers only (last 2 versions, Firefox ESR, no dead browsers). Configure
 7. **Lint** with `npm run lint`
 8. **Update docs** in `docs/` if user-facing
 9. **Update visual snapshots** with `npm run test:snapshot` if applicable
+10. **Consider version bump** → see Semantic Versioning section below
+
+## Semantic Versioning
+
+This project follows [SemVer](https://semver.org/). When making changes, consider the impact on the public API (CSS variables, class names, behavior):
+
+| Change Type | Examples | Version Bump |
+|-------------|----------|--------------|
+| **PATCH** | Bug fixes, typo corrections, non-visual refactors | 0.7.0 → 0.7.1 |
+| **MINOR** | New utility classes, new semantic elements, additive features | 0.7.0 → 0.8.0 |
+| **MAJOR** | Removing CSS variables, changing class behavior, browser support changes | 0.7.0 → 0.8.0* or 1.0.0 |
+
+*For pre-1.0 releases, MINOR bumps can include breaking changes per SemVer spec.*
+
+### Breaking Change Checklist
+
+**MAJOR/MINOR bump required if you:**
+- ❌ Remove or rename CSS variables (e.g., `--color-h1`, `--spacing-lg`)
+- ❌ Remove or rename CSS classes (e.g., `.text-primary`, `.bg-secondary`)
+- ❌ Change the visual output of existing classes significantly
+- ❌ Change browser support requirements (e.g., adding `color-mix()`, `@layer`)
+- ❌ Reorganize file structure that affects imports
+
+**Non-breaking (PATCH OK):**
+- ✅ Add new CSS variables that don't conflict with existing ones
+- ✅ Add new utility classes
+- ✅ Fix broken styles (restoring intended behavior)
+- ✅ Internal refactoring with no visual/output changes
+- ✅ Documentation updates
+
+### After Making Changes
+
+1. Review the **Breaking Change Checklist** above
+2. Run `npm run lint` and `npm run build` to ensure no errors
+3. Update `package.json` version appropriately
+4. Document breaking changes in commit message / PR description
+5. Consider adding migration notes for significant breaking changes
 
 ## Dependencies
 
