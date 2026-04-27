@@ -133,6 +133,20 @@ const stacksHtml = `<div class="hstack gap-3 mb-3">
   <div class="p-2 border">Item 3</div>
 </div>
 `;
+const flowHtml = `<div class="flow-h gap-3 mb-3 border">
+  <div class="p-2 border">Item 1</div>
+  <div class="p-2 border">Item 2</div>
+  <div class="p-2 border">Item 3</div>
+</div>
+
+<hr>
+
+<div class="flow-v gap-3 border" style="height: 200px">
+  <div class="p-2 border">Item 1</div>
+  <div class="p-2 border">Item 2</div>
+  <div class="p-2 border">Item 3</div>
+</div>
+`;
 const mediaObjectHtml = `<div class="d-flex">
   <div class="flex-shrink-0">
     <div class="bg-secondary rounded p-3" style="width:64px;height:64px"></div>
@@ -223,6 +237,17 @@ Change the visual order of flex items. Values range from `0` to `5`, plus `first
 Use `.hstack` and `.vstack` for quick horizontal and vertical layouts.
 
 <HtmlPreviewer :code="stacksHtml" />
+
+## Flow Layouts
+
+Use `.flow-h` and `.flow-v` for fluid, stretchable layouts that fill available space. Unlike stacks, these flow layouts grow to fill their container.
+
+| Class | Description |
+|-------|-------------|
+| `.flow-h` | Horizontal flow with items aligned to start, stretching to fill available width |
+| `.flow-v` | Vertical flow with items stretching to fill available height |
+
+<HtmlPreviewer :code="flowHtml" />
 
 ## Media Object
 

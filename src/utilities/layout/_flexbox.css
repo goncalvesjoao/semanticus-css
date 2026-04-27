@@ -1,3 +1,19 @@
+.flow-h {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: stretch;
+}
+
+.flow-v {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+}
+
 .hstack {
   display: flex;
   flex-direction: row;
@@ -843,4 +859,3 @@
     order: 6 !important;
   }
 }
-
