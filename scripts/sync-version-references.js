@@ -8,16 +8,25 @@ const packageJsonPath = path.join(repoRoot, 'package.json');
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 const packageName = packageJson.name;
 const packageVersion = process.env.SEMANTICUS_CDN_VERSION || packageJson.version;
+const packageAuthor = packageJson.author || 'Joao Goncalves';
 const packageSlug = packageName.split('/').pop();
 const encodedPackageName = packageName.replace('/', '%2F');
 
-// Target paths to scan - ONLY docs and markdown files, never source CSS
+// Specific files to update (entry points with version headers)
+const specificFiles = [
+  path.join(repoRoot, 'src', 'index.css'),
+  path.join(repoRoot, 'src', 'semantics', 'index.css'),
+  path.join(repoRoot, 'LICENSE'),
+  path.join(repoRoot, 'NOTICE'),
+];
+
+// Target paths to scan (directories)
 const targetPaths = [
   path.join(repoRoot, 'README.md'),
   path.join(repoRoot, 'docs')
 ];
 
-// File extensions to process - EXCLUDES .css to prevent modifying source files
+// File extensions to process in directory scans
 const allowedExtensions = new Set(['.md', '.vue']);
 const ignoredDirectories = new Set(['.git', '.vitepress/cache', '.vitepress/dist', 'node_modules']);
 
@@ -35,8 +44,33 @@ const cdnUrlPattern = new RegExp(
   'g'
 );
 
+// Header version pattern: "Semanticus CSS v0.8.0"
+const headerVersionPattern = /(Semanticus CSS v)\d+\.\d+\.\d+/g;
+
+// Copyright pattern - only updates copyright lines matching the package author
+// Matches: "Copyright (c) YYYY" followed by the author name from package.json
+const currentYear = new Date().getFullYear();
+const copyrightPattern = new RegExp(
+  `Copyright \\(c\\) (\\d{4})(?:(-)(\\d{4}))? ${escapeRegex(packageAuthor)}`,
+  'g'
+);
+const updateCopyright = (match, startYear, dash, existingEndYear) => {
+  if (currentYear > parseInt(startYear)) {
+    return `Copyright (c) ${startYear}-${currentYear} ${packageAuthor}`;
+  }
+  return `Copyright (c) ${startYear} ${packageAuthor}`;
+};
+
 let updatedFiles = 0;
 
+// Process specific files first
+for (const filePath of specificFiles) {
+  if (fs.existsSync(filePath)) {
+    updateFile(filePath, true);
+  }
+}
+
+// Then scan target directories
 for (const targetPath of targetPaths) {
   visitPath(targetPath);
 }
@@ -69,31 +103,36 @@ function visitPath(targetPath) {
     return;
   }
 
-  updateFile(targetPath);
+  updateFile(targetPath, false);
 }
 
 function shouldIgnoreDirectory(relativePath) {
   return ignoredDirectories.has(relativePath);
 }
 
-function updateFile(filePath) {
+function updateFile(filePath, isSpecificFile) {
   const original = fs.readFileSync(filePath, 'utf8');
   let updated = original;
 
-  // Update npm package CDN URLs: @semanticus/semanticus-css@0.7.0
-  updated = updated.replace(packageReferencePattern, `${packageName}@${packageVersion}`);
-
-  // Update tarball URLs
-  updated = updated.replace(
-    tarballPattern,
-    `https://registry.npmjs.org/${encodedPackageName}/-/${packageSlug}-${packageVersion}.tgz`
-  );
-
-  // Update jsdelivr CDN URLs
-  updated = updated.replace(
-    cdnUrlPattern,
-    `https://cdn.jsdelivr.net/npm/${packageName}@${packageVersion}`
-  );
+  if (isSpecificFile) {
+    // For CSS entry points, only update the header version comment
+    updated = updated.replace(headerVersionPattern, `$1${packageVersion}`);
+    // Also update copyright year in CSS files
+    updated = updated.replace(copyrightPattern, updateCopyright);
+  } else {
+    // For docs/markdown files, update CDN URLs and tarball links
+    updated = updated.replace(packageReferencePattern, `${packageName}@${packageVersion}`);
+    updated = updated.replace(
+      tarballPattern,
+      `https://registry.npmjs.org/${encodedPackageName}/-/${packageSlug}-${packageVersion}.tgz`
+    );
+    updated = updated.replace(
+      cdnUrlPattern,
+      `https://cdn.jsdelivr.net/npm/${packageName}@${packageVersion}`
+    );
+    // Also update copyright year in docs
+    updated = updated.replace(copyrightPattern, updateCopyright);
+  }
 
   if (updated === original) {
     return;
