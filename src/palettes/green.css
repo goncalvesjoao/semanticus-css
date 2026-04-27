@@ -8,7 +8,7 @@
 :root:not([data-theme="dark"]),
 :host(:not([data-theme="dark"])) {
   --color-text-selection: rgba(92, 199, 142, 0.25);
-  --color-primary: #2b7a4c;
+  --color-primary-rgb: 43, 122, 76;
   --color-primary-bg: #2b7a4c;
   --color-primary-border: var(--color-primary-bg);
   --color-primary-underline: rgba(43, 122, 76, 0.5);
@@ -26,7 +26,7 @@
   :root:not([data-theme]),
   :host(:not([data-theme])) {
     --color-text-selection: rgba(110, 213, 157, 0.1875);
-    --color-primary: #6ed59d;
+    --color-primary-rgb: 110, 213, 157;
     --color-primary-bg: #2b7a4c;
     --color-primary-border: var(--color-primary-bg);
     --color-primary-underline: rgba(110, 213, 157, 0.5);
@@ -42,7 +42,7 @@
 
 [data-theme="dark"] {
   --color-text-selection: rgba(110, 213, 157, 0.1875);
-  --color-primary: #6ed59d;
+  --color-primary-rgb: 110, 213, 157;
   --color-primary-bg: #2b7a4c;
   --color-primary-border: var(--color-primary-bg);
   --color-primary-underline: rgba(110, 213, 157, 0.5);

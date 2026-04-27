@@ -41,7 +41,7 @@
   --focus-ring-opacity: 0.25;
 
   /* Auto-switching mappings (resolved at computed-value time via Semanticus CSS) */
-  --emphasis-color: var(--color-contrast);
+  --emphasis-color: rgb(var(--color-contrast-rgb));
   --secondary-color: var(--color-text-muted);
   --border-color: var(--color-border-muted);
   --box-shadow: var(--shadow-md);

@@ -3,7 +3,7 @@
  */
 :where(a:not([role=button])),
 [role=link] {
-  --color-text: var(--color-primary);
+  --color-text: rgb(var(--color-primary-rgb));
   --color-background: transparent;
   --underline: var(--color-primary-underline);
   outline: none;

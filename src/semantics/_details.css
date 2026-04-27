@@ -53,7 +53,7 @@ details {
     &:focus-visible:not([role]) {
       outline: var(--outline-width) solid var(--color-primary-focus);
       outline-offset: calc(var(--spacing, 1rem) * 0.5);
-      color: var(--color-primary);
+      color: rgb(var(--color-primary-rgb));
     }
 
     &[role=button] {

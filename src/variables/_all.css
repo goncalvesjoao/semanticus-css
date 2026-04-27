@@ -229,7 +229,6 @@
   --color-border-muted: rgb(231, 234, 239.5); /* Subtle border for dividers, table rows, and card edges */
 
   /* Primary */
-  --color-primary: #0172ad;
   --color-primary-bg: #0172ad;
   --color-primary-border: var(--color-primary-bg);
   --color-primary-underline: rgba(1, 114, 173, 0.5);
@@ -241,7 +240,6 @@
   --color-primary-inverse: #fff;
 
   /* Secondary */
-  --color-secondary: #5d6b89;
   --color-secondary-bg: #525f7a;
   --color-secondary-border: var(--color-secondary-bg);
   --color-secondary-underline: rgba(93, 107, 137, 0.5);
@@ -253,7 +251,6 @@
   --color-secondary-inverse: #fff;
 
   /* Contrast */
-  --color-contrast: #181c25;
   --color-contrast-bg: #181c25;
   --color-contrast-border: var(--color-contrast-bg);
   --color-contrast-underline: rgba(24, 28, 37, 0.5);
@@ -470,7 +467,6 @@
     --color-border-muted: #202632;
 
     /* Primary */
-    --color-primary: #01aaff;
     --color-primary-bg: #0172ad;
     --color-primary-border: var(--color-primary-bg);
     --color-primary-underline: rgba(1, 170, 255, 0.5);
@@ -482,7 +478,6 @@
     --color-primary-inverse: #fff;
 
     /* Secondary */
-    --color-secondary: #969eaf;
     --color-secondary-bg: #525f7a;
     --color-secondary-border: var(--color-secondary-bg);
     --color-secondary-underline: rgba(150, 158, 175, 0.5);
@@ -494,7 +489,6 @@
     --color-secondary-inverse: #fff;
 
     /* Contrast */
-    --color-contrast: #dfe3eb;
     --color-contrast-bg: #eff1f4;
     --color-contrast-border: var(--color-contrast-bg);
     --color-contrast-underline: rgba(223, 227, 235, 0.5);
@@ -697,7 +691,6 @@
   --color-border-muted: #202632;
 
   /* Primary */
-  --color-primary: #01aaff;
   --color-primary-bg: #0172ad;
   --color-primary-border: var(--color-primary-bg);
   --color-primary-underline: rgba(1, 170, 255, 0.5);
@@ -709,7 +702,6 @@
   --color-primary-inverse: #fff;
 
   /* Secondary */
-  --color-secondary: #969eaf;
   --color-secondary-bg: #525f7a;
   --color-secondary-border: var(--color-secondary-bg);
   --color-secondary-underline: rgba(150, 158, 175, 0.5);
@@ -721,7 +713,6 @@
   --color-secondary-inverse: #fff;
 
   /* Contrast */
-  --color-contrast: #dfe3eb;
   --color-contrast-bg: #eff1f4;
   --color-contrast-border: var(--color-contrast-bg);
   --color-contrast-underline: rgba(223, 227, 235, 0.5);
@@ -1022,5 +1013,5 @@ input:not(
 [type="checkbox"],
 [type="radio"],
 [type="range"] {
-  accent-color: var(--color-primary);
+  accent-color: rgb(var(--color-primary-rgb));
 }
