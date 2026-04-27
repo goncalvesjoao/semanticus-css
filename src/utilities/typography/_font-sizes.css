@@ -21,18 +21,3 @@
 .fs-6 {
   font-size: var(--fs-6) !important;
 }
-
-@media (--breakpoint-xl) {
-  .fs-1 {
-    font-size: 2.5rem !important;
-  }
-  .fs-2 {
-    font-size: 2rem !important;
-  }
-  .fs-3 {
-    font-size: 1.75rem !important;
-  }
-  .fs-4 {
-    font-size: 1.5rem !important;
-  }
-}

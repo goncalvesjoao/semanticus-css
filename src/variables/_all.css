@@ -39,6 +39,14 @@
   --font-size: 97%; /* Root font-size; overridden per breakpoint below and per element in §6 */
   --text-underline-offset: 0.1rem;
 
+  /* Font Size Scale – semantic heading sizes (aligned with h1-h6) */
+  --fs-1: 2rem;
+  --fs-2: 1.75rem;
+  --fs-3: 1.5rem;
+  --fs-4: 1.25rem;
+  --fs-5: 1.125rem;
+  --fs-6: 1rem;
+
   /* Borders & Effects – global defaults for border-radius, border-width, outline, and transition */
   --border-radius: 0.25rem;
   --border-width: 0.0625rem; /* 1px – base border width used by forms, tables, etc. */
@@ -710,37 +718,37 @@ h6 {
 }
 
 h1 {
-  --font-size: 2rem;
+  --font-size: var(--fs-1);
   --line-height: 1.125;
   --typography-headings-top: 3rem; /* Extra top margin to separate from previous content */
 }
 
 h2 {
-  --font-size: 1.75rem;
+  --font-size: var(--fs-2);
   --line-height: 1.15;
   --typography-headings-top: 2.625rem;
 }
 
 h3 {
-  --font-size: 1.5rem;
+  --font-size: var(--fs-3);
   --line-height: 1.175;
   --typography-headings-top: 2.25rem;
 }
 
 h4 {
-  --font-size: 1.25rem;
+  --font-size: var(--fs-4);
   --line-height: 1.2;
   --typography-headings-top: 1.874rem;
 }
 
 h5 {
-  --font-size: 1.125rem;
+  --font-size: var(--fs-5);
   --line-height: 1.225;
   --typography-headings-top: 1.6875rem;
 }
 
 h6 {
-  --font-size: 1rem;
+  --font-size: var(--fs-6);
   --line-height: 1.25;
   --typography-headings-top: 1.5rem;
 }
