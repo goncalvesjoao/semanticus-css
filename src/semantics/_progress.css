@@ -15,7 +15,7 @@ progress {
   background-color: var(--progress-bg);
   color: var(--progress-fill);
   vertical-align: baseline;
-  accent-color: var(--color-primary);
+  accent-color: rgb(var(--color-primary-rgb));
 
   &::-webkit-progress-bar {
     border-radius: var(--border-radius);

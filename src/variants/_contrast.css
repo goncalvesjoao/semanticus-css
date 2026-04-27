@@ -7,7 +7,7 @@
 :where(a:not([role="button"])),
 [role="link"] {
   &.contrast {
-    --color-text: var(--color-contrast);
+    --color-text: rgb(var(--color-contrast-rgb));
     --underline: var(--color-contrast-underline);
 
     &:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {

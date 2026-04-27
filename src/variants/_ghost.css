@@ -12,8 +12,8 @@
 
 :is(button, [type="submit"], [type="button"], [role="button"]).ghost {
   --color-background: transparent;
-  --color-text: var(--color-primary);
-  --border-color: var(--color-primary);
+  --color-text: rgb(var(--color-primary-rgb));
+  --border-color: rgb(var(--color-primary-rgb));
 }
 
 :is(button, [type="submit"], [type="button"], [role="button"]).ghost:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
@@ -23,8 +23,8 @@
 }
 
 :is(.panel, button, [type="submit"], [type="button"], [role="button"]).ghost.secondary {
-  --color-text: var(--color-secondary);
-  --border-color: var(--color-secondary);
+  --color-text: rgb(var(--color-secondary-rgb));
+  --border-color: rgb(var(--color-secondary-rgb));
 }
 
 :is(button, [type="submit"], [type="button"], [role="button"]).ghost.secondary:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
@@ -33,8 +33,8 @@
 }
 
 :is(.panel, button, [type="submit"], [type="button"], [role="button"]).ghost.contrast {
-  --color-text: var(--color-contrast);
-  --border-color: var(--color-contrast);
+  --color-text: rgb(var(--color-contrast-rgb));
+  --border-color: rgb(var(--color-contrast-rgb));
 }
 
 :is(button, [type="submit"], [type="button"], [role="button"]).ghost.contrast:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
@@ -45,8 +45,8 @@
 /* Reset buttons */
 [type="reset"].ghost {
   --color-background: transparent;
-  --color-text: var(--color-secondary);
-  --border-color: var(--color-secondary);
+  --color-text: rgb(var(--color-secondary-rgb));
+  --border-color: rgb(var(--color-secondary-rgb));
 
   &:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
     --color-text: var(--color-secondary-hover);

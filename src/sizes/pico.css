@@ -128,10 +128,10 @@
   color-scheme: light;
 
   /* Status Colors */
-  --success-rgb: 43, 122, 76;
-  --info-rgb: 4, 120, 120;
-  --warning-rgb: 255, 191, 0;
-  --danger-rgb: 197, 47, 33;
+  --color-success-rgb: 43, 122, 76;
+  --color-info-rgb: 4, 120, 120;
+  --color-warning-rgb: 255, 191, 0;
+  --color-danger-rgb: 197, 47, 33;
 
   /* Core Colors – page-level background, body text, and text selection highlight */
   --color-background: #fff;
@@ -141,7 +141,7 @@
   --color-border-muted: rgb(231, 234, 239.5); /* Subtle border for dividers, table rows, and card edges */
 
   /* Primary */
-  --color-primary: #0172ad;
+  --color-primary-rgb: 1, 114, 173;
   --color-primary-bg: #0172ad;
   --color-primary-border: var(--color-primary-bg);
   --color-primary-underline: rgba(1, 114, 173, 0.5);
@@ -153,7 +153,7 @@
   --color-primary-inverse: #fff;
 
   /* Secondary */
-  --color-secondary: #5d6b89;
+  --color-secondary-rgb: 93, 107, 137;
   --color-secondary-bg: #525f7a;
   --color-secondary-border: var(--color-secondary-bg);
   --color-secondary-underline: rgba(93, 107, 137, 0.5);
@@ -165,7 +165,7 @@
   --color-secondary-inverse: #fff;
 
   /* Contrast */
-  --color-contrast: #181c25;
+  --color-contrast-rgb: 24, 28, 37;
   --color-contrast-bg: #181c25;
   --color-contrast-border: var(--color-contrast-bg);
   --color-contrast-underline: rgba(24, 28, 37, 0.5);
@@ -216,12 +216,12 @@
   --form-active-border: var(--color-primary-border); /* Border when focused */
   --form-focus: var(--color-primary-border); /* Focus ring color */
   --form-disabled-opacity: 0.5; /* Opacity applied to disabled form elements */
-  --form-invalid-border: rgb(var(--danger-rgb)); /* Border for invalid fields (idle) */
-  --form-invalid-active-border: rgb(var(--danger-rgb)); /* Border for invalid fields (focused) */
-  --form-invalid-focus: rgba(var(--danger-rgb), 0.5); /* Focus ring for invalid fields */
-  --form-valid-border: rgb(var(--success-rgb)); /* Border for valid fields (idle) */
-  --form-valid-active-border: rgb(var(--success-rgb)); /* Border for valid fields (focused) */
-  --form-valid-focus: rgba(var(--success-rgb), 0.5); /* Focus ring for valid fields */
+  --form-invalid-border: rgb(var(--color-danger-rgb)); /* Border for invalid fields (idle) */
+  --form-invalid-active-border: rgb(var(--color-danger-rgb)); /* Border for invalid fields (focused) */
+  --form-invalid-focus: rgba(var(--color-danger-rgb), 0.5); /* Focus ring for invalid fields */
+  --form-valid-border: rgb(var(--color-success-rgb)); /* Border for valid fields (idle) */
+  --form-valid-active-border: rgb(var(--color-success-rgb)); /* Border for valid fields (focused) */
+  --form-valid-focus: rgba(var(--color-success-rgb), 0.5); /* Focus ring for valid fields */
 
   /* Switch – toggle switch component (checkbox[role="switch"]) */
   --switch-bg: #bfc7d9; /* Track background (unchecked) */
@@ -319,10 +319,10 @@
     color-scheme: dark;
 
     /* Status Colors */
-    --success-rgb: 110, 213, 157;
-    --info-rgb: 10, 194, 194;
-    --warning-rgb: 255, 191, 0;
-    --danger-rgb: 243, 143, 121;
+    --color-success-rgb: 110, 213, 157;
+    --color-info-rgb: 10, 194, 194;
+    --color-warning-rgb: 255, 191, 0;
+    --color-danger-rgb: 243, 143, 121;
 
     /* Core Colors */
     --color-background: rgb(19, 22.5, 30.5);
@@ -332,7 +332,7 @@
     --color-border-muted: #202632;
 
     /* Primary */
-    --color-primary: #01aaff;
+    --color-primary-rgb: 1, 170, 255;
     --color-primary-bg: #0172ad;
     --color-primary-border: var(--color-primary-bg);
     --color-primary-underline: rgba(1, 170, 255, 0.5);
@@ -344,7 +344,7 @@
     --color-primary-inverse: #fff;
 
     /* Secondary */
-    --color-secondary: #969eaf;
+    --color-secondary-rgb: 150, 158, 175;
     --color-secondary-bg: #525f7a;
     --color-secondary-border: var(--color-secondary-bg);
     --color-secondary-underline: rgba(150, 158, 175, 0.5);
@@ -356,7 +356,7 @@
     --color-secondary-inverse: #fff;
 
     /* Contrast */
-    --color-contrast: #dfe3eb;
+    --color-contrast-rgb: 223, 227, 235;
     --color-contrast-bg: #eff1f4;
     --color-contrast-border: var(--color-contrast-bg);
     --color-contrast-underline: rgba(223, 227, 235, 0.5);
@@ -407,12 +407,12 @@
     --form-active-border: var(--color-primary-border);
     --form-focus: var(--color-primary-border);
     --form-disabled-opacity: 0.5;
-    --form-invalid-border: rgb(var(--danger-rgb));
-    --form-invalid-active-border: rgb(var(--danger-rgb));
-    --form-invalid-focus: rgba(var(--danger-rgb), 0.5);
-    --form-valid-border: rgb(var(--success-rgb));
-    --form-valid-active-border: rgb(var(--success-rgb));
-    --form-valid-focus: rgba(var(--success-rgb), 0.5);
+    --form-invalid-border: rgb(var(--color-danger-rgb));
+    --form-invalid-active-border: rgb(var(--color-danger-rgb));
+    --form-invalid-focus: rgba(var(--color-danger-rgb), 0.5);
+    --form-valid-border: rgb(var(--color-success-rgb));
+    --form-valid-active-border: rgb(var(--color-success-rgb));
+    --form-valid-focus: rgba(var(--color-success-rgb), 0.5);
 
     /* Switch */
     --switch-bg: #333c4e;
@@ -496,10 +496,10 @@
   color-scheme: dark;
 
   /* Status Colors */
-  --success-rgb: 110, 213, 157;
-  --info-rgb: 10, 194, 194;
-  --warning-rgb: 255, 191, 0;
-  --danger-rgb: 243, 143, 121;
+  --color-success-rgb: 110, 213, 157;
+  --color-info-rgb: 10, 194, 194;
+  --color-warning-rgb: 255, 191, 0;
+  --color-danger-rgb: 243, 143, 121;
 
   /* Core Colors */
   --color-background: rgb(19, 22.5, 30.5);
@@ -509,7 +509,7 @@
   --color-border-muted: #202632;
 
   /* Primary */
-  --color-primary: #01aaff;
+  --color-primary-rgb: 1, 170, 255;
   --color-primary-bg: #0172ad;
   --color-primary-border: var(--color-primary-bg);
   --color-primary-underline: rgba(1, 170, 255, 0.5);
@@ -521,7 +521,7 @@
   --color-primary-inverse: #fff;
 
   /* Secondary */
-  --color-secondary: #969eaf;
+  --color-secondary-rgb: 150, 158, 175;
   --color-secondary-bg: #525f7a;
   --color-secondary-border: var(--color-secondary-bg);
   --color-secondary-underline: rgba(150, 158, 175, 0.5);
@@ -533,7 +533,7 @@
   --color-secondary-inverse: #fff;
 
   /* Contrast */
-  --color-contrast: #dfe3eb;
+  --color-contrast-rgb: 223, 227, 235;
   --color-contrast-bg: #eff1f4;
   --color-contrast-border: var(--color-contrast-bg);
   --color-contrast-underline: rgba(223, 227, 235, 0.5);
@@ -584,12 +584,12 @@
   --form-active-border: var(--color-primary-border);
   --form-focus: var(--color-primary-border);
   --form-disabled-opacity: 0.5;
-  --form-invalid-border: rgb(var(--danger-rgb));
-  --form-invalid-active-border: rgb(var(--danger-rgb));
-  --form-invalid-focus: rgba(var(--danger-rgb), 0.5);
-  --form-valid-border: rgb(var(--success-rgb));
-  --form-valid-active-border: rgb(var(--success-rgb));
-  --form-valid-focus: rgba(var(--success-rgb), 0.5);
+  --form-invalid-border: rgb(var(--color-danger-rgb));
+  --form-invalid-active-border: rgb(var(--color-danger-rgb));
+  --form-invalid-focus: rgba(var(--color-danger-rgb), 0.5);
+  --form-valid-border: rgb(var(--color-success-rgb));
+  --form-valid-active-border: rgb(var(--color-success-rgb));
+  --form-valid-focus: rgba(var(--color-success-rgb), 0.5);
 
   /* Switch */
   --switch-bg: #333c4e;
@@ -834,5 +834,5 @@ input:not(
 [type="checkbox"],
 [type="radio"],
 [type="range"] {
-  accent-color: var(--color-primary);
+  accent-color: rgb(var(--color-primary-rgb));
 }
