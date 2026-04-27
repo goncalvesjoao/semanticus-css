@@ -20,11 +20,11 @@
 }
 
 .focus-ring-primary {
-  --focus-ring-color: rgba(var(--primary-rgb), var(--focus-ring-opacity));
+  --focus-ring-color: rgba(var(--color-primary-rgb), var(--focus-ring-opacity));
 }
 
 .focus-ring-secondary {
-  --focus-ring-color: rgba(var(--secondary-rgb), var(--focus-ring-opacity));
+  --focus-ring-color: rgba(var(--color-secondary-rgb), var(--focus-ring-opacity));
 }
 
 .focus-ring-success {
@@ -44,5 +44,5 @@
 }
 
 .focus-ring-contrast {
-  --focus-ring-color: rgba(var(--contrast-rgb), var(--focus-ring-opacity));
+  --focus-ring-color: rgba(var(--color-contrast-rgb), var(--focus-ring-opacity));
 }
