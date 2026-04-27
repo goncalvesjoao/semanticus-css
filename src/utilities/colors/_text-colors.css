@@ -88,68 +88,90 @@
 
 .text-primary {
   --text-opacity: 1;
+  --color-text: rgba(var(--primary-rgb), var(--text-opacity)) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: rgba(var(--primary-rgb), var(--text-opacity)) !important;
+  color: var(--color-text) !important;
 }
 
 .text-secondary {
   --text-opacity: 1;
+  --color-text: rgba(var(--secondary-rgb), var(--text-opacity)) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: rgba(var(--secondary-rgb), var(--text-opacity)) !important;
+  color: var(--color-text) !important;
 }
 
 .text-success {
   --text-opacity: 1;
+  --color-text: rgba(var(--success-rgb), var(--text-opacity)) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: rgba(var(--success-rgb), var(--text-opacity)) !important;
+  color: var(--color-text) !important;
 }
 
 .text-info {
   --text-opacity: 1;
+  --color-text: rgba(var(--info-rgb), var(--text-opacity)) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: rgba(var(--info-rgb), var(--text-opacity)) !important;
+  color: var(--color-text) !important;
 }
 
 .text-warning {
   --text-opacity: 1;
+  --color-text: rgba(var(--warning-rgb), var(--text-opacity)) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: rgba(var(--warning-rgb), var(--text-opacity)) !important;
+  color: var(--color-text) !important;
 }
 
 .text-danger {
   --text-opacity: 1;
+  --color-text: rgba(var(--danger-rgb), var(--text-opacity)) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: rgba(var(--danger-rgb), var(--text-opacity)) !important;
+  color: var(--color-text) !important;
 }
 
 .text-contrast {
   --text-opacity: 1;
+  --color-text: rgba(var(--contrast-rgb), var(--text-opacity)) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: rgba(var(--contrast-rgb), var(--text-opacity)) !important;
+  color: var(--color-text) !important;
 }
 
 .text-body {
   --text-opacity: 1;
+  --color-text: rgba(var(--body-color-rgb), var(--text-opacity)) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: rgba(var(--body-color-rgb), var(--text-opacity)) !important;
+  color: var(--color-text) !important;
 }
 
 .text-muted {
   --text-opacity: 1;
+  --color-text: var(--secondary-color) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: var(--secondary-color) !important;
+  color: var(--color-text) !important;
 }
 
 .text-body-secondary {
   --text-opacity: 1;
+  --color-text: var(--secondary-color) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: var(--secondary-color) !important;
+  color: var(--color-text) !important;
 }
 
 .text-body-emphasis {
   --text-opacity: 1;
+  --color-text: var(--emphasis-color) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: var(--emphasis-color) !important;
+  color: var(--color-text) !important;
 }
 
 .text-reset {
@@ -175,31 +197,52 @@
 }
 
 .text-primary-emphasis {
-  color: var(--primary-text-emphasis) !important;
+  --color-text: var(--primary-text-emphasis) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
+
+  color: var(--color-text) !important;
 }
 
 .text-secondary-emphasis {
-  color: var(--secondary-text-emphasis) !important;
+  --color-text: var(--secondary-text-emphasis) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
+
+  color: var(--color-text) !important;
 }
 
 .text-success-emphasis {
-  color: var(--success-text-emphasis) !important;
+  --color-text: var(--success-text-emphasis) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
+
+  color: var(--color-text) !important;
 }
 
 .text-info-emphasis {
-  color: var(--info-text-emphasis) !important;
+  --color-text: var(--info-text-emphasis) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
+
+  color: var(--color-text) !important;
 }
 
 .text-warning-emphasis {
-  color: var(--warning-text-emphasis) !important;
+  --color-text: var(--warning-text-emphasis) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
+
+  color: var(--color-text) !important;
 }
 
 .text-danger-emphasis {
-  color: var(--danger-text-emphasis) !important;
+  --color-text: var(--danger-text-emphasis) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
+
+  color: var(--color-text) !important;
 }
 
 .text-contrast-emphasis {
-  color: var(--contrast-text-emphasis) !important;
+  --color-text: var(--contrast-text-emphasis) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
+
+  color: var(--color-text) !important;
 }
 
 .link-opacity-10 {
@@ -368,4 +411,51 @@
 
 .link-underline-opacity-100-hover:hover {
   --link-underline-opacity: 1;
+}
+
+/* Dark mode: headings should be lighter than text color (mix in white) */
+@media (prefers-color-scheme: dark) {
+  .text-primary,
+  .text-secondary,
+  .text-success,
+  .text-info,
+  .text-warning,
+  .text-danger,
+  .text-contrast,
+  .text-body,
+  .text-muted,
+  .text-body-secondary,
+  .text-body-emphasis,
+  .text-primary-emphasis,
+  .text-secondary-emphasis,
+  .text-success-emphasis,
+  .text-info-emphasis,
+  .text-warning-emphasis,
+  .text-danger-emphasis,
+  .text-contrast-emphasis {
+    --color-heading-base: color-mix(in srgb, var(--color-text), white 75%);
+  }
+}
+
+[data-theme="dark"] {
+  .text-primary,
+  .text-secondary,
+  .text-success,
+  .text-info,
+  .text-warning,
+  .text-danger,
+  .text-contrast,
+  .text-body,
+  .text-muted,
+  .text-body-secondary,
+  .text-body-emphasis,
+  .text-primary-emphasis,
+  .text-secondary-emphasis,
+  .text-success-emphasis,
+  .text-info-emphasis,
+  .text-warning-emphasis,
+  .text-danger-emphasis,
+  .text-contrast-emphasis {
+    --color-heading-base: color-mix(in srgb, var(--color-text), white 75%);
+  }
 }

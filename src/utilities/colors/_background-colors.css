@@ -1,49 +1,56 @@
 .text-bg-primary {
   --color-text: var(--color-primary-inverse) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: var(--color-primary-inverse) !important;
+  color: var(--color-text) !important;
   background-color: rgba(var(--primary-rgb), var(--bg-opacity, 1)) !important;
 }
 
 .text-bg-secondary {
   --color-text: var(--color-secondary-inverse) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: var(--color-secondary-inverse) !important;
+  color: var(--color-text) !important;
   background-color: rgba(var(--secondary-rgb), var(--bg-opacity, 1)) !important;
 }
 
 .text-bg-success {
   --color-text: var(--color-success-inverse) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: var(--color-success-inverse) !important;
+  color: var(--color-text) !important;
   background-color: rgba(var(--success-rgb), var(--bg-opacity, 1)) !important;
 }
 
 .text-bg-info {
   --color-text: var(--color-info-inverse) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: var(--color-info-inverse) !important;
+  color: var(--color-text) !important;
   background-color: rgba(var(--info-rgb), var(--bg-opacity, 1)) !important;
 }
 
 .text-bg-warning {
   --color-text: var(--color-warning-inverse) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: var(--color-warning-inverse) !important;
+  color: var(--color-text) !important;
   background-color: rgba(var(--warning-rgb), var(--bg-opacity, 1)) !important;
 }
 
 .text-bg-danger {
   --color-text: var(--color-danger-inverse) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: var(--color-danger-inverse) !important;
+  color: var(--color-text) !important;
   background-color: rgba(var(--danger-rgb), var(--bg-opacity, 1)) !important;
 }
 
 .text-bg-contrast {
   --color-text: var(--color-contrast-inverse) !important;
+  --color-heading-base: color-mix(in srgb, var(--color-text), black 18%);
 
-  color: var(--color-contrast-inverse) !important;
+  color: var(--color-text) !important;
   background-color: rgba(var(--contrast-rgb), var(--bg-opacity, 1)) !important;
 }
 
@@ -206,4 +213,29 @@
 
 .bg-gradient {
   background-image: var(--gradient) !important;
+}
+
+/* Dark mode: headings should be lighter than inverse text (mix in white) */
+@media (prefers-color-scheme: dark) {
+  .text-bg-primary,
+  .text-bg-secondary,
+  .text-bg-success,
+  .text-bg-info,
+  .text-bg-warning,
+  .text-bg-danger,
+  .text-bg-contrast {
+    --color-heading-base: color-mix(in srgb, var(--color-text), white 75%);
+  }
+}
+
+[data-theme="dark"] {
+  .text-bg-primary,
+  .text-bg-secondary,
+  .text-bg-success,
+  .text-bg-info,
+  .text-bg-warning,
+  .text-bg-danger,
+  .text-bg-contrast {
+    --color-heading-base: color-mix(in srgb, var(--color-text), white 75%);
+  }
 }
