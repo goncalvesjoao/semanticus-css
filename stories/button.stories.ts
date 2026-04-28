@@ -8,6 +8,6 @@ export default meta;
 
 export const Default: StoryObj = {
   render: () => `
-    <button>Click me
+    <button>Click me</button>
   `,
 };
