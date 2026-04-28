@@ -2,6 +2,28 @@
 
 The docs are organized into four main sections:
 
+```html-preview
+<article>
+  <h1>Hello World</h1>
+  <p>
+    Look at me, I'm <strong>bold</strong> and <em>stylish!</em>
+  </p>
+  <button>Click me</button>
+</article>
+```
+
+---
+
+```html
+<article>
+  <h1>Hello World</h1>
+  <p>
+    Look at me, I'm <strong>bold</strong> and <em>stylish!</em>
+  </p>
+  <button>Click me</button>
+</article>
+```
+
 - **Composites**
   UI patterns that you can use as building blocks for your applications, implemented using all 3 layers of **Semanticus CSS**.
 

@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { htmlPreviewPlugin } from './plugins/html-preview'
 import path from 'path'
 import fs from 'fs'
 
@@ -30,7 +31,7 @@ export default defineConfig({
   ignoreDeadLinks: true,
   markdown: {
     config: (md) => {
-      // No custom markdown plugins needed
+      md.use(htmlPreviewPlugin);
     }
   },
   vite: {

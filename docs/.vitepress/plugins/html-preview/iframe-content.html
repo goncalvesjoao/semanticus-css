@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    ${customStyles}
+  </style>
+</head>
+
+<body>
+  ${code}
+  <script>
+    (function() {
+      function sendHeight() {
+        var h = document.documentElement.scrollHeight;
+        parent.postMessage({
+          type: "preview-resize",
+          height: h
+        }, "*")
+      }
+      window.addEventListener("load", sendHeight);
+      var ro = new ResizeObserver(function() {
+        sendHeight()
+      });
+      ro.observe(document.body);
+      var lastHeight = 0;
+      setInterval(function() {
+        var h = document.documentElement.scrollHeight;
+        if (h !== lastHeight) {
+          lastHeight = h;
+          sendHeight()
+        }
+      }, 100);
+      document.addEventListener("click", function(e) {
+        var a = e.target.closest("a");
+        if (a) {
+          e.preventDefault()
+        }
+      })
+    })();
+  </script>
+</body>
+</html>
