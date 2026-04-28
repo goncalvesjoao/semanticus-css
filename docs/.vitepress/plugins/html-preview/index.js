@@ -1,19 +1,25 @@
 import fs from 'fs';
-import type MarkdownIt from 'markdown-it'
-import type { RenderRule } from 'markdown-it/lib/renderer.mjs'
 
 // Ensure that these files are included in the bundle
 const rawSemanticusStyles = fs.readFileSync('./dist/semanticus.css', 'utf-8')
 const rawIframeContent = fs.readFileSync('./docs/.vitepress/plugins/html-preview/iframe-content.html', 'utf-8')
 
-function escapeForAttr(str: string): string {
+function escapeForAttr(str) {
   return str
     .replace(/&/g, '&amp;')
     .replace(/"/g, '&quot;')
 }
 
-export function htmlPreviewPlugin(md: MarkdownIt) {
-  const defaultFence: RenderRule = md.renderer.rules.fence!.bind(md.renderer.rules)
+export function htmlPreviewPlugin(md) {
+  const defaultFence = md.renderer.rules.fence.bind(md.renderer.rules)
+
+  function renderCodeBlock(tokens, idx, options, env, self) {
+    const rawRenderedCodeBlock = defaultFence(tokens, idx, options, env, self)
+    const renderedCodeBlock = rawRenderedCodeBlock
+      .replace('<span class="lang">html</span>', '<span class="lang">editable html</span>')
+
+    return renderedCodeBlock
+  }
 
   md.renderer.rules.fence = (tokens, idx, options, env, self) => {
     const token = tokens[idx]
@@ -25,7 +31,7 @@ export function htmlPreviewPlugin(md: MarkdownIt) {
       // Render the code block using markdown-it's default fence renderer
       const originalInfo = token.info
       token.info = 'html'
-      const renderedCode = defaultFence(tokens, idx, options, env, self)
+      const renderedCode = renderCodeBlock(tokens, idx, options, env, self)
       token.info = originalInfo
 
       const iframeContent = rawIframeContent.replace('${customStyles}', rawSemanticusStyles).replace('${code}', code)
