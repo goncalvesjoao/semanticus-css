@@ -1,41 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/html';
-import * as NavStories from './nav.stories';
+import { HeaderDemo, HeaderDemoArgs, type HeaderDemoArgsType } from '@demos/semantics/header.demo';
 
-type Args = {
-  class: string;
-  slot: string;
-};
-
-export function render(args: Partial<Args>): string {
-  return `<header class="${args.class}">
-    ${args.slot}
-  </header>`;
-};
-
-const meta: Meta<Args> = {
+const meta: Meta<HeaderDemoArgsType> = {
   title: 'Semantics/<header>',
-  excludeStories: ['render'],
-  render,
 };
 
 export default meta;
 
-export const Default: StoryObj<Args> = {
-  args: {
-    slot: "<h2>Logo</h2>",
-  },
-};
-
-export const WithNavigation: StoryObj<Args> = {
-  args: {
-    ...Default.args,
-    slot: NavStories.render(NavStories.HeaderNavigation.args),
-  },
-};
-
-export const WithSearchNavigation: StoryObj<Args> = {
-  args: {
-    ...Default.args,
-    slot: NavStories.render(NavStories.HeaderSearchNavigation.args),
-  },
+export const Overview: StoryObj<HeaderDemoArgsType> = {
+  args: HeaderDemoArgs.logoTaglineLinks,
+  render(args) {
+    return HeaderDemo.logoTaglineLinks(args);
+  }
 };

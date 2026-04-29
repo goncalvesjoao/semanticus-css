@@ -1,0 +1,42 @@
+import { renderElement } from '@demos/utils';
+import { HgroupDemo } from '@demos/semantics/hgroup.demo';
+
+export type ArticleDemoArgsType = {
+  slot?: string;
+  class?: string;
+};
+
+export const ArticleDemoArgs = {
+  helloWorld: {
+    class: '',
+    slot: `<h2>Hello World</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.</p>`,
+  },
+  hgroup: {
+    class: '',
+    slot: HgroupDemo.helloWorld(),
+  },
+  multipleParagraphs: {
+    class: '',
+    slot: `<h2>Hello World</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.</p>
+<p>Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p>Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet.</p>`,
+  },
+};
+
+export const ArticleDemo = {
+  render: renderElement.bind(null, 'article'),
+
+  helloWorld(args: ArticleDemoArgsType = {}) {
+    return this.render({ ...ArticleDemoArgs.helloWorld, ...args });
+  },
+
+  hgroup(args: ArticleDemoArgsType = {}) {
+    return this.render({ ...ArticleDemoArgs.hgroup, ...args });
+  },
+
+  multipleParagraphs(args: ArticleDemoArgsType = {}) {
+    return this.render({ ...ArticleDemoArgs.multipleParagraphs, ...args });
+  },
+};

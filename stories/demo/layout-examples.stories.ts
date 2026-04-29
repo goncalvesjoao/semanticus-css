@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/html';
-import * as AsideStories from '../semantics/aside.stories';
-import * as HeaderStories from '../semantics/header.stories';
-import * as ArticleStories from '../semantics/article.stories';
-import * as FooterStories from '../semantics/footer.stories';
+import { AsideDemo } from '@demos/semantics/aside.demo';
+import { FooterDemo } from '@demos/semantics/footer.demo';
+import { ArticleDemo } from '@demos/semantics/article.demo';
+import { HeaderDemo } from '@demos/semantics/header.demo';
 
 const meta: Meta = {
   title: 'Demo/Layout Examples',
@@ -10,16 +10,16 @@ const meta: Meta = {
 
 export default meta;
 
-export const MainAsideHeaderArticleFooter: StoryObj = {
-  render: () => `<main class="flow-h">
-  ${AsideStories.render(AsideStories.LeftSidebarNavigation.args)}
+export const MainWithAsideAndHeaderArticleFooter: StoryObj = {
+  render: () => `<main class="flow-h bg-success">
+  ${AsideDemo.pagesLinksSidebar({ class: 'bg-warning' })}
 
   <div class="flow-v">
-    ${HeaderStories.render({ ...HeaderStories.WithSearchNavigation.args, class: 'ps-d' })}
+    ${HeaderDemo.logoTaglineLinks({ class: 'text-bg-contrast' })}
 
-    ${ArticleStories.render({ ...ArticleStories.WithHgroup.args })}
+    ${ArticleDemo.helloWorld({ class: 'bg-secondary' })}
 
-    ${FooterStories.render({ ...FooterStories.WithNavigation.args, class: 'px-d text-bg-contrast-subtle' })}
+    ${FooterDemo.copyrightAndContactUs({ class: 'text-bg-contrast-subtle' })}
   </div>
 </main>`,
 };

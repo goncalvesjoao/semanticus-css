@@ -1,45 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/html';
-import * as NavStories from './nav.stories';
+import { AsideDemo, AsideDemoArgs, type AsideDemoArgsType } from '@demos/semantics/aside.demo';
 
-type Args = {
-  class: string;
-  slot: string;
-};
-
-export function render(args: Partial<Args>): string {
-  return `<aside class="${args.class}">
-  ${args.slot}
-</aside>`;
-}
-
-const meta: Meta<Args> = {
+const meta: Meta<AsideDemoArgsType> = {
   title: 'Semantics/<aside>',
-  render,
-  excludeStories: ['render'],
 };
 
 export default meta;
 
-export const Default: StoryObj<Args> = {
-  args: {
-    slot: "<h4>Logo</h4>",
-  },
-};
-
-export const LeftSidebarNavigation: StoryObj<Args> = {
-  args: {
-    class: 'sidebar',
-    slot: `<h4>Composites</h4>
-    ${NavStories.render(NavStories.PagesNavigation.args)}
-
-<a href="#">Help</a>`,
+export const PagesLinksSidebar: StoryObj<AsideDemoArgsType> = {
+  args: AsideDemoArgs.pagesLinksSidebar,
+  render(args) {
+    return AsideDemo.pagesLinksSidebar(args);
   }
 };
 
-export const RightSidebarNavigation: StoryObj<Args> = {
-  args: {
-    class: 'sidebar',
-    slot: `<h4>On this page</h4>
-    ${NavStories.render(NavStories.PageNavigation.args)}`,
+export const PageLinksSidebar: StoryObj<AsideDemoArgsType> = {
+  args: AsideDemoArgs.pageLinksSidebar,
+  render(args) {
+    return AsideDemo.pageLinksSidebar(args);
   }
 };

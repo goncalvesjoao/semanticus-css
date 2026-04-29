@@ -1,17 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/html';
-import { NavDemo, NavDemoArgs } from '@demos/semantics/nav.demo';
+import { NavDemo, NavDemoArgs, type NavDemoArgsType } from '@demos/semantics/nav.demo';
 
-const meta: Meta<NavDemoArgs> = {
+const meta: Meta<NavDemoArgsType> = {
   title: 'Semantics/<nav>',
 };
 
 export default meta;
 
-export const Overview: StoryObj<NavDemoArgs> = {
-  args: {
-    slot: "<h4>Logo</h4>",
-  },
-  render: (args) => {
-    return NavDemo.base(args);
+export const Overview: StoryObj<NavDemoArgsType> = {
+  args: NavDemoArgs.logoTaglineLinks,
+  render(args) {
+    return NavDemo.logoTaglineLinks(args);
   }
 };
