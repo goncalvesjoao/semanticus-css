@@ -15,7 +15,12 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "strict": false,
-    "types": ["node"]
+    "types": ["node"],
+    "paths": {
+      "@demos/*": ["./demos/*"],
+      "@stories/*": ["./stories/*"],
+      "@tests/*": ["./tests/*"],
+    }
   },
   "include": [
     "src/**/*",
