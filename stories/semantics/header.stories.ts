@@ -7,9 +7,16 @@ const meta: Meta<HeaderDemoArgsType> = {
 
 export default meta;
 
-export const Overview: StoryObj<HeaderDemoArgsType> = {
-  args: HeaderDemoArgs.logoTaglineLinks,
+export const Default: StoryObj<HeaderDemoArgsType> = {
+  args: HeaderDemoArgs.default,
   render(args) {
-    return HeaderDemo.logoTaglineLinks(args);
+    return HeaderDemo.default(args);
+  }
+};
+
+export const SearchDropdownAndLinks: StoryObj<HeaderDemoArgsType> = {
+  args: HeaderDemoArgs.searchDropdownAndLinks,
+  render(args) {
+    return HeaderDemo.searchDropdownAndLinks(args);
   }
 };

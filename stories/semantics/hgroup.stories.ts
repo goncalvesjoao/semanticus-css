@@ -7,9 +7,9 @@ const meta: Meta<HgroupDemoArgsType> = {
 
 export default meta;
 
-export const Overview: StoryObj<HgroupDemoArgsType> = {
-  args: HgroupDemoArgs.helloWorld,
+export const Default: StoryObj<HgroupDemoArgsType> = {
+  args: HgroupDemoArgs.default,
   render(args) {
-    return HgroupDemo.helloWorld(args);
+    return HgroupDemo.default(args);
   }
 };

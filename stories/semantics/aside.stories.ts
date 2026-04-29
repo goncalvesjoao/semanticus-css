@@ -7,16 +7,16 @@ const meta: Meta<AsideDemoArgsType> = {
 
 export default meta;
 
-export const PagesLinksSidebar: StoryObj<AsideDemoArgsType> = {
-  args: AsideDemoArgs.pagesLinksSidebar,
+export const RightSidebar: StoryObj<AsideDemoArgsType> = {
+  args: AsideDemoArgs.rightSidebar,
   render(args) {
-    return AsideDemo.pagesLinksSidebar(args);
+    return AsideDemo.rightSidebar(args);
   }
 };
 
-export const PageLinksSidebar: StoryObj<AsideDemoArgsType> = {
-  args: AsideDemoArgs.pageLinksSidebar,
+export const LeftSidebar: StoryObj<AsideDemoArgsType> = {
+  args: AsideDemoArgs.leftSidebar,
   render(args) {
-    return AsideDemo.pageLinksSidebar(args);
+    return AsideDemo.leftSidebar(args);
   }
 };

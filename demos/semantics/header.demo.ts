@@ -7,7 +7,7 @@ export type HeaderDemoArgsType = {
 };
 
 export const HeaderDemoArgs = {
-  logoTaglineLinks: {
+  default: {
     class: '',
     slot: NavDemo.logoTaglineLinks(),
   },
@@ -20,8 +20,8 @@ export const HeaderDemoArgs = {
 export const HeaderDemo = {
   render: renderElement.bind(null, 'header'),
 
-  logoTaglineLinks(args: HeaderDemoArgsType = {}) {
-    return this.render({ ...HeaderDemoArgs.logoTaglineLinks, ...args });
+  default(args: HeaderDemoArgsType = {}) {
+    return this.render({ ...HeaderDemoArgs.default, ...args });
   },
 
   searchDropdownAndLinks(args: HeaderDemoArgsType = {}) {

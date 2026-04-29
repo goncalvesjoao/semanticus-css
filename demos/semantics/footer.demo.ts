@@ -7,7 +7,7 @@ export type FooterDemoArgsType = {
 };
 
 export const FooterDemoArgs = {
-  copyrightAndContactUs: {
+  default: {
     class: '',
     slot: NavDemo.copyrightAndContactUs(),
   },
@@ -16,7 +16,7 @@ export const FooterDemoArgs = {
 export const FooterDemo = {
   render: renderElement.bind(null, 'footer'),
 
-  copyrightAndContactUs(args: FooterDemoArgsType = {}) {
-    return this.render({ ...FooterDemoArgs.copyrightAndContactUs, ...args });
+  default(args: FooterDemoArgsType = {}) {
+    return this.render({ ...FooterDemoArgs.default, ...args });
   },
 };

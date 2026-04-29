@@ -7,9 +7,9 @@ const meta: Meta<FooterDemoArgsType> = {
 
 export default meta;
 
-export const Overview: StoryObj<FooterDemoArgsType> = {
-  args: FooterDemoArgs.copyrightAndContactUs,
+export const Default: StoryObj<FooterDemoArgsType> = {
+  args: FooterDemoArgs.default,
   render(args) {
-    return FooterDemo.copyrightAndContactUs(args);
+    return FooterDemo.default(args);
   }
 };

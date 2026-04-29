@@ -13,7 +13,7 @@ export default meta;
 export const DocsPageExample: StoryObj = {
   render() {
     return `<div class="flow-h container">
-  ${AsideDemo.pagesLinksSidebar({ class: 'bg-secondary-subtle py-4' })}
+  ${AsideDemo.leftSidebar({ class: 'bg-secondary-subtle py-4' })}
 
   <main>
     ${HeaderDemo.searchDropdownAndLinks({ class: 'border-bottom ps-4 mb-4 bg-body' })}
@@ -22,10 +22,10 @@ export const DocsPageExample: StoryObj = {
       <div class="flow-v w-60 mx-auto">
         ${ArticleDemo.multipleParagraphs()}
 
-        ${FooterDemo.copyrightAndContactUs({ class: 'border-top mt-5' })}
+        ${FooterDemo.default({ class: 'border-top mt-5' })}
       </div>
 
-      ${AsideDemo.pageLinksSidebar({ class: 'border-start sticky-top' })}
+      ${AsideDemo.rightSidebar({ class: 'border-start sticky-top' })}
     </div>
   </main>
 </div>`;

@@ -7,14 +7,14 @@ export type ArticleDemoArgsType = {
 };
 
 export const ArticleDemoArgs = {
-  helloWorld: {
+  default: {
     class: '',
     slot: `<h2>Hello World</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.</p>`,
   },
   hgroup: {
     class: '',
-    slot: HgroupDemo.helloWorld(),
+    slot: HgroupDemo.default(),
   },
   multipleParagraphs: {
     class: '',
@@ -28,8 +28,8 @@ export const ArticleDemoArgs = {
 export const ArticleDemo = {
   render: renderElement.bind(null, 'article'),
 
-  helloWorld(args: ArticleDemoArgsType = {}) {
-    return this.render({ ...ArticleDemoArgs.helloWorld, ...args });
+  default(args: ArticleDemoArgsType = {}) {
+    return this.render({ ...ArticleDemoArgs.default, ...args });
   },
 
   hgroup(args: ArticleDemoArgsType = {}) {
