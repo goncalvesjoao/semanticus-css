@@ -3,17 +3,23 @@
  * Just the semantic component styles (no variables, no normalize)
  * Used by the full version which imports variables/normalize separately
  */
-@import "./_typography.css";
+@import "./_misc.css";
+
 @import "./attributes/_aria-busy.css";
 @import "./attributes/_hidden.css";
 @import "./attributes/_role-group-search.css";
 @import "./attributes/_role-toolbar.css";
 @import "./attributes/_role-tooltip.css";
+
+@import "./elements/_abbr.css";
+@import "./elements/_address.css";
 @import "./elements/_article.css";
 @import "./elements/_aside.css";
+@import "./elements/_blockquote.css";
 @import "./elements/_body.css";
 @import "./elements/_button.css";
 @import "./elements/_code.css";
+@import "./elements/_del.css";
 @import "./elements/_details.css";
 @import "./elements/_dialog.css";
 @import "./elements/_document.css";
@@ -21,13 +27,22 @@
 @import "./elements/_figure.css";
 @import "./elements/_footer.css";
 @import "./elements/_header.css";
+@import "./elements/_headings.css";
+@import "./elements/_hgroup.css";
 @import "./elements/_hr.css";
 @import "./elements/_input.css";
+@import "./elements/_ins.css";
 @import "./elements/_links.css";
+@import "./elements/_lists.css";
 @import "./elements/_main.css";
+@import "./elements/_mark.css";
 @import "./elements/_nav.css";
+@import "./elements/_p.css";
 @import "./elements/_progress.css";
 @import "./elements/_section.css";
+@import "./elements/_strong.css";
+@import "./elements/_sub.css";
+@import "./elements/_sup.css";
 @import "./elements/_table.css";
 @import "./elements/_type-checkbox-radio.css";
 @import "./elements/_type-color.css";

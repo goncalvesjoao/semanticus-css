@@ -1,11 +1,16 @@
 /**
  * Table
  */
-:where(table) {
-  width: 100%;
+table {
   border-collapse: collapse;
   border-spacing: 0;
+  color: var(--color-text);
+  font-style: normal;
+  font-weight: var(--font-weight);
+  margin-bottom: var(--typography-spacing-vertical);
+  margin-top: 0;
   text-indent: 0;
+  width: 100%;
 }
 
 th,
