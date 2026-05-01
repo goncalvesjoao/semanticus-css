@@ -7,8 +7,8 @@ const meta: Meta = {
 
 export default meta;
 
-export const basicTextarea: StoryObj = {
-  args: { html: TextareaDemo.basicTextarea },
+export const BasicUsage: StoryObj = {
+  args: { html: TextareaDemo.basic },
   render: (args) => args.html,
 };
 

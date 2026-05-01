@@ -7,8 +7,8 @@ const meta: Meta = {
 
 export default meta;
 
-export const basicSelect: StoryObj = {
-  args: { html: SelectDemo.basicSelect },
+export const BasicUsage: StoryObj = {
+  args: { html: SelectDemo.basic },
   render: (args) => args.html,
 };
 

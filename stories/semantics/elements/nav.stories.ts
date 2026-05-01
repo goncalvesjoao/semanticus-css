@@ -1,79 +1,73 @@
 import type { Meta, StoryObj } from "@storybook/html";
-import {
-  NavDemo,
-  NavDemoArgs,
-  type NavDemoArgsType,
-} from "@demos/semantics/elements";
+import { NavDemo } from "@demos/semantics/elements";
 
-const meta: Meta<NavDemoArgsType> = {
+const meta: Meta = {
   title: "Semantics/Elements/<nav>",
 };
 
 export default meta;
 
-export const LogoTaglineLinks: StoryObj<NavDemoArgsType> = {
-  args: NavDemoArgs.logoTaglineLinks,
-  render(args) {
-    return NavDemo.logoTaglineLinks(args);
-  },
+export const BasicUsage: StoryObj = {
+  args: { html: NavDemo.basic },
+  render: (args) => args.html,
 };
 
-export const SearchDropdownAndLinks: StoryObj<NavDemoArgsType> = {
-  args: NavDemoArgs.searchDropdownAndLinks,
-  render(args) {
-    return NavDemo.searchDropdownAndLinks(args);
-  },
+export const LogoTaglineLinks: StoryObj = {
+  args: { html: NavDemo.logoTaglineLinks },
+  render: (args) => args.html,
 };
 
-export const CopyrightAndContactUs: StoryObj<NavDemoArgsType> = {
-  args: NavDemoArgs.copyrightAndContactUs,
-  render(args) {
-    return NavDemo.copyrightAndContactUs(args);
-  },
+export const SearchDropdownAndLinks: StoryObj = {
+  args: { html: NavDemo.searchDropdownAndLinks },
+  render: (args) => args.html,
 };
 
-export const PagesLinks: StoryObj<NavDemoArgsType> = {
-  args: NavDemoArgs.pagesLinks,
-  render(args) {
-    return NavDemo.pagesLinks(args);
-  },
+export const CopyrightAndContactUs: StoryObj = {
+  args: { html: NavDemo.copyrightAndContactUs },
+  render: (args) => args.html,
 };
 
-export const PageLinks: StoryObj<NavDemoArgsType> = {
-  args: NavDemoArgs.pageLinks,
-  render(args) {
-    return NavDemo.pageLinks(args);
-  },
+export const PagesLinks: StoryObj = {
+  args: { html: NavDemo.pagesLinks },
+  render: (args) => args.html,
 };
 
-export const BasicSyntax: StoryObj = {
-  render: () => NavDemo.basicSyntax(),
+export const PageLinks: StoryObj = {
+  args: { html: NavDemo.pageLinks },
+  render: (args) => args.html,
 };
 
 export const ContrastLinks: StoryObj = {
-  render: () => NavDemo.contrastLinks(),
+    args: { html: NavDemo.contrastLinks },
+  render: (args) => args.html,
 };
 
 export const IconButtons: StoryObj = {
-  render: () => NavDemo.iconButtons(),
+    args: { html: NavDemo.iconButtons },
+  render: (args) => args.html,
 };
 
 export const WithButton: StoryObj = {
-  render: () => NavDemo.withButton(),
+    args: { html: NavDemo.withButton },
+  render: (args) => args.html,
 };
 
 export const WithDropdown: StoryObj = {
-  render: () => NavDemo.withDropdown(),
+    args: { html: NavDemo.withDropdown },
+  render: (args) => args.html,
 };
 
 export const VerticalInAside: StoryObj = {
-  render: () => NavDemo.verticalInAside(),
+    args: { html: NavDemo.verticalInAside },
+  render: (args) => args.html,
 };
 
 export const Breadcrumb: StoryObj = {
-  render: () => NavDemo.breadcrumb(),
+    args: { html: NavDemo.breadcrumb },
+  render: (args) => args.html,
 };
 
 export const Overflow: StoryObj = {
-  render: () => NavDemo.overflow(),
+    args: { html: NavDemo.overflow },
+  render: (args) => args.html,
 };

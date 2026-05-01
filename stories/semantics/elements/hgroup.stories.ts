@@ -1,19 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/html";
-import {
-  HgroupDemo,
-  HgroupDemoArgs,
-  type HgroupDemoArgsType,
-} from "@demos/semantics/elements";
+import { HgroupDemo } from "@demos/semantics/elements";
 
-const meta: Meta<HgroupDemoArgsType> = {
+const meta: Meta = {
   title: "Semantics/Elements/<hgroup>",
 };
 
 export default meta;
 
-export const Default: StoryObj<HgroupDemoArgsType> = {
-  args: HgroupDemoArgs.default,
-  render(args) {
-    return HgroupDemo.default(args);
-  },
+export const BasicUsage: StoryObj = {
+  args: { html: HgroupDemo.basic },
+  render: (args) => args.html,
 };

@@ -1,12 +1,7 @@
 import { renderElement } from "@demos/utils";
-import { HeaderDemo } from "@demos/semantics/elements/header.demo";
-import { FooterDemo } from "@demos/semantics/elements/footer.demo";
-import { ArticleDemo } from "@demos/semantics/elements/article.demo";
-
-export type MainDemoArgsType = Record<string, string> & {
-  slot?: string;
-  class?: string;
-};
+import * as HeaderDemo from "@demos/semantics/elements/header.demo";
+import * as FooterDemo from "@demos/semantics/elements/footer.demo";
+import * as ArticleDemo from "@demos/semantics/elements/article.demo";
 
 export const MainDemoArgs = {
   default: {

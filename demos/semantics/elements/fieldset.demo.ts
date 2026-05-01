@@ -1,17 +1,6 @@
 export const basic = `<fieldset>
-  <legend>Personal Information</legend>
-  <label>
-    First name
-    <input name="first_name" placeholder="First name" autocomplete="given-name" />
-  </label>
-  <label>
-    Last name
-    <input name="last_name" placeholder="Last name" autocomplete="family-name" />
-  </label>
-  <label>
-    Email
-    <input type="email" name="email" placeholder="Email" autocomplete="email" />
-  </label>
+  <label>First name</label>
+  <input placeholder="First name" autocomplete="given-name" />
 </fieldset>
 `;
 
@@ -30,7 +19,7 @@ export const insideForm = `<form>
 </form>
 `;
 
-export const disabled_ = `<fieldset disabled>
+export const disabled = `<fieldset disabled>
   <legend>Disabled fieldset</legend>
   <label>
     Username
@@ -41,6 +30,23 @@ export const disabled_ = `<fieldset disabled>
     <input type="password" name="password" placeholder="Password" />
   </label>
   <input type="submit" value="Sign in" />
+</fieldset>
+`;
+
+export const section = `<fieldset>
+  <legend>Personal Information</legend>
+  <label>
+    First name
+    <input name="first_name" placeholder="First name" autocomplete="given-name" />
+  </label>
+  <label>
+    Last name
+    <input name="last_name" placeholder="Last name" autocomplete="family-name" />
+  </label>
+  <label>
+    Email
+    <input type="email" name="email" placeholder="Email" autocomplete="email" />
+  </label>
 </fieldset>
 `;
 

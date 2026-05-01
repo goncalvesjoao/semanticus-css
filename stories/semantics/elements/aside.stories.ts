@@ -1,26 +1,23 @@
 import type { Meta, StoryObj } from "@storybook/html";
-import {
-  AsideDemo,
-  AsideDemoArgs,
-  type AsideDemoArgsType,
-} from "@demos/semantics/elements";
+import { AsideDemo } from "@demos/semantics/elements";
 
-const meta: Meta<AsideDemoArgsType> = {
+const meta: Meta = {
   title: "Semantics/Elements/<aside>",
 };
 
 export default meta;
 
-export const RightSidebar: StoryObj<AsideDemoArgsType> = {
-  args: AsideDemoArgs.rightSidebar,
-  render(args) {
-    return AsideDemo.rightSidebar(args);
-  },
+export const BasicUsage: StoryObj = {
+  args: { html: AsideDemo.basic },
+  render: (args) => args.html,
 };
 
-export const LeftSidebar: StoryObj<AsideDemoArgsType> = {
-  args: AsideDemoArgs.leftSidebar,
-  render(args) {
-    return AsideDemo.leftSidebar(args);
-  },
+export const LeftSidebar: StoryObj = {
+  args: { html: AsideDemo.leftSidebar },
+  render: (args) => args.html,
+};
+
+export const RightSidebar: StoryObj = {
+  args: { html: AsideDemo.rightSidebar },
+  render: (args) => args.html,
 };

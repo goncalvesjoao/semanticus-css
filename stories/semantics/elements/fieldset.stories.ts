@@ -17,13 +17,18 @@ export const insideForm: StoryObj = {
   render: (args) => args.html,
 };
 
-export const disabled_: StoryObj = {
-  name: "Disabled",
-  args: { html: FieldsetDemo.disabled_ },
+export const disabled: StoryObj = {
+  args: { html: FieldsetDemo.disabled },
   render: (args) => args.html,
 };
 
-export const withGroup: StoryObj = {
+export const AsASection: StoryObj = {
+  name: "As a section",
+  args: { html: FieldsetDemo.section },
+  render: (args) => args.html,
+};
+
+export const UsageWithGroup: StoryObj = {
   args: { html: FieldsetDemo.withGroup },
   render: (args) => args.html,
 };

@@ -1,4 +1,4 @@
-export const basicTable = `<table>
+export const basic = `<table>
   <thead>
     <tr>
       <th>Name</th>

@@ -1,4 +1,4 @@
-export const basicTextarea = `<textarea
+export const basic = `<textarea
   name="bio"
   placeholder="Write a professional short bio..."
   aria-label="Professional short bio"

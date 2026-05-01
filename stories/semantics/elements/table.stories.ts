@@ -7,7 +7,7 @@ const meta: Meta = {
 
 export default meta;
 
-export const basicTable: StoryObj = {
-  args: { html: TableDemo.basicTable },
+export const BasicUsage: StoryObj = {
+  args: { html: TableDemo.basic },
   render: (args) => args.html,
 };

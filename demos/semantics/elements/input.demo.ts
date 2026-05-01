@@ -1,27 +1,30 @@
-export const basicInputs = `<input type="text" name="text" placeholder="Text" aria-label="Text" />
-<input type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email" />
-<input type="number" name="number" placeholder="Number" aria-label="Number" />
-<input type="password" name="password" placeholder="Password" aria-label="Password" />
-<input type="tel" name="tel" placeholder="Tel" aria-label="Tel" autocomplete="tel" />
-<input type="url" name="url" placeholder="Url" aria-label="Url" />
-`;
+export const basic = `<input type="text" name="text" placeholder="Text" aria-label="Text" />`;
 
-export const datetimeInput = `<input type="date" name="date" aria-label="Date" />
-<input type="datetime-local" name="datetime-local" aria-label="Datetime local" />
-<input type="month" name="month" aria-label="Month" />
-<input type="time" name="time" aria-label="Time" />
-`;
+export const email = `<input type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email" />`;
 
-export const searchInput = `<input type="search" name="search" placeholder="Search" aria-label="Search" />
-`;
+export const number = `<input type="number" name="number" placeholder="Number" aria-label="Number" />`;
 
-export const colorInput = `<input type="color" value="#ff9500" aria-label="Color picker" />
-`;
+export const password = `<input type="password" name="password" placeholder="Password" aria-label="Password" />`;
 
-export const fileInput = `<input type="file" />
-`;
+export const telephone = `<input type="tel" name="tel" placeholder="Tel" aria-label="Tel" autocomplete="tel" />`;
 
-export const basicCheckbox = `<fieldset>
+export const url = `<input type="url" name="url" placeholder="Url" aria-label="Url" />`;
+
+export const date = `<input type="date" name="date" aria-label="Date" />`;
+
+export const datetime = `<input type="datetime-local" name="datetime-local" aria-label="Datetime local" />`;
+
+export const month = `<input type="month" name="month" aria-label="Month" />`;
+
+export const time = `<input type="time" name="time" aria-label="Time" />`;
+
+export const search = `<input type="search" name="search" placeholder="Search" aria-label="Search" />`;
+
+export const color = `<input type="color" value="#ff9500" aria-label="Color picker" />`;
+
+export const file = `<input type="file" />`;
+
+export const checkbox = `<fieldset>
   <legend>Language preferences:</legend>
   <label>
     <input type="checkbox" name="english" checked />

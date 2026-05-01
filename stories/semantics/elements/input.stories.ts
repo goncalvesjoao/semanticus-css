@@ -7,33 +7,73 @@ const meta: Meta = {
 
 export default meta;
 
-export const basicInputs: StoryObj = {
-  args: { html: InputDemo.basicInputs },
+export const BasicUsage: StoryObj = {
+  args: { html: InputDemo.basic },
   render: (args) => args.html,
 };
 
-export const datetimeInput: StoryObj = {
-  args: { html: InputDemo.datetimeInput },
+export const email: StoryObj = {
+  args: { html: InputDemo.email },
   render: (args) => args.html,
 };
 
-export const searchInput: StoryObj = {
-  args: { html: InputDemo.searchInput },
+export const number: StoryObj = {
+  args: { html: InputDemo.number },
   render: (args) => args.html,
 };
 
-export const colorInput: StoryObj = {
-  args: { html: InputDemo.colorInput },
+export const password: StoryObj = {
+  args: { html: InputDemo.password },
   render: (args) => args.html,
 };
 
-export const fileInput: StoryObj = {
-  args: { html: InputDemo.fileInput },
+export const telephone: StoryObj = {
+  args: { html: InputDemo.telephone },
   render: (args) => args.html,
 };
 
-export const basicCheckbox: StoryObj = {
-  args: { html: InputDemo.basicCheckbox },
+export const url: StoryObj = {
+  args: { html: InputDemo.url },
+  render: (args) => args.html,
+};
+
+export const date: StoryObj = {
+  args: { html: InputDemo.date },
+  render: (args) => args.html,
+};
+
+export const datetime: StoryObj = {
+  args: { html: InputDemo.datetime },
+  render: (args) => args.html,
+};
+
+export const month: StoryObj = {
+  args: { html: InputDemo.month },
+  render: (args) => args.html,
+};
+
+export const time: StoryObj = {
+  args: { html: InputDemo.time },
+  render: (args) => args.html,
+};
+
+export const search: StoryObj = {
+  args: { html: InputDemo.search },
+  render: (args) => args.html,
+};
+
+export const color: StoryObj = {
+  args: { html: InputDemo.color },
+  render: (args) => args.html,
+};
+
+export const file: StoryObj = {
+  args: { html: InputDemo.file },
+  render: (args) => args.html,
+};
+
+export const checkbox: StoryObj = {
+  args: { html: InputDemo.checkbox },
   render: (args) => args.html,
 };
 

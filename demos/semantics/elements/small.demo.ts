@@ -1,4 +1,4 @@
-export const helperText = `<input
+export const basic = `<input
   type="email"
   name="email"
   placeholder="Email"

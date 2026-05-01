@@ -14,9 +14,9 @@ Use the `value` and `max` attributes to set progress, or omit `value` for an ind
 
 Pair with a `<label>` to give it an accessible name for screen readers.
 
-## Basic Progress
+## Basic Usage
 
-<HtmlPreviewer :code="ProgressDemo.basicProgress" />
+<HtmlPreviewer :code="ProgressDemo.basic" />
 
 ## Indeterminate Progress
 

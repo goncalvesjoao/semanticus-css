@@ -1,19 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/html";
-import {
-  FooterDemo,
-  FooterDemoArgs,
-  type FooterDemoArgsType,
-} from "@demos/semantics/elements";
+import { FooterDemo } from "@demos/semantics/elements";
 
-const meta: Meta<FooterDemoArgsType> = {
+const meta: Meta = {
   title: "Semantics/Elements/<footer>",
 };
 
 export default meta;
 
-export const Default: StoryObj<FooterDemoArgsType> = {
-  args: FooterDemoArgs.default,
-  render(args) {
-    return FooterDemo.default(args);
-  },
+export const BasicUsage: StoryObj = {
+  args: { html: FooterDemo.basic },
+  render: (args) => args.html,
 };

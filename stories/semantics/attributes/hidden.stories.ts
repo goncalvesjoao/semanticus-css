@@ -1,18 +1,18 @@
 import type { Meta, StoryObj } from "@storybook/html";
-import { LabelDemo } from "@demos/semantics/elements";
+import { HiddenDemo } from "@demos/semantics/attributes";
 
 const meta: Meta = {
-  title: "Semantics/Elements/<label>",
+  title: "Semantics/Attributes/[hidden]",
 };
 
 export default meta;
 
 export const BasicUsage: StoryObj = {
-  args: { html: LabelDemo.basic },
+  args: { html: HiddenDemo.basic },
   render: (args) => args.html,
 };
 
-export const inputInside: StoryObj = {
-  args: { html: LabelDemo.inputInside },
+export const toggle: StoryObj = {
+  args: { html: HiddenDemo.toggle },
   render: (args) => args.html,
 };

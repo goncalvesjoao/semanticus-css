@@ -12,7 +12,7 @@ The `<button>` element is a native interactive control that is keyboard-accessib
 
 Use `type="submit"` for form submission, `type="reset"` to clear a form, without needing JavaScript.
 
-## Basic Button
+## Basic Usage
 
 <HtmlPreviewer :code="ButtonDemo.basic" />
 

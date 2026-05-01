@@ -1,4 +1,4 @@
-export const accordion = `<details open name="accordion-group">
+export const basic = `<details open name="accordion-group">
   <summary>Accordion 1</summary>
   <p>Flamingos are known for their bright pink feathers and distinctive long necks. These birds are social creatures that live in large groups, and a group of flamingos is called a flamboyance. They can often be seen standing on one leg, which helps them conserve body heat.</p>
 </details>

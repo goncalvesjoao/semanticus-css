@@ -7,8 +7,8 @@ const meta: Meta = {
 
 export default meta;
 
-export const accordion: StoryObj = {
-  args: { html: DetailsDemo.accordion },
+export const BasicUsage: StoryObj = {
+  args: { html: DetailsDemo.basic },
   render: (args) => args.html,
 };
 

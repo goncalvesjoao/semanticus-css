@@ -1,4 +1,4 @@
-export const basicSelect = `<select name="favorite-cuisine" aria-label="Select your favorite cuisine..." required>
+export const basic = `<select name="favorite-cuisine" aria-label="Select your favorite cuisine..." required>
   <option selected disabled value="">
     Select your favorite cuisine...
   </option>

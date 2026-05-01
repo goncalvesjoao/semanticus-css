@@ -4,6 +4,21 @@ title: input
 
 <script setup>
 import { InputDemo } from "@demos/semantics/elements";
+const basicUsage = [
+  InputDemo.basic,
+  InputDemo.email,
+  InputDemo.number,
+  InputDemo.password,
+  InputDemo.telephone,
+  InputDemo.url,
+].join('\n');
+const dateUsage = [
+  InputDemo.date,
+  InputDemo.datetime,
+  InputDemo.datetime,
+  InputDemo.month,
+  InputDemo.time,
+].join('\n');
 </script>
 
 # &lt;input&gt;
@@ -18,41 +33,41 @@ For validation states see [[aria-invalid]](/docs/semantics/aria-invalid).
 
 For helper text below inputs see [&lt;small&gt;](/docs/semantics/small).
 
-## Basic Inputs
+## Basic Usage
 
-<HtmlPreviewer :code="InputDemo.basicInputs" />
+<HtmlPreviewer :code="basicUsage" />
 
-## Datetime Input
+## Date Inputs
 
 Datetime inputs come with an icon.
 
-<HtmlPreviewer :code="InputDemo.datetimeInput" />
+<HtmlPreviewer :code="dateUsage" />
 
 ## Search Input
 
 `type="search"` comes with a distinctive style.
 
-<HtmlPreviewer :code="InputDemo.searchInput" />
+<HtmlPreviewer :code="InputDemo.search" />
 
 ## Color Input
 
 `type="color"` is also consistent with the other input types.
 
-<HtmlPreviewer :code="InputDemo.colorInput" />
+<HtmlPreviewer :code="InputDemo.color" />
 
 ## File Input
 
 Input type file button has a secondary button style.
 
-<HtmlPreviewer :code="InputDemo.fileInput" />
+<HtmlPreviewer :code="InputDemo.file" />
 
 ## Checkboxes
 
 The native `<input type="checkbox">` with a custom and responsive style.
 
-### Basic Checkbox
+### Basic Usage
 
-<HtmlPreviewer :code="InputDemo.basicCheckbox" />
+<HtmlPreviewer :code="InputDemo.checkbox" />
 
 ### Horizontal Stacking
 

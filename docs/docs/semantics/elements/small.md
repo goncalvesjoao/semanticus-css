@@ -12,6 +12,6 @@ import { SmallDemo } from "@demos/semantics/elements";
 
 Use `aria-describedby` to associate it with the input.
 
-## Helper Text
+## Basic Usage
 
-<HtmlPreviewer :code="SmallDemo.helperText" />
+<HtmlPreviewer :code="SmallDemo.basic" />

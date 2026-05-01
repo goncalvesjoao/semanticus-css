@@ -10,7 +10,7 @@ import { FieldsetDemo } from "@demos/semantics/elements";
 
 `<fieldset>` groups related form elements together and can optionally include a `<legend>` label.
 
-## Basic Fieldset
+## Basic Usage
 
 <HtmlPreviewer :code="FieldsetDemo.basic" />
 
@@ -20,11 +20,15 @@ Inputs are `width: 100%` by default and match button sizes for consistent layout
 
 <HtmlPreviewer :code="FieldsetDemo.insideForm" />
 
-## Disabled Fieldset
+## Disabled
 
 Setting `disabled` on a `<fieldset>` disables all contained form elements.
 
-<HtmlPreviewer :code="FieldsetDemo.disabled_" />
+<HtmlPreviewer :code="FieldsetDemo.disabled" />
+
+## As a section
+
+<HtmlPreviewer :code="FieldsetDemo.section" />
 
 ## Usage with Group
 

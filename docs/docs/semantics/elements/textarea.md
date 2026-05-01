@@ -10,9 +10,9 @@ import { TextareaDemo } from "@demos/semantics/elements";
 
 The `<textarea>` element is a multi-line plain-text input for free-form entry. Use the `rows` attribute to control default height. Always pair with a `<label>` or `aria-label` to provide an accessible name for screen readers.
 
-## Basic Textarea
+## Basic Usage
 
-<HtmlPreviewer :code="TextareaDemo.basicTextarea" />
+<HtmlPreviewer :code="TextareaDemo.basic" />
 
 ## With Label
 

@@ -1,26 +1,18 @@
 import type { Meta, StoryObj } from "@storybook/html";
-import {
-  HeaderDemo,
-  HeaderDemoArgs,
-  type HeaderDemoArgsType,
-} from "@demos/semantics/elements";
+import { HeaderDemo } from "@demos/semantics/elements";
 
-const meta: Meta<HeaderDemoArgsType> = {
+const meta: Meta = {
   title: "Semantics/Elements/<header>",
 };
 
 export default meta;
 
-export const Default: StoryObj<HeaderDemoArgsType> = {
-  args: HeaderDemoArgs.default,
-  render(args) {
-    return HeaderDemo.default(args);
-  },
+export const BasicUsage: StoryObj = {
+  args: { html: HeaderDemo.basic },
+  render: (args) => args.html,
 };
 
-export const SearchDropdownAndLinks: StoryObj<HeaderDemoArgsType> = {
-  args: HeaderDemoArgs.searchDropdownAndLinks,
-  render(args) {
-    return HeaderDemo.searchDropdownAndLinks(args);
-  },
+export const WithSearchDropdownAndLinks: StoryObj = {
+  args: { html: HeaderDemo.withSearchDropdownAndLinks },
+  render: (args) => args.html,
 };

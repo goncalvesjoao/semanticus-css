@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/html";
-import { DisabledDemo } from "@demos/semantics/elements";
+import { DisabledDemo } from "@demos/semantics/attributes";
 
 const meta: Meta = {
-  title: "Semantics/Elements/[disabled]",
+  title: "Semantics/Attributes/[disabled]",
 };
 
 export default meta;
 
-export const button: StoryObj = {
-  args: { html: DisabledDemo.button },
+export const BasicUsage: StoryObj = {
+  args: { html: DisabledDemo.basic },
   render: (args) => args.html,
 };
 

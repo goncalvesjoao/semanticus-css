@@ -12,9 +12,9 @@ The `<details>` element creates a native disclosure widget — a collapsible sec
 
 Use the `open` attribute to expand it by default. Set the same `name` attribute on multiple `<details>` elements to create an exclusive accordion where only one can be open at a time.
 
-## Overview
+## Basic Usage
 
-<HtmlPreviewer :code="DetailsDemo.accordion" />
+<HtmlPreviewer :code="DetailsDemo.basic" />
 
 For style variants, see [Details Variants](/docs/variants/details).
 

@@ -12,32 +12,27 @@ The `<article>` element represents a self-contained composition — such as a bl
 
 It carries semantic meaning that distinguishes it from a generic `<div>`.
 
-## Styling
+## Basic Usage
 
-By default, the `<article>` element has no visual styling. To create a card-like appearance, apply the `.card` class:
+By default, the `<article>` element has no visual styling.
 
-```html
-<article class="card">
-  <h3>Card Title</h3>
-  <p>Card content goes here.</p>
-</article>
-```
+<HtmlPreviewer :code="ArticleDemo.basic" />
 
-## Basic Card
+## Card
 
-<HtmlPreviewer :code="ArticleDemo.basicCard()" />
+<HtmlPreviewer :code="ArticleDemo.card" />
 
 ## Card with Header
 
-<HtmlPreviewer :code="ArticleDemo.cardWithHeader()" />
+<HtmlPreviewer :code="ArticleDemo.cardWithHeader" />
 
 ## Card with Footer
 
-<HtmlPreviewer :code="ArticleDemo.cardWithFooter()" />
+<HtmlPreviewer :code="ArticleDemo.cardWithFooter" />
 
 ## Complete Card
 
-<HtmlPreviewer :code="ArticleDemo.completeCard()" />
+<HtmlPreviewer :code="ArticleDemo.completeCard" />
 
 ## Semantic vs Visual
 

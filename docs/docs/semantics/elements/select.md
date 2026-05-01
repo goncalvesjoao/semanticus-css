@@ -10,9 +10,9 @@ import { SelectDemo } from "@demos/semantics/elements";
 
 The `<select>` element creates a dropdown list of `<option>` items. Use the `multiple` attribute to allow multi-selection and `size` to show multiple rows. Always pair with a `<label>` to provide an accessible name.
 
-## Basic Select
+## Basic Usage
 
-<HtmlPreviewer :code="SelectDemo.basicSelect" />
+<HtmlPreviewer :code="SelectDemo.basic" />
 
 ## Select Multiple
 
