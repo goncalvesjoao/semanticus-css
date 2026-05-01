@@ -1,13 +1,13 @@
-import { renderElement } from '@demos/utils';
+import { renderElement } from "@demos/utils";
 
-export type NavDemoArgsType = {
+export type NavDemoArgsType = Record<string, string> & {
   slot?: string;
   class?: string;
 };
 
 export const NavDemoArgs = {
   logoTaglineLinks: {
-    class: '',
+    class: "",
     slot: `<h2>logo</h2>
 
 <h3>tagline</h3>
@@ -17,7 +17,7 @@ export const NavDemoArgs = {
 </ul>`,
   },
   searchDropdownAndLinks: {
-    class: '',
+    class: "",
     slot: `<input class="w-auto" type="search" name="search" placeholder="Search" aria-label="Search" />
 
 <ul>
@@ -36,7 +36,7 @@ export const NavDemoArgs = {
 </ul>`,
   },
   copyrightAndContactUs: {
-    class: '',
+    class: "",
     slot: `<p>Copyright</p>
 
 <ul>
@@ -44,14 +44,14 @@ export const NavDemoArgs = {
 </ul>`,
   },
   pagesLinks: {
-    class: '',
+    class: "",
     slot: `<ul>
   <li><a href="#">Overview</a></li>
   <li><a href="#">Layout</a></li>
 </ul>`,
   },
   pageLinks: {
-    class: '',
+    class: "",
     slot: `<ul>
   <li><a href="#">Install</a></li>
   <li><a href="#">Usage</a></li>
@@ -60,7 +60,7 @@ export const NavDemoArgs = {
 };
 
 export const NavDemo = {
-  render: renderElement.bind(null, 'nav'),
+  render: renderElement.bind(null, "nav"),
   logoTaglineLinks(args: NavDemoArgsType = {}) {
     return this.render({ ...NavDemoArgs.logoTaglineLinks, ...args });
   },

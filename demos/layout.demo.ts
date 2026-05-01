@@ -1,32 +1,35 @@
-import { renderElement } from '@demos/utils';
-import { AsideDemo } from '@demos/semantics/aside.demo';
-import { FooterDemo } from '@demos/semantics/footer.demo';
-import { HeaderDemo } from '@demos/semantics/header.demo';
-import { MainDemo } from '@demos/semantics/main.demo';
+import { renderElement } from "@demos/utils";
+import { AsideDemo } from "@demos/semantics/elements/aside.demo";
+import { FooterDemo } from "@demos/semantics/elements/footer.demo";
+import { HeaderDemo } from "@demos/semantics/elements/header.demo";
+import { MainDemo } from "@demos/semantics/elements/main.demo";
 
 export type LayoutDemoArgsType = Record<string, any> & {
   class?: string;
-  mainClass?: string,
-  articleClass?: string,
-  headerClass?: string,
-  footerClass?: string,
-  leftSidebarClass?: string
-  rightSidebarClass?: string
+  mainClass?: string;
+  articleClass?: string;
+  headerClass?: string;
+  footerClass?: string;
+  leftSidebarClass?: string;
+  rightSidebarClass?: string;
 };
 
 export const LayoutDemoArgs = {
   default: {
-    class: '',
-    slot: '',
+    class: "",
+    slot: "",
   },
 };
 
 export const LayoutDemo = {
   render(args: LayoutDemoArgsType = {}) {
-    const cssClass = args.class || '';
+    const cssClass = args.class || "";
     delete args.class;
 
-    return renderElement('div', { ...args, class: `${cssClass} flow-h`.trim() });
+    return renderElement("div", {
+      ...args,
+      class: `${cssClass} flow-h`.trim(),
+    });
   },
 
   default(args: LayoutDemoArgsType = {}) {
@@ -40,7 +43,7 @@ export const LayoutDemo = {
 
     return this.render({
       ...restArgs,
-      slot: `${HeaderDemo.default({ class: headerClass })}`
+      slot: `${HeaderDemo.default({ class: headerClass })}`,
     });
   },
 
@@ -50,7 +53,7 @@ export const LayoutDemo = {
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
-${HeaderDemo.default({ class: headerClass })}`
+${HeaderDemo.default({ class: headerClass })}`,
     });
   },
 
@@ -60,18 +63,24 @@ ${HeaderDemo.default({ class: headerClass })}`
     return this.render({
       ...restArgs,
       slot: `${HeaderDemo.default({ class: headerClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
   withLeftSidebarAndHeaderAndRightSidebar(args: LayoutDemoArgsType = {}) {
-    const { leftSidebarClass, mainClass, headerClass, rightSidebarClass, ...restArgs } = args;
+    const {
+      leftSidebarClass,
+      mainClass,
+      headerClass,
+      rightSidebarClass,
+      ...restArgs
+    } = args;
 
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
 ${HeaderDemo.default({ class: headerClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
@@ -82,7 +91,7 @@ ${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
 
     return this.render({
       ...restArgs,
-      slot: `${FooterDemo.default({ class: footerClass })}`
+      slot: `${FooterDemo.default({ class: footerClass })}`,
     });
   },
 
@@ -92,7 +101,7 @@ ${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
-${FooterDemo.default({ class: footerClass })}`
+${FooterDemo.default({ class: footerClass })}`,
     });
   },
 
@@ -102,18 +111,24 @@ ${FooterDemo.default({ class: footerClass })}`
     return this.render({
       ...restArgs,
       slot: `${FooterDemo.default({ class: footerClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
   withLeftSidebarAndFooterAndRightSidebar(args: LayoutDemoArgsType = {}) {
-    const { leftSidebarClass, mainClass, footerClass, rightSidebarClass, ...restArgs } = args;
+    const {
+      leftSidebarClass,
+      mainClass,
+      footerClass,
+      rightSidebarClass,
+      ...restArgs
+    } = args;
 
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
 ${FooterDemo.default({ class: footerClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
@@ -124,7 +139,7 @@ ${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
 
     return this.render({
       ...restArgs,
-      slot: `${MainDemo.default({ class: mainClass })}`
+      slot: `${MainDemo.default({ class: mainClass })}`,
     });
   },
 
@@ -134,7 +149,7 @@ ${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
-${MainDemo.default({ class: mainClass })}`
+${MainDemo.default({ class: mainClass })}`,
     });
   },
 
@@ -144,18 +159,19 @@ ${MainDemo.default({ class: mainClass })}`
     return this.render({
       ...restArgs,
       slot: `${MainDemo.default({ class: mainClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
   withLeftSidebarAndMainAndRightSidebar(args: LayoutDemoArgsType = {}) {
-    const { leftSidebarClass, mainClass, rightSidebarClass, ...restArgs } = args;
+    const { leftSidebarClass, mainClass, rightSidebarClass, ...restArgs } =
+      args;
 
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
 ${MainDemo.default({ class: mainClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
@@ -166,7 +182,7 @@ ${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
 
     return this.render({
       ...restArgs,
-      slot: `${MainDemo.withHeader({ class: `${mainClass} flow-v`.trim(), headerClass })}`
+      slot: `${MainDemo.withHeader({ class: `${mainClass} flow-v`.trim(), headerClass })}`,
     });
   },
 
@@ -176,7 +192,7 @@ ${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
-${MainDemo.withHeader({ class: `${mainClass} flow-v`.trim(), headerClass })}`
+${MainDemo.withHeader({ class: `${mainClass} flow-v`.trim(), headerClass })}`,
     });
   },
 
@@ -186,18 +202,26 @@ ${MainDemo.withHeader({ class: `${mainClass} flow-v`.trim(), headerClass })}`
     return this.render({
       ...restArgs,
       slot: `${MainDemo.withHeader({ class: `${mainClass} flow-v`.trim(), headerClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
-  withLeftSidebarAndMainWithHeaderAndRightSidebar(args: LayoutDemoArgsType = {}) {
-    const { leftSidebarClass, mainClass, headerClass, rightSidebarClass, ...restArgs } = args;
+  withLeftSidebarAndMainWithHeaderAndRightSidebar(
+    args: LayoutDemoArgsType = {},
+  ) {
+    const {
+      leftSidebarClass,
+      mainClass,
+      headerClass,
+      rightSidebarClass,
+      ...restArgs
+    } = args;
 
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
 ${MainDemo.withHeader({ class: `${mainClass} flow-v`.trim(), headerClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
@@ -208,7 +232,7 @@ ${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
 
     return this.render({
       ...restArgs,
-      slot: `${MainDemo.withFooter({ class: `${mainClass} flow-v`.trim(), footerClass })}`
+      slot: `${MainDemo.withFooter({ class: `${mainClass} flow-v`.trim(), footerClass })}`,
     });
   },
 
@@ -218,7 +242,7 @@ ${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
-${MainDemo.withFooter({ class: `${mainClass} flow-v`.trim(), footerClass })}`
+${MainDemo.withFooter({ class: `${mainClass} flow-v`.trim(), footerClass })}`,
     });
   },
 
@@ -228,60 +252,90 @@ ${MainDemo.withFooter({ class: `${mainClass} flow-v`.trim(), footerClass })}`
     return this.render({
       ...restArgs,
       slot: `${MainDemo.withFooter({ class: `${mainClass} flow-v`.trim(), footerClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
-  withLeftSidebarAndMainWithFooterAndRightSidebar(args: LayoutDemoArgsType = {}) {
-    const { leftSidebarClass, mainClass, footerClass, rightSidebarClass, ...restArgs } = args;
+  withLeftSidebarAndMainWithFooterAndRightSidebar(
+    args: LayoutDemoArgsType = {},
+  ) {
+    const {
+      leftSidebarClass,
+      mainClass,
+      footerClass,
+      rightSidebarClass,
+      ...restArgs
+    } = args;
 
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
 ${MainDemo.withFooter({ class: `${mainClass} flow-v`.trim(), footerClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
   // Main With Header Plus Footer
 
   withMainWithHeaderPlusFooter(args: LayoutDemoArgsType = {}) {
-    const { mainClass, articleClass, headerClass, footerClass, ...restArgs } = args;
+    const { mainClass, articleClass, headerClass, footerClass, ...restArgs } =
+      args;
 
     return this.render({
       ...restArgs,
-      slot: `${MainDemo.withHeaderPlusFooter({ class: `${mainClass} flow-v`.trim(), headerClass, footerClass })}`
+      slot: `${MainDemo.withHeaderPlusFooter({ class: `${mainClass} flow-v`.trim(), headerClass, footerClass })}`,
     });
   },
 
   withLeftSidebarAndMainWithHeaderPlusFooter(args: LayoutDemoArgsType = {}) {
-    const { leftSidebarClass, mainClass, headerClass, footerClass, ...restArgs } = args;
+    const {
+      leftSidebarClass,
+      mainClass,
+      headerClass,
+      footerClass,
+      ...restArgs
+    } = args;
 
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
-${MainDemo.withHeaderPlusFooter({ class: `${mainClass} flow-v`.trim(), headerClass, footerClass })}`
+${MainDemo.withHeaderPlusFooter({ class: `${mainClass} flow-v`.trim(), headerClass, footerClass })}`,
     });
   },
 
   withMainWithHeaderPlusFooterAndRightSidebar(args: LayoutDemoArgsType = {}) {
-    const { mainClass, headerClass, footerClass, rightSidebarClass, ...restArgs } = args;
+    const {
+      mainClass,
+      headerClass,
+      footerClass,
+      rightSidebarClass,
+      ...restArgs
+    } = args;
 
     return this.render({
       ...restArgs,
       slot: `${MainDemo.withHeaderPlusFooter({ class: `${mainClass} flow-v`.trim(), headerClass, footerClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
-  withLeftSidebarAndMainWithHeaderPlusFooterAndRightSidebar(args: LayoutDemoArgsType = {}) {
-    const { leftSidebarClass, mainClass, headerClass, footerClass, rightSidebarClass, ...restArgs } = args;
+  withLeftSidebarAndMainWithHeaderPlusFooterAndRightSidebar(
+    args: LayoutDemoArgsType = {},
+  ) {
+    const {
+      leftSidebarClass,
+      mainClass,
+      headerClass,
+      footerClass,
+      rightSidebarClass,
+      ...restArgs
+    } = args;
 
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
 ${MainDemo.withHeaderPlusFooter({ class: `${mainClass} flow-v`.trim(), headerClass, footerClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
@@ -292,7 +346,7 @@ ${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
 
     return this.render({
       ...restArgs,
-      slot: `${MainDemo.withArticle({ class: `${mainClass} flow-v`.trim(), articleClass })}`
+      slot: `${MainDemo.withArticle({ class: `${mainClass} flow-v`.trim(), articleClass })}`,
     });
   },
 
@@ -302,7 +356,7 @@ ${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
-${MainDemo.withArticle({ class: `${mainClass} flow-v`.trim(), articleClass })}`
+${MainDemo.withArticle({ class: `${mainClass} flow-v`.trim(), articleClass })}`,
     });
   },
 
@@ -312,49 +366,70 @@ ${MainDemo.withArticle({ class: `${mainClass} flow-v`.trim(), articleClass })}`
     return this.render({
       ...restArgs,
       slot: `${MainDemo.withArticle({ class: `${mainClass} flow-v`.trim(), articleClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
-  withLeftSidebarAndMainWithArticleAndRightSidebar(args: LayoutDemoArgsType = {}) {
-    const { leftSidebarClass, mainClass, articleClass, rightSidebarClass, ...restArgs } = args;
+  withLeftSidebarAndMainWithArticleAndRightSidebar(
+    args: LayoutDemoArgsType = {},
+  ) {
+    const {
+      leftSidebarClass,
+      mainClass,
+      articleClass,
+      rightSidebarClass,
+      ...restArgs
+    } = args;
 
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
 ${MainDemo.withArticle({ class: `${mainClass} flow-v`.trim(), articleClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
   // Main With Header Plus Article
 
   withMainWithHeaderPlusArticle(args: LayoutDemoArgsType = {}) {
-    const { mainClass, articleClass, headerClass, footerClass, ...restArgs } = args;
+    const { mainClass, articleClass, headerClass, footerClass, ...restArgs } =
+      args;
 
     return this.render({
       ...restArgs,
-      slot: `${MainDemo.withHeaderPlusArticle({ class: `${mainClass} flow-v`.trim(), articleClass, headerClass })}`
+      slot: `${MainDemo.withHeaderPlusArticle({ class: `${mainClass} flow-v`.trim(), articleClass, headerClass })}`,
     });
   },
 
   withLeftSidebarAndMainWithHeaderPlusArticle(args: LayoutDemoArgsType = {}) {
-    const { leftSidebarClass, mainClass, articleClass, headerClass, ...restArgs } = args;
+    const {
+      leftSidebarClass,
+      mainClass,
+      articleClass,
+      headerClass,
+      ...restArgs
+    } = args;
 
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
-${MainDemo.withHeaderPlusArticle({ class: `${mainClass} flow-v`.trim(), articleClass, headerClass })}`
+${MainDemo.withHeaderPlusArticle({ class: `${mainClass} flow-v`.trim(), articleClass, headerClass })}`,
     });
   },
 
   withMainWithHeaderPlusArticleAndRightSidebar(args: LayoutDemoArgsType = {}) {
-    const { mainClass, articleClass, headerClass, rightSidebarClass, ...restArgs } = args;
+    const {
+      mainClass,
+      articleClass,
+      headerClass,
+      rightSidebarClass,
+      ...restArgs
+    } = args;
 
     return this.render({
       ...restArgs,
       slot: `${MainDemo.withHeaderPlusArticle({ class: `${mainClass} flow-v`.trim(), articleClass, headerClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
@@ -365,80 +440,130 @@ ${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
 
     return this.render({
       ...restArgs,
-      slot: `${MainDemo.withArticlePlusFooter({ class: `${mainClass} flow-v`.trim(), articleClass, footerClass })}`
+      slot: `${MainDemo.withArticlePlusFooter({ class: `${mainClass} flow-v`.trim(), articleClass, footerClass })}`,
     });
   },
 
   withLeftSidebarAndMainWithArticlePlusFooter(args: LayoutDemoArgsType = {}) {
-    const { leftSidebarClass, mainClass, articleClass, footerClass, ...restArgs } = args;
+    const {
+      leftSidebarClass,
+      mainClass,
+      articleClass,
+      footerClass,
+      ...restArgs
+    } = args;
 
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
-${MainDemo.withArticlePlusFooter({ class: `${mainClass} flow-v`.trim(), articleClass, footerClass })}`
+${MainDemo.withArticlePlusFooter({ class: `${mainClass} flow-v`.trim(), articleClass, footerClass })}`,
     });
   },
 
   withMainWithArticlePlusFooterAndRightSidebar(args: LayoutDemoArgsType = {}) {
-    const { mainClass, articleClass, footerClass, rightSidebarClass, ...restArgs } = args;
+    const {
+      mainClass,
+      articleClass,
+      footerClass,
+      rightSidebarClass,
+      ...restArgs
+    } = args;
 
     return this.render({
       ...restArgs,
       slot: `${MainDemo.withArticlePlusFooter({ class: `${mainClass} flow-v`.trim(), articleClass, footerClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
-  withLeftSidebarAndMainWithArticlePlusFooterAndRightSidebar(args: LayoutDemoArgsType = {}) {
-    const { leftSidebarClass, mainClass, articleClass, footerClass, rightSidebarClass, ...restArgs } = args;
+  withLeftSidebarAndMainWithArticlePlusFooterAndRightSidebar(
+    args: LayoutDemoArgsType = {},
+  ) {
+    const {
+      leftSidebarClass,
+      mainClass,
+      articleClass,
+      footerClass,
+      rightSidebarClass,
+      ...restArgs
+    } = args;
 
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
 ${MainDemo.withArticlePlusFooter({ class: `${mainClass} flow-v`.trim(), articleClass, footerClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
   // Main With Header Plus Article Plus Footer
 
   withMainWithHeaderPlusArticlePlusFooter(args: LayoutDemoArgsType = {}) {
-    const { mainClass, articleClass, headerClass, footerClass, ...restArgs } = args;
+    const { mainClass, articleClass, headerClass, footerClass, ...restArgs } =
+      args;
 
     return this.render({
       ...restArgs,
-      slot: `${MainDemo.withHeaderPlusArticlePlusFooter({ class: `${mainClass} flow-v`.trim(), articleClass, headerClass, footerClass })}`
+      slot: `${MainDemo.withHeaderPlusArticlePlusFooter({ class: `${mainClass} flow-v`.trim(), articleClass, headerClass, footerClass })}`,
     });
   },
 
-  withLeftSidebarAndMainWithHeaderPlusArticlePlusFooter(args: LayoutDemoArgsType = {}) {
-    const { leftSidebarClass, mainClass, articleClass, headerClass, footerClass, ...restArgs } = args;
+  withLeftSidebarAndMainWithHeaderPlusArticlePlusFooter(
+    args: LayoutDemoArgsType = {},
+  ) {
+    const {
+      leftSidebarClass,
+      mainClass,
+      articleClass,
+      headerClass,
+      footerClass,
+      ...restArgs
+    } = args;
 
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
-${MainDemo.withHeaderPlusArticlePlusFooter({ class: `${mainClass} flow-v`.trim(), articleClass, headerClass, footerClass })}`
+${MainDemo.withHeaderPlusArticlePlusFooter({ class: `${mainClass} flow-v`.trim(), articleClass, headerClass, footerClass })}`,
     });
   },
 
-  withMainWithHeaderPlusArticlePlusFooterAndRightSidebar(args: LayoutDemoArgsType = {}) {
-    const { mainClass, articleClass, headerClass, footerClass, rightSidebarClass, ...restArgs } = args;
+  withMainWithHeaderPlusArticlePlusFooterAndRightSidebar(
+    args: LayoutDemoArgsType = {},
+  ) {
+    const {
+      mainClass,
+      articleClass,
+      headerClass,
+      footerClass,
+      rightSidebarClass,
+      ...restArgs
+    } = args;
 
     return this.render({
       ...restArgs,
       slot: `${MainDemo.withHeaderPlusArticlePlusFooter({ class: `${mainClass} flow-v`.trim(), articleClass, headerClass, footerClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 
-  withLeftSidebarAndMainWithHeaderPlusArticlePlusFooterAndRightSidebar(args: LayoutDemoArgsType = {}) {
-    const { leftSidebarClass, mainClass, articleClass, headerClass, footerClass, rightSidebarClass, ...restArgs } = args;
+  withLeftSidebarAndMainWithHeaderPlusArticlePlusFooterAndRightSidebar(
+    args: LayoutDemoArgsType = {},
+  ) {
+    const {
+      leftSidebarClass,
+      mainClass,
+      articleClass,
+      headerClass,
+      footerClass,
+      rightSidebarClass,
+      ...restArgs
+    } = args;
 
     return this.render({
       ...restArgs,
       slot: `${AsideDemo.leftSidebar({ class: leftSidebarClass })}
 ${MainDemo.withHeaderPlusArticlePlusFooter({ class: `${mainClass} flow-v`.trim(), articleClass, headerClass, footerClass })}
-${AsideDemo.rightSidebar({ class: rightSidebarClass })}`
+${AsideDemo.rightSidebar({ class: rightSidebarClass })}`,
     });
   },
 };

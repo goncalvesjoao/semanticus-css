@@ -1,20 +1,20 @@
-import { renderElement } from '@demos/utils';
-import { NavDemo } from '@demos/semantics/nav.demo';
+import { renderElement } from "@demos/utils";
+import { NavDemo } from "@demos/semantics/elements/nav.demo";
 
-export type FooterDemoArgsType = {
+export type FooterDemoArgsType = Record<string, string> & {
   slot?: string;
   class?: string;
 };
 
 export const FooterDemoArgs = {
   default: {
-    class: '',
+    class: "",
     slot: NavDemo.copyrightAndContactUs(),
   },
 };
 
 export const FooterDemo = {
-  render: renderElement.bind(null, 'footer'),
+  render: renderElement.bind(null, "footer"),
 
   default(args: FooterDemoArgsType = {}) {
     return this.render({ ...FooterDemoArgs.default, ...args });

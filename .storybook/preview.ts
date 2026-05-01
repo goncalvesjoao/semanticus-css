@@ -1,5 +1,5 @@
-import '../dist/semanticus.css';
+import "../dist/semanticus.css";
 
 export const parameters = {
-  layout: 'centered',
+  layout: "centered",
 };
