@@ -2,6 +2,24 @@ import { defineConfig } from "vitepress";
 import path from "path";
 import fs from "fs";
 
+function loadTsconfigAliases() {
+  const tsconfigPath = path.resolve(process.cwd(), "tsconfig.json");
+  let raw = fs.readFileSync(tsconfigPath, "utf8");
+  // tolerate trailing commas so JSON.parse won't fail
+  raw = raw.replace(/,\s*(?=[}\]])/g, "");
+  const cfg = JSON.parse(raw);
+  const paths: Record<string, string[]> = cfg?.compilerOptions?.paths || {};
+
+  return Object.entries(paths).map(([key, values]) => {
+    const find = key.replace(/\/\*$/, "");
+    const replacement = path.resolve(
+      process.cwd(),
+      (values[0] as string).replace(/\/\*$/, ""),
+    );
+    return { find, replacement };
+  });
+}
+
 // Load package.json for version info
 const packageJsonPath = path.resolve(process.cwd(), "package.json");
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
@@ -38,6 +56,9 @@ export default defineConfig({
     },
   },
   vite: {
+    resolve: {
+      alias: loadTsconfigAliases(),
+    },
     define: {
       __SEMANTICUS_VERSION__: JSON.stringify(packageVersion),
     },

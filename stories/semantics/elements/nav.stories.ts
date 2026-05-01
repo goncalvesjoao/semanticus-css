@@ -7,7 +7,6 @@ import {
 
 const meta: Meta<NavDemoArgsType> = {
   title: "Semantics/Elements/<nav>",
-  tags: ["autodocs"],
 };
 
 export default meta;

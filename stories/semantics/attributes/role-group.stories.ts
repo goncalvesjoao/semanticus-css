@@ -7,7 +7,7 @@ import {
 
 const meta: Meta<RoleGroupDemoArgsType> = {
   title: "Semantics/Attributes/[role=group]",
-  tags: ["autodocs"],
+  parameters: {},
 };
 
 export default meta;
@@ -35,4 +35,9 @@ export const multipleInputs: StoryObj<RoleGroupDemoArgsType> = {
 export const paginationExample: StoryObj<RoleGroupDemoArgsType> = {
   args: RoleGroupDemoArgs.paginationExample,
   render: (args) => RoleGroupDemo.paginationExample(args),
+};
+
+export const newsletterExample: StoryObj<RoleGroupDemoArgsType> = {
+  args: RoleGroupDemoArgs.newsletterExample,
+  render: (args) => RoleGroupDemo.newsletterExample(args),
 };

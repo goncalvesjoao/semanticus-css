@@ -7,7 +7,6 @@ import {
 
 const meta: Meta<FooterDemoArgsType> = {
   title: "Semantics/Elements/<footer>",
-  tags: ["autodocs"],
 };
 
 export default meta;

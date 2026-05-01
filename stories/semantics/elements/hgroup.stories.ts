@@ -7,7 +7,6 @@ import {
 
 const meta: Meta<HgroupDemoArgsType> = {
   title: "Semantics/Elements/<hgroup>",
-  tags: ["autodocs"],
 };
 
 export default meta;

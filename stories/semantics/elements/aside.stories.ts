@@ -7,7 +7,6 @@ import {
 
 const meta: Meta<AsideDemoArgsType> = {
   title: "Semantics/Elements/<aside>",
-  tags: ["autodocs"],
 };
 
 export default meta;

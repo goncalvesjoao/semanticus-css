@@ -3,50 +3,7 @@ title: 'role="group"'
 ---
 
 <script setup>
-const example1Html = `<div role="group">
-  <button>One</button>
-  <button>Two</button>
-  <button>Three</button>
-</div>
-`;
-const example4Html = `<div role="group">
-  <input type="text" placeholder="Enter value">
-  <button>Go</button>
-</div>
-`;
-const example5Html = `<div role="group">
-  <select>
-    <option>Option 1</option>
-    <option>Option 2</option>
-    <option>Option 3</option>
-  </select>
-  <button>Action</button>
-</div>
-`;
-const example6Html = `<div role="group">
-  <input type="text" placeholder="First name">
-  <input type="text" placeholder="Last name">
-  <button>Save</button>
-</div>
-`;
-const example9Html = `<nav aria-label="Pagination">
-  <div role="group">
-    <button disabled>Previous</button>
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>Next</button>
-  </div>
-</nav>
-`;
-const example10Html = `<form>
-  <label for="email">Subscribe to our newsletter</label>
-  <div role="group">
-    <input type="email" id="email" placeholder="your@email.com">
-    <button type="submit">Subscribe</button>
-  </div>
-</form>
-`;
+import { RoleGroupDemo } from "@demos/semantics/attributes";
 </script>
 
 # [role="group"]
@@ -65,28 +22,28 @@ Use `role="group"` to create connected groups of buttons or form elements. For s
 
 ### Basic Group
 
-<HtmlPreviewer :code="example1Html" />
+<HtmlPreviewer :code="RoleGroupDemo.basic()" />
 
 ## Input Groups
 
 ### Input with Button
 
-<HtmlPreviewer :code="example4Html" />
+<HtmlPreviewer :code="RoleGroupDemo.inputWithButton()" />
 
 ### Select with Button
 
-<HtmlPreviewer :code="example5Html" />
+<HtmlPreviewer :code="RoleGroupDemo.selectWithButton()" />
 
 ### Multiple Inputs
 
-<HtmlPreviewer :code="example6Html" />
+<HtmlPreviewer :code="RoleGroupDemo.multipleInputs()" />
 
 ## Pagination Groups
 
-<HtmlPreviewer :code="example9Html" />
+<HtmlPreviewer :code="RoleGroupDemo.paginationExample()" />
 
 ## Practical Examples
 
 ### Newsletter Signup
 
-<HtmlPreviewer :code="example10Html" />
+<HtmlPreviewer :code="RoleGroupDemo.newsletterExample()" />

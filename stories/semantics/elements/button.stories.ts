@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from "@storybook/html";
 
 const meta: Meta = {
   title: "Semantics/Elements/<button>",
-  tags: ["autodocs"],
 };
 
 export default meta;

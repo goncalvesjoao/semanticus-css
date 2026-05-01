@@ -16,13 +16,13 @@ export const RoleGroupDemoArgs = {
   },
   inputWithButton: {
     class: "",
-    tagName: "div",
+    tagName: "fieldset",
     slot: `<input type="text" placeholder="Enter value">
 <button>Go</button>`,
   },
   selectWithButton: {
     class: "",
-    tagName: "div",
+    tagName: "fieldset",
     slot: `<select>
   <option>Option 1</option>
   <option>Option 2</option>
@@ -32,7 +32,7 @@ export const RoleGroupDemoArgs = {
   },
   multipleInputs: {
     class: "",
-    tagName: "div",
+    tagName: "fieldset",
     slot: `<input type="text" placeholder="First name">
 <input type="text" placeholder="Last name">
 <button>Save</button>`,
@@ -41,11 +41,17 @@ export const RoleGroupDemoArgs = {
     class: "",
     tagName: "nav",
     "aria-label": "Pagination",
-    slot: `<button disabled>Previous</button>
-<button>1</button>
-<button>2</button>
-<button>3</button>
-<button>Next</button>`,
+    slot: `<a href="#" role="button" disabled>Previous</a>
+<a href="#page-1" role="button">1</a>
+<a href="#page-2" role="button" aria-current="page">2</a>
+<a href="#page-3" role="button">3</a>
+<a href="#page-3" role="button">Next</a>`,
+  },
+  newsletterExample: {
+    class: "",
+    tagName: "fieldset",
+    slot: `<input type="email" id="email" placeholder="your@email.com">
+<button type="submit">Subscribe</button>`,
   },
 };
 
@@ -76,5 +82,12 @@ export const RoleGroupDemo = {
 
   paginationExample(args: RoleGroupDemoArgsType = {}) {
     return this.render({ ...RoleGroupDemoArgs.paginationExample, ...args });
+  },
+
+  newsletterExample(args: RoleGroupDemoArgsType = {}) {
+    return renderElement("form", {
+      slot: `<label for="email">Subscribe to our newsletter</label>
+${this.render({ ...RoleGroupDemoArgs.newsletterExample, ...args })}`,
+    });
   },
 };
