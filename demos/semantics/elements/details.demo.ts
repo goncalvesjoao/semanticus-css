@@ -1,6 +1,4 @@
-export const DetailsDemo = {
-  accordion() {
-    return `<details open name="accordion-group">
+export const accordion = `<details open name="accordion-group">
   <summary>Accordion 1</summary>
   <p>Flamingos are known for their bright pink feathers and distinctive long necks. These birds are social creatures that live in large groups, and a group of flamingos is called a flamboyance. They can often be seen standing on one leg, which helps them conserve body heat.</p>
 </details>
@@ -18,10 +16,8 @@ export const DetailsDemo = {
   </ul>
 </details>
 `;
-  },
 
-  basicDropdown() {
-    return `<details>
+export const basicDropdown = `<details>
   <summary aria-haspopup="menu">Dropdown</summary>
   <ul role="menu">
     <li><a role="menuitem" href="#">Solid</a></li>
@@ -39,10 +35,8 @@ export const DetailsDemo = {
   <option>Plasma</option>
 </select>
 `;
-  },
 
-  dropdownWithRadios() {
-    return `<details>
+export const dropdownWithRadios = `<details>
   <summary aria-haspopup="menu">Select a phase of matter...</summary>
   <ul role="menu">
     <li>
@@ -60,10 +54,8 @@ export const DetailsDemo = {
   </ul>
 </details>
 `;
-  },
 
-  dropdownWithCheckboxes() {
-    return `<details>
+export const dropdownWithCheckboxes = `<details>
   <summary aria-haspopup="menu">Select phases of matter...</summary>
   <ul role="menu">
     <li>
@@ -81,10 +73,8 @@ export const DetailsDemo = {
   </ul>
 </details>
 `;
-  },
 
-  dropdownAsButton() {
-    return `<details>
+export const dropdownAsButton = `<details>
   <summary role="button" aria-haspopup="menu">Dropdown as a button</summary>
   <ul role="menu">
     <li><a role="menuitem" href="#">Solid</a></li>
@@ -94,10 +84,8 @@ export const DetailsDemo = {
   </ul>
 </details>
 `;
-  },
 
-  dropdownValidationStates() {
-    return `<details>
+export const dropdownValidationStates = `<details>
   <summary aria-haspopup="menu" aria-invalid="false">Valid phase of matter: Solid</summary>
   <ul role="menu">
     <li><a role="menuitem" href="#">Solid</a></li>
@@ -117,10 +105,8 @@ export const DetailsDemo = {
   </ul>
 </details>
 `;
-  },
 
-  dropdownInNav() {
-    return `<nav>
+export const dropdownInNav = `<nav>
   <ul>
     <li><strong>Acme Corp</strong></li>
   </ul>
@@ -141,10 +127,8 @@ export const DetailsDemo = {
   </ul>
 </nav>
 `;
-  },
 
-  faq() {
-    return `<h1>Frequently Asked Questions</h1>
+export const faq = `<h1>Frequently Asked Questions</h1>
 
 <details>
   <summary>How do I get started?</summary>
@@ -171,5 +155,3 @@ export const DetailsDemo = {
   </div>
 </details>
 `;
-  },
-};

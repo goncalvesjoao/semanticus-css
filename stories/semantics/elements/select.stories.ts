@@ -7,18 +7,22 @@ const meta: Meta = {
 
 export default meta;
 
-export const BasicSelect: StoryObj = {
-  render: () => SelectDemo.basicSelect(),
+export const basicSelect: StoryObj = {
+  args: { html: SelectDemo.basicSelect },
+  render: (args) => args.html,
 };
 
-export const MultipleSelect: StoryObj = {
-  render: () => SelectDemo.multipleSelect(),
+export const multipleSelect: StoryObj = {
+  args: { html: SelectDemo.multipleSelect },
+  render: (args) => args.html,
 };
 
-export const WithOptgroup: StoryObj = {
-  render: () => SelectDemo.withOptgroup(),
+export const withOptgroup: StoryObj = {
+  args: { html: SelectDemo.withOptgroup },
+  render: (args) => args.html,
 };
 
-export const Dropdown: StoryObj = {
-  render: () => SelectDemo.dropdown(),
+export const dropdown: StoryObj = {
+  args: { html: SelectDemo.dropdown },
+  render: (args) => args.html,
 };

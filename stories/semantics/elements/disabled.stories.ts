@@ -7,26 +7,33 @@ const meta: Meta = {
 
 export default meta;
 
-export const Button: StoryObj = {
-  render: () => DisabledDemo.button(),
+export const button: StoryObj = {
+  args: { html: DisabledDemo.button },
+  render: (args) => args.html,
 };
 
-export const Input: StoryObj = {
-  render: () => DisabledDemo.input(),
+export const input: StoryObj = {
+  args: { html: DisabledDemo.input },
+  render: (args) => args.html,
 };
 
-export const Range: StoryObj = {
-  render: () => DisabledDemo.range(),
+export const range: StoryObj = {
+  args: { html: DisabledDemo.range },
+  render: (args) => args.html,
 };
 
-export const Select: StoryObj = {
-  render: () => DisabledDemo.select(),
+export const select: StoryObj = {
+  args: { html: DisabledDemo.select },
+  render: (args) => args.html,
 };
 
-export const Switch_: StoryObj = {
-  render: () => DisabledDemo.switch_(),
+export const switch_: StoryObj = {
+  name: "Switch",
+  args: { html: DisabledDemo.switch_ },
+  render: (args) => args.html,
 };
 
-export const Textarea: StoryObj = {
-  render: () => DisabledDemo.textarea(),
+export const textarea: StoryObj = {
+  args: { html: DisabledDemo.textarea },
+  render: (args) => args.html,
 };

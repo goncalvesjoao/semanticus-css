@@ -7,10 +7,12 @@ const meta: Meta = {
 
 export default meta;
 
-export const InputInside: StoryObj = {
-  render: () => LabelDemo.inputInside(),
+export const inputInside: StoryObj = {
+  args: { html: LabelDemo.inputInside },
+  render: (args) => args.html,
 };
 
-export const InputOutside: StoryObj = {
-  render: () => LabelDemo.inputOutside(),
+export const inputOutside: StoryObj = {
+  args: { html: LabelDemo.inputOutside },
+  render: (args) => args.html,
 };

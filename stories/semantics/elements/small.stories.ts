@@ -7,6 +7,7 @@ const meta: Meta = {
 
 export default meta;
 
-export const HelperText: StoryObj = {
-  render: () => SmallDemo.helperText(),
+export const helperText: StoryObj = {
+  args: { html: SmallDemo.helperText },
+  render: (args) => args.html,
 };

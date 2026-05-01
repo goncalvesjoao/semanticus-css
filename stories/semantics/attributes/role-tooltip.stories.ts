@@ -8,10 +8,12 @@ const meta: Meta = {
 
 export default meta;
 
-export const Syntax: StoryObj = {
-  render: () => RoleTooltipDemo.syntax(),
+export const syntax: StoryObj = {
+  args: { html: RoleTooltipDemo.syntax },
+  render: (args) => args.html,
 };
 
-export const Placement: StoryObj = {
-  render: () => RoleTooltipDemo.placement(),
+export const placement: StoryObj = {
+  args: { html: RoleTooltipDemo.placement },
+  render: (args) => args.html,
 };

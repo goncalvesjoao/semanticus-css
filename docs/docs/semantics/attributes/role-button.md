@@ -14,4 +14,4 @@ This is useful when a non-button element (e.g. `<div>`, `<span>`) needs to behav
 
 ## Basic Role Button
 
-<HtmlPreviewer :code="RoleButtonDemo.basic()" />
+<HtmlPreviewer :code="RoleButtonDemo.basic" />

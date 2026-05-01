@@ -7,6 +7,7 @@ const meta: Meta = {
 
 export default meta;
 
-export const AriaCurrentLink: StoryObj = {
-  render: () => ADemo.ariaCurrent(),
+export const ariaCurrent: StoryObj = {
+  args: { html: ADemo.ariaCurrent },
+  render: (args) => args.html,
 };

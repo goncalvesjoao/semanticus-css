@@ -7,18 +7,23 @@ const meta: Meta = {
 
 export default meta;
 
-export const Basic: StoryObj = {
-  render: () => FieldsetDemo.basic(),
+export const basic: StoryObj = {
+  args: { html: FieldsetDemo.basic },
+  render: (args) => args.html,
 };
 
-export const InsideForm: StoryObj = {
-  render: () => FieldsetDemo.insideForm(),
+export const insideForm: StoryObj = {
+  args: { html: FieldsetDemo.insideForm },
+  render: (args) => args.html,
 };
 
-export const Disabled_: StoryObj = {
-  render: () => FieldsetDemo.disabled_(),
+export const disabled_: StoryObj = {
+  name: "Disabled",
+  args: { html: FieldsetDemo.disabled_ },
+  render: (args) => args.html,
 };
 
-export const WithGroup: StoryObj = {
-  render: () => FieldsetDemo.withGroup(),
+export const withGroup: StoryObj = {
+  args: { html: FieldsetDemo.withGroup },
+  render: (args) => args.html,
 };

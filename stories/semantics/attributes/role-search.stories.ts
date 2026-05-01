@@ -1,28 +1,24 @@
 import type { Meta, StoryObj } from "@storybook/html";
-import {
-  RoleSearchDemo,
-  RoleSearchDemoArgs,
-  type RoleSearchDemoArgsType,
-} from "@demos/semantics/attributes";
+import { RoleSearchDemo } from "@demos/semantics/attributes";
 
-const meta: Meta<RoleSearchDemoArgsType> = {
+const meta: Meta = {
   title: "Semantics/Attributes/[role=search]",
   parameters: {},
 };
 
 export default meta;
 
-export const basic: StoryObj<RoleSearchDemoArgsType> = {
-  args: RoleSearchDemoArgs.basic,
-  render: (args) => RoleSearchDemo.basic(args),
+export const basic: StoryObj = {
+  args: { html: RoleSearchDemo.basic },
+  render: (args) => args.html,
 };
 
-export const withIconButton: StoryObj<RoleSearchDemoArgsType> = {
-  args: RoleSearchDemoArgs.withIconButton,
-  render: (args) => RoleSearchDemo.withIconButton(args),
+export const withIconButton: StoryObj = {
+  args: { html: RoleSearchDemo.withIconButton },
+  render: (args) => args.html,
 };
 
-export const filterSearch: StoryObj<RoleSearchDemoArgsType> = {
-  args: RoleSearchDemoArgs.filterSearch,
-  render: (args) => RoleSearchDemo.filterSearch(args),
+export const filterSearch: StoryObj = {
+  args: { html: RoleSearchDemo.filterSearch },
+  render: (args) => args.html,
 };

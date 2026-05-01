@@ -1,6 +1,4 @@
-export const SmallDemo = {
-  helperText() {
-    return `<input
+export const helperText = `<input
   type="email"
   name="email"
   placeholder="Email"
@@ -10,5 +8,3 @@ export const SmallDemo = {
 />
 <small id="email-helper">We'll never share your email with anyone else.</small>
 `;
-  },
-};

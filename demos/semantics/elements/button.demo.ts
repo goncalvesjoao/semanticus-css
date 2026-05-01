@@ -1,22 +1,14 @@
-export const ButtonDemo = {
-  basic() {
-    return `<button>Button</button>
+export const basic = `<button>Button</button>
 `;
-  },
 
-  formButtons() {
-    return `<input type="submit" value="Submit">
+export const formButtons = `<input type="submit" value="Submit">
 <input type="button" value="Input Button">
 `;
-  },
 
-  resetButton() {
-    return `<input type="reset" value="Reset">
+export const resetButton = `<input type="reset" value="Reset">
 `;
-  },
 
-  loginForm() {
-    return `<form>
+export const loginForm = `<form>
   <label for="email">Email</label>
   <input type="email" id="email" placeholder="you@example.com">
   <label for="password">Password</label>
@@ -24,5 +16,3 @@ export const ButtonDemo = {
   <button type="submit">Sign In</button>
 </form>
 `;
-  },
-};

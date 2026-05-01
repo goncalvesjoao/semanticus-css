@@ -7,14 +7,17 @@ const meta: Meta = {
 
 export default meta;
 
-export const BasicProgress: StoryObj = {
-  render: () => ProgressDemo.basicProgress(),
+export const basicProgress: StoryObj = {
+  args: { html: ProgressDemo.basicProgress },
+  render: (args) => args.html,
 };
 
-export const Indeterminate: StoryObj = {
-  render: () => ProgressDemo.indeterminate(),
+export const indeterminate: StoryObj = {
+  args: { html: ProgressDemo.indeterminate },
+  render: (args) => args.html,
 };
 
-export const WithLabel: StoryObj = {
-  render: () => ProgressDemo.withLabel(),
+export const withLabel: StoryObj = {
+  args: { html: ProgressDemo.withLabel },
+  render: (args) => args.html,
 };

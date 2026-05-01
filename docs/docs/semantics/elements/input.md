@@ -20,31 +20,31 @@ For helper text below inputs see [&lt;small&gt;](/docs/semantics/small).
 
 ## Basic Inputs
 
-<HtmlPreviewer :code="InputDemo.basicInputs()" />
+<HtmlPreviewer :code="InputDemo.basicInputs" />
 
 ## Datetime Input
 
 Datetime inputs come with an icon.
 
-<HtmlPreviewer :code="InputDemo.datetimeInput()" />
+<HtmlPreviewer :code="InputDemo.datetimeInput" />
 
 ## Search Input
 
 `type="search"` comes with a distinctive style.
 
-<HtmlPreviewer :code="InputDemo.searchInput()" />
+<HtmlPreviewer :code="InputDemo.searchInput" />
 
 ## Color Input
 
 `type="color"` is also consistent with the other input types.
 
-<HtmlPreviewer :code="InputDemo.colorInput()" />
+<HtmlPreviewer :code="InputDemo.colorInput" />
 
 ## File Input
 
 Input type file button has a secondary button style.
 
-<HtmlPreviewer :code="InputDemo.fileInput()" />
+<HtmlPreviewer :code="InputDemo.fileInput" />
 
 ## Checkboxes
 
@@ -52,16 +52,16 @@ The native `<input type="checkbox">` with a custom and responsive style.
 
 ### Basic Checkbox
 
-<HtmlPreviewer :code="InputDemo.basicCheckbox()" />
+<HtmlPreviewer :code="InputDemo.basicCheckbox" />
 
 ### Horizontal Stacking
 
-<HtmlPreviewer :code="InputDemo.horizontalCheckbox()" />
+<HtmlPreviewer :code="InputDemo.horizontalCheckbox" />
 
 
 ### Single Checkbox
 
-<HtmlPreviewer :code="InputDemo.singleCheckbox()" />
+<HtmlPreviewer :code="InputDemo.singleCheckbox" />
 
 ## Radios
 
@@ -69,11 +69,11 @@ The native `<input type="radio">` with a custom and responsive style.
 
 ### Basic Radio
 
-<HtmlPreviewer :code="InputDemo.basicRadio()" />
+<HtmlPreviewer :code="InputDemo.basicRadio" />
 
 ### Horizontal Stacking
 
-<HtmlPreviewer :code="InputDemo.horizontalRadio()" />
+<HtmlPreviewer :code="InputDemo.horizontalRadio" />
 
 ## Range
 
@@ -81,15 +81,15 @@ The native `<input type="range">` with a custom and responsive style.
 
 ### Basic Range
 
-<HtmlPreviewer :code="InputDemo.basicRange()" />
+<HtmlPreviewer :code="InputDemo.basicRange" />
 
 ### With Min and Max
 
-<HtmlPreviewer :code="InputDemo.rangeWithMinMax()" />
+<HtmlPreviewer :code="InputDemo.rangeWithMinMax" />
 
 ### With Step
 
-<HtmlPreviewer :code="InputDemo.rangeWithStep()" />
+<HtmlPreviewer :code="InputDemo.rangeWithStep" />
 
 ## Switch
 
@@ -97,5 +97,5 @@ The native `<input type="checkbox">` styled as a switch, using the `role="switch
 
 ### Basic Switch
 
-<HtmlPreviewer :code="InputDemo.basicSwitch()" />
+<HtmlPreviewer :code="InputDemo.basicSwitch" />
 

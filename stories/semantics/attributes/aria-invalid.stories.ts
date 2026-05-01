@@ -8,35 +8,43 @@ const meta: Meta = {
 
 export default meta;
 
-export const Input: StoryObj = {
-  render: () => AriaInvalidDemo.input(),
+export const input: StoryObj = {
+  args: { html: AriaInvalidDemo.input },
+  render: (args) => args.html,
 };
 
-export const InputHelper: StoryObj = {
-  render: () => AriaInvalidDemo.inputHelper(),
+export const inputHelper: StoryObj = {
+  args: { html: AriaInvalidDemo.inputHelper },
+  render: (args) => args.html,
 };
 
-export const Checkbox: StoryObj = {
-  render: () => AriaInvalidDemo.checkbox(),
+export const checkbox: StoryObj = {
+  args: { html: AriaInvalidDemo.checkbox },
+  render: (args) => args.html,
 };
 
-export const Radio: StoryObj = {
-  render: () => AriaInvalidDemo.radio(),
+export const radio: StoryObj = {
+  args: { html: AriaInvalidDemo.radio },
+  render: (args) => args.html,
 };
 
-export const Select: StoryObj = {
-  render: () => AriaInvalidDemo.select(),
+export const select: StoryObj = {
+  args: { html: AriaInvalidDemo.select },
+  render: (args) => args.html,
 };
 
-export const Switch_: StoryObj = {
+export const switch_: StoryObj = {
   name: "Switch",
-  render: () => AriaInvalidDemo.switch_(),
+  args: { html: AriaInvalidDemo.switch_ },
+  render: (args) => args.html,
 };
 
-export const Textarea: StoryObj = {
-  render: () => AriaInvalidDemo.textarea(),
+export const textarea: StoryObj = {
+  args: { html: AriaInvalidDemo.textarea },
+  render: (args) => args.html,
 };
 
-export const TextareaHelper: StoryObj = {
-  render: () => AriaInvalidDemo.textareaHelper(),
+export const textareaHelper: StoryObj = {
+  args: { html: AriaInvalidDemo.textareaHelper },
+  render: (args) => args.html,
 };

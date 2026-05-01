@@ -7,58 +7,72 @@ const meta: Meta = {
 
 export default meta;
 
-export const BasicInputs: StoryObj = {
-  render: () => InputDemo.basicInputs(),
+export const basicInputs: StoryObj = {
+  args: { html: InputDemo.basicInputs },
+  render: (args) => args.html,
 };
 
-export const DatetimeInput: StoryObj = {
-  render: () => InputDemo.datetimeInput(),
+export const datetimeInput: StoryObj = {
+  args: { html: InputDemo.datetimeInput },
+  render: (args) => args.html,
 };
 
-export const SearchInput: StoryObj = {
-  render: () => InputDemo.searchInput(),
+export const searchInput: StoryObj = {
+  args: { html: InputDemo.searchInput },
+  render: (args) => args.html,
 };
 
-export const ColorInput: StoryObj = {
-  render: () => InputDemo.colorInput(),
+export const colorInput: StoryObj = {
+  args: { html: InputDemo.colorInput },
+  render: (args) => args.html,
 };
 
-export const FileInput: StoryObj = {
-  render: () => InputDemo.fileInput(),
+export const fileInput: StoryObj = {
+  args: { html: InputDemo.fileInput },
+  render: (args) => args.html,
 };
 
-export const BasicCheckbox: StoryObj = {
-  render: () => InputDemo.basicCheckbox(),
+export const basicCheckbox: StoryObj = {
+  args: { html: InputDemo.basicCheckbox },
+  render: (args) => args.html,
 };
 
-export const HorizontalCheckbox: StoryObj = {
-  render: () => InputDemo.horizontalCheckbox(),
+export const horizontalCheckbox: StoryObj = {
+  args: { html: InputDemo.horizontalCheckbox },
+  render: (args) => args.html,
 };
 
-export const SingleCheckbox: StoryObj = {
-  render: () => InputDemo.singleCheckbox(),
+export const singleCheckbox: StoryObj = {
+  args: { html: InputDemo.singleCheckbox },
+  render: (args) => args.html,
 };
 
-export const BasicRadio: StoryObj = {
-  render: () => InputDemo.basicRadio(),
+export const basicRadio: StoryObj = {
+  args: { html: InputDemo.basicRadio },
+  render: (args) => args.html,
 };
 
-export const HorizontalRadio: StoryObj = {
-  render: () => InputDemo.horizontalRadio(),
+export const horizontalRadio: StoryObj = {
+  args: { html: InputDemo.horizontalRadio },
+  render: (args) => args.html,
 };
 
-export const BasicRange: StoryObj = {
-  render: () => InputDemo.basicRange(),
+export const basicRange: StoryObj = {
+  args: { html: InputDemo.basicRange },
+  render: (args) => args.html,
 };
 
-export const RangeWithMinMax: StoryObj = {
-  render: () => InputDemo.rangeWithMinMax(),
+export const rangeWithMinMax: StoryObj = {
+  args: { html: InputDemo.rangeWithMinMax },
+  render: (args) => args.html,
 };
 
-export const RangeWithStep: StoryObj = {
-  render: () => InputDemo.rangeWithStep(),
+export const rangeWithStep: StoryObj = {
+  args: { html: InputDemo.rangeWithStep },
+  render: (args) => args.html,
 };
 
-export const BasicSwitch: StoryObj = {
-  render: () => InputDemo.basicSwitch(),
+export const basicSwitch: StoryObj = {
+  args: { html: InputDemo.basicSwitch },
+  render: (args) => args.html,
 };

@@ -7,14 +7,17 @@ const meta: Meta = {
 
 export default meta;
 
-export const BasicTextarea: StoryObj = {
-  render: () => TextareaDemo.basicTextarea(),
+export const basicTextarea: StoryObj = {
+  args: { html: TextareaDemo.basicTextarea },
+  render: (args) => args.html,
 };
 
-export const WithLabel: StoryObj = {
-  render: () => TextareaDemo.withLabel(),
+export const withLabel: StoryObj = {
+  args: { html: TextareaDemo.withLabel },
+  render: (args) => args.html,
 };
 
-export const WithRows: StoryObj = {
-  render: () => TextareaDemo.withRows(),
+export const withRows: StoryObj = {
+  args: { html: TextareaDemo.withRows },
+  render: (args) => args.html,
 };

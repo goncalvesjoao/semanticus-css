@@ -1,6 +1,4 @@
-export const FieldsetDemo = {
-  basic() {
-    return `<fieldset>
+export const basic = `<fieldset>
   <legend>Personal Information</legend>
   <label>
     First name
@@ -16,10 +14,8 @@ export const FieldsetDemo = {
   </label>
 </fieldset>
 `;
-  },
 
-  insideForm() {
-    return `<form>
+export const insideForm = `<form>
   <fieldset>
     <label>
       First name
@@ -33,10 +29,8 @@ export const FieldsetDemo = {
   <input type="submit" value="Subscribe" />
 </form>
 `;
-  },
 
-  disabled_() {
-    return `<fieldset disabled>
+export const disabled_ = `<fieldset disabled>
   <legend>Disabled fieldset</legend>
   <label>
     Username
@@ -49,15 +43,11 @@ export const FieldsetDemo = {
   <input type="submit" value="Sign in" />
 </fieldset>
 `;
-  },
 
-  withGroup() {
-    return `<form>
+export const withGroup = `<form>
   <fieldset role="group">
     <input type="email" name="email" placeholder="Enter your email" autocomplete="email" />
     <input type="submit" value="Subscribe" />
   </fieldset>
 </form>
 `;
-  },
-};

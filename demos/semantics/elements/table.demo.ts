@@ -1,6 +1,4 @@
-export const TableDemo = {
-  basicTable() {
-    return `<table>
+export const basicTable = `<table>
   <thead>
     <tr>
       <th>Name</th>
@@ -22,5 +20,3 @@ export const TableDemo = {
   </tbody>
 </table>
 `;
-  },
-};

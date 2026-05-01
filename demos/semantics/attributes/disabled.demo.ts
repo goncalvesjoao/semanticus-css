@@ -1,36 +1,26 @@
-export const DisabledDemo = {
-  button() {
-    return `<div role="toolbar">
+export const button = `<div role="toolbar">
   <button disabled>Disabled</button>
   <button class="secondary" disabled>Disabled</button>
   <button class="contrast" disabled>Disabled</button>
 </div>
 `;
-  },
 
-  input() {
-    return `<input type="text" name="text" placeholder="Disabled" aria-label="Disabled input" disabled />
+export const input = `<input type="text" name="text" placeholder="Disabled" aria-label="Disabled input" disabled />
 `;
-  },
 
-  range() {
-    return `<label>
+export const range = `<label>
   Disabled slider
   <input type="range" disabled />
 </label>
 `;
-  },
 
-  select() {
-    return `<select name="meal-type" aria-label="Select a meal type..." disabled>
+export const select = `<select name="meal-type" aria-label="Select a meal type..." disabled>
   <option>Select a meal type...</option>
   <option>...</option>
 </select>
 `;
-  },
 
-  switch_() {
-    return `<fieldset>
+export const switch_ = `<fieldset>
   <label>
     <input name="publish" type="checkbox" role="switch" disabled />
     Publish on my profile
@@ -41,12 +31,8 @@ export const DisabledDemo = {
   </label>
 </fieldset>
 `;
-  },
 
-  textarea() {
-    return `<textarea name="disabled" disabled>
+export const textarea = `<textarea name="disabled" disabled>
   Disabled
 </textarea>
 `;
-  },
-};

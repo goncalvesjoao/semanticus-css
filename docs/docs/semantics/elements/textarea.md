@@ -12,13 +12,13 @@ The `<textarea>` element is a multi-line plain-text input for free-form entry. U
 
 ## Basic Textarea
 
-<HtmlPreviewer :code="TextareaDemo.basicTextarea()" />
+<HtmlPreviewer :code="TextareaDemo.basicTextarea" />
 
 ## With Label
 
-<HtmlPreviewer :code="TextareaDemo.withLabel()" />
+<HtmlPreviewer :code="TextareaDemo.withLabel" />
 
 ## With Rows
 
-<HtmlPreviewer :code="TextareaDemo.withRows()" />
+<HtmlPreviewer :code="TextareaDemo.withRows" />
 

@@ -1,39 +1,27 @@
-export const InputDemo = {
-  basicInputs() {
-    return `<input type="text" name="text" placeholder="Text" aria-label="Text" />
+export const basicInputs = `<input type="text" name="text" placeholder="Text" aria-label="Text" />
 <input type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email" />
 <input type="number" name="number" placeholder="Number" aria-label="Number" />
 <input type="password" name="password" placeholder="Password" aria-label="Password" />
 <input type="tel" name="tel" placeholder="Tel" aria-label="Tel" autocomplete="tel" />
 <input type="url" name="url" placeholder="Url" aria-label="Url" />
 `;
-  },
 
-  datetimeInput() {
-    return `<input type="date" name="date" aria-label="Date" />
+export const datetimeInput = `<input type="date" name="date" aria-label="Date" />
 <input type="datetime-local" name="datetime-local" aria-label="Datetime local" />
 <input type="month" name="month" aria-label="Month" />
 <input type="time" name="time" aria-label="Time" />
 `;
-  },
 
-  searchInput() {
-    return `<input type="search" name="search" placeholder="Search" aria-label="Search" />
+export const searchInput = `<input type="search" name="search" placeholder="Search" aria-label="Search" />
 `;
-  },
 
-  colorInput() {
-    return `<input type="color" value="#ff9500" aria-label="Color picker" />
+export const colorInput = `<input type="color" value="#ff9500" aria-label="Color picker" />
 `;
-  },
 
-  fileInput() {
-    return `<input type="file" />
+export const fileInput = `<input type="file" />
 `;
-  },
 
-  basicCheckbox() {
-    return `<fieldset>
+export const basicCheckbox = `<fieldset>
   <legend>Language preferences:</legend>
   <label>
     <input type="checkbox" name="english" checked />
@@ -49,10 +37,8 @@ export const InputDemo = {
   </label>
 </fieldset>
 `;
-  },
 
-  horizontalCheckbox() {
-    return `<fieldset>
+export const horizontalCheckbox = `<fieldset>
   <legend>Language preferences:</legend>
   <input type="checkbox" id="hindi" name="hindi" checked />
   <label for="hindi">Hindi</label>
@@ -62,18 +48,14 @@ export const InputDemo = {
   <label for="navi" aria-disabled="true">Na'vi</label>
 </fieldset>
 `;
-  },
 
-  singleCheckbox() {
-    return `<label>
+export const singleCheckbox = `<label>
   <input type="checkbox" name="agree">
   I agree to the terms
 </label>
 `;
-  },
 
-  basicRadio() {
-    return `<fieldset>
+export const basicRadio = `<fieldset>
   <legend>Language preference:</legend>
   <label>
     <input type="radio" name="language" checked value="english" />
@@ -89,10 +71,8 @@ export const InputDemo = {
   </label>
 </fieldset>
 `;
-  },
 
-  horizontalRadio() {
-    return `<fieldset>
+export const horizontalRadio = `<fieldset>
   <legend>Second language:</legend>
   <input type="radio" id="hindi" name="second-language" checked value="hindi" />
   <label for="hindi">Hindi</label>
@@ -102,10 +82,8 @@ export const InputDemo = {
   <label for="navi" aria-disabled="true">Na'vi</label>
 </fieldset>
 `;
-  },
 
-  basicRange() {
-    return `<label>
+export const basicRange = `<label>
   Brightness
   <input type="range" />
 </label>
@@ -115,26 +93,20 @@ export const InputDemo = {
   <input type="range" value="40" />
 </label>
 `;
-  },
 
-  rangeWithMinMax() {
-    return `<label>
+export const rangeWithMinMax = `<label>
   Volume
   <input type="range" min="0" max="100" value="50" />
 </label>
 `;
-  },
 
-  rangeWithStep() {
-    return `<label>
+export const rangeWithStep = `<label>
   Rating (0-10)
   <input type="range" min="0" max="10" step="1" value="5" />
 </label>
 `;
-  },
 
-  basicSwitch() {
-    return `<fieldset>
+export const basicSwitch = `<fieldset>
   <label>
     <input name="terms" type="checkbox" role="switch" />
     I agree to the Terms
@@ -145,5 +117,3 @@ export const InputDemo = {
   </label>
 </fieldset>
 `;
-  },
-};

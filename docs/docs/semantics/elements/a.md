@@ -10,6 +10,6 @@ import { ADemo } from "@demos/semantics/elements";
 
 The `aria-current="page"` attribute tells assistive technologies which link represents the current page.
 
-<HtmlPreviewer :code="ADemo.ariaCurrent()" />
+<HtmlPreviewer :code="ADemo.ariaCurrent" />
 
 For `.secondary` and `.contrast` color styles, see [Link Variants](/variants/components/links).

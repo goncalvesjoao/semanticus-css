@@ -7,34 +7,42 @@ const meta: Meta = {
 
 export default meta;
 
-export const Accordion: StoryObj = {
-  render: () => DetailsDemo.accordion(),
+export const accordion: StoryObj = {
+  args: { html: DetailsDemo.accordion },
+  render: (args) => args.html,
 };
 
-export const BasicDropdown: StoryObj = {
-  render: () => DetailsDemo.basicDropdown(),
+export const basicDropdown: StoryObj = {
+  args: { html: DetailsDemo.basicDropdown },
+  render: (args) => args.html,
 };
 
-export const DropdownWithRadios: StoryObj = {
-  render: () => DetailsDemo.dropdownWithRadios(),
+export const dropdownWithRadios: StoryObj = {
+  args: { html: DetailsDemo.dropdownWithRadios },
+  render: (args) => args.html,
 };
 
-export const DropdownWithCheckboxes: StoryObj = {
-  render: () => DetailsDemo.dropdownWithCheckboxes(),
+export const dropdownWithCheckboxes: StoryObj = {
+  args: { html: DetailsDemo.dropdownWithCheckboxes },
+  render: (args) => args.html,
 };
 
-export const DropdownAsButton: StoryObj = {
-  render: () => DetailsDemo.dropdownAsButton(),
+export const dropdownAsButton: StoryObj = {
+  args: { html: DetailsDemo.dropdownAsButton },
+  render: (args) => args.html,
 };
 
-export const DropdownValidationStates: StoryObj = {
-  render: () => DetailsDemo.dropdownValidationStates(),
+export const dropdownValidationStates: StoryObj = {
+  args: { html: DetailsDemo.dropdownValidationStates },
+  render: (args) => args.html,
 };
 
-export const DropdownInNav: StoryObj = {
-  render: () => DetailsDemo.dropdownInNav(),
+export const dropdownInNav: StoryObj = {
+  args: { html: DetailsDemo.dropdownInNav },
+  render: (args) => args.html,
 };
 
-export const Faq: StoryObj = {
-  render: () => DetailsDemo.faq(),
+export const faq: StoryObj = {
+  args: { html: DetailsDemo.faq },
+  render: (args) => args.html,
 };
