@@ -22,4 +22,4 @@ Cards are implemented using the `.card` class. This class can be applied to any 
 
 ## Reference
 
-For more examples and detailed documentation, see [&lt;article&gt;](/docs/semantics/article).
+For more examples and detailed documentation, see [&lt;article&gt;](/docs/semantics/elements/article).

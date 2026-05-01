@@ -24,7 +24,7 @@ Screen readers expose it as a navigation landmark, allowing users to jump direct
 
 ## Link variants
 
-You can use `.secondary`, `.contrast`, and `.ghost` classes (not available in the [class-less version](/guide/installation)).
+You can use `.secondary`, `.contrast`, and `.ghost` classes (not available in the [class-less version](/guide/)).
 
 <HtmlPreviewer :code="NavDemo.contrastLinks()" />
 
@@ -38,7 +38,7 @@ You can use `<button>` inside `<li>`. Button sizes automatically match link size
 
 ## Dropdowns
 
-You can use [dropdowns](/semantics/components/dropdown) inside Nav.
+You can use [dropdowns](/docs/composites/dropdown) inside Nav.
 
 <HtmlPreviewer :code="NavDemo.withDropdown()" />
 

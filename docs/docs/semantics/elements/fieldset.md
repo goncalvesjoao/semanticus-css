@@ -16,7 +16,7 @@ import { FieldsetDemo } from "@demos/semantics/elements";
 
 ## Inside a Form
 
-Inputs are `width: 100%` by default and match button sizes for consistent layouts. For label placement and helper text, see [&lt;label&gt;](/docs/semantics/label).
+Inputs are `width: 100%` by default and match button sizes for consistent layouts. For label placement and helper text, see [&lt;label&gt;](/docs/semantics/elements/label).
 
 <HtmlPreviewer :code="FieldsetDemo.insideForm()" />
 
@@ -32,7 +32,7 @@ Setting `disabled` on a `<fieldset>` disables all contained form elements.
 
 ## Usage with Group
 
-Use `role="group"` inside a fieldset for inline input+button combinations. See [[role="group"]](/docs/semantics/role-group).
+Use `role="group"` inside a fieldset for inline input+button combinations. See [[role="group"]](/docs/semantics/attributes/role-group).
 
 <HtmlPreviewer :code="FieldsetDemo.withGroup()" />
 

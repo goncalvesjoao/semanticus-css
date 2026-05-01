@@ -8,7 +8,7 @@ import { HiddenDemo } from "@demos/semantics/attributes";
 
 # [hidden]
 
-Elements with the `[hidden]` attribute are hidden by default. For `<template>` elements, see [&lt;template&gt;](/docs/semantics/template).
+Elements with the `[hidden]` attribute are hidden by default. For `<template>` elements, see [&lt;template&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template).
 
 ## Basic Usage
 

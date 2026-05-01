@@ -18,4 +18,4 @@ Screen readers expose it as a "search" landmark, allowing users to jump directly
 
 ## Reference
 
-For more search variants and detailed accessibility guidance, see [role="search"](/docs/semantics/role-search).
+For more search variants and detailed accessibility guidance, see [role="search"](/docs/semantics/attributes/role-search).

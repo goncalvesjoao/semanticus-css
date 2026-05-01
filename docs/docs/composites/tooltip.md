@@ -16,4 +16,4 @@ Tooltips are implemented using the [ARIA: tooltip pattern](https://developer.moz
 
 ## Reference
 
-For more tooltip examples including different placements and use cases, see [[role-tooltip]](/docs/semantics/role-tooltip).
+For more tooltip examples including different placements and use cases, see [[role-tooltip]](/docs/semantics/attributes/role-tooltip).

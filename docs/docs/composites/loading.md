@@ -32,5 +32,5 @@ For operations with measurable progress, use the `<progress>` element to show co
 
 ## Related
 
-- [[aria-busy]](/docs/semantics/aria-busy) - ARIA attribute for indicating loading state
-- [[progress]](/docs/semantics/progress) - HTML element for displaying progress of an operation
+- [[aria-busy]](/docs/semantics/attributes/aria-busy) - ARIA attribute for indicating loading state
+- [[progress]](/docs/semantics/elements/progress) - HTML element for displaying progress of an operation

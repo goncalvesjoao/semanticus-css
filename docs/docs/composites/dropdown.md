@@ -16,4 +16,4 @@ Dropdowns are implemented using the [ARIA: menu pattern](https://developer.mozil
 
 ## Reference
 
-For more dropdown variants including multi-select, validation states, and navigation integration, see **Dropdown** examples at [&lt;details&gt;](/docs/semantics/details#dropdown).
+For more dropdown variants including multi-select, validation states, and navigation integration, see **Dropdown** examples at [&lt;details&gt;](/docs/semantics/elements/details#dropdown).

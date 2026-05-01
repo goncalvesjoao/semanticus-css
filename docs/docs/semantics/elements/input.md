@@ -27,11 +27,11 @@ The `<input>` element accepts user data in many formats defined by its `type` at
 
 Always pair inputs with a `<label>` or `aria-label` so screen readers can identify the field.
 
-For associating labels with inputs see [&lt;label&gt;](/docs/semantics/label).
+For associating labels with inputs see [&lt;label&gt;](/docs/semantics/elements/label).
 
-For validation states see [[aria-invalid]](/docs/semantics/aria-invalid).
+For validation states see [[aria-invalid]](/docs/semantics/attributes/aria-invalid).
 
-For helper text below inputs see [&lt;small&gt;](/docs/semantics/small).
+For helper text below inputs see [&lt;small&gt;](/docs/semantics/elements/small).
 
 ## Basic Usage
 

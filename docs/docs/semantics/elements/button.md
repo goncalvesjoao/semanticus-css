@@ -16,9 +16,9 @@ Use `type="submit"` for form submission, `type="reset"` to clear a form, without
 
 <HtmlPreviewer :code="ButtonDemo.basic()" />
 
-For `.secondary`, `.contrast` and `.ghost` styles, see [Button Variants](/variants/components/buttons).
+For `.secondary`, `.contrast` and `.ghost` styles, see [Button Variants](/docs/variants/).
 
-On how to turn non-button elements into buttons, see [[role="button"]](/docs/semantics/role-button).
+On how to turn non-button elements into buttons, see [[role="button"]](/docs/semantics/attributes/role-button).
 
 ## Form Buttons
 

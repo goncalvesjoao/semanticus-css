@@ -56,4 +56,4 @@ The `<small>` element associated with a form control via `aria-describedby` auto
 
 ## Reference
 
-For detailed implementation of `aria-invalid` on specific elements, see the [\[aria-invalid\]](/docs/semantics/aria-invalid) documentation.
+For detailed implementation of `aria-invalid` on specific elements, see the [\[aria-invalid\]](/docs/semantics/attributes/aria-invalid) documentation.

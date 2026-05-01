@@ -16,7 +16,7 @@ Use it to semantically cluster controls and communicate their relationship to as
 
 ## Basic Usage
 
-Use `role="group"` to create connected groups of buttons or form elements. For search groups, see [[role="search"]](/docs/semantics/role-search).
+Use `role="group"` to create connected groups of buttons or form elements. For search groups, see [[role="search"]](/docs/semantics/attributes/role-search).
 
 <HtmlPreviewer :code="RoleGroupDemo.basic()" />
 

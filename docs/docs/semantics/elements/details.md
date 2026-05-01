@@ -16,7 +16,7 @@ Use the `open` attribute to expand it by default. Set the same `name` attribute 
 
 <HtmlPreviewer :code="DetailsDemo.basic()" />
 
-For style variants, see [Details Variants](/docs/variants/details).
+For style variants, see [Details Variants](/docs/variants/).
 
 ## Dropdown
 

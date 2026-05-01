@@ -12,4 +12,4 @@ The `aria-current="page"` attribute tells assistive technologies which link repr
 
 <HtmlPreviewer :code="`${ADemo.basic()}\n<hr>\n${ADemo.active()}`" />
 
-For `.secondary` and `.contrast` color styles, see [Link Variants](/variants/components/links).
+For `.secondary` and `.contrast` color styles, see [Link Variants](/docs/variants/).

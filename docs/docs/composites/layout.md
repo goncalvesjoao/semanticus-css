@@ -20,6 +20,6 @@ A typical layout combines the `.container` class with grid utilities:
 
 For more layout options, see:
 
-- [Container](variants/container.md) — responsive width wrappers (`.container`, `.container-fluid`)
-- [Layout utilities](utilities/layout.md) — grid, aspect ratios, object-fit, and more
+- [Container](/docs/variants/container) — responsive width wrappers (`.container`, `.container-fluid`)
+- [Layout utilities](/docs/utilities/layout) — grid, aspect ratios, object-fit, and more
 
