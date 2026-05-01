@@ -1,4 +1,4 @@
-export * from "./role-group.demo";
+export * as RoleGroupDemo from "./role-group.demo";
 export * from "./aria-busy.demo";
 export * from "./aria-invalid.demo";
 export * from "./role-button.demo";

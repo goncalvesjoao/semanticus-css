@@ -1,43 +1,39 @@
 import type { Meta, StoryObj } from "@storybook/html";
-import {
-  RoleGroupDemo,
-  RoleGroupDemoArgs,
-  type RoleGroupDemoArgsType,
-} from "@demos/semantics/attributes";
+import { RoleGroupDemo } from "@demos/semantics/attributes";
 
-const meta: Meta<RoleGroupDemoArgsType> = {
+const meta: Meta = {
   title: "Semantics/Attributes/[role=group]",
   parameters: {},
 };
 
 export default meta;
 
-export const basic: StoryObj<RoleGroupDemoArgsType> = {
-  args: RoleGroupDemoArgs.basic,
-  render: (args) => RoleGroupDemo.basic(args),
+export const basic: StoryObj = {
+  args: { html: RoleGroupDemo.basic },
+  render: (args) => args.html,
 };
 
-export const inputWithButton: StoryObj<RoleGroupDemoArgsType> = {
-  args: RoleGroupDemoArgs.inputWithButton,
-  render: (args) => RoleGroupDemo.inputWithButton(args),
+export const inputWithButton: StoryObj = {
+  args: { html: RoleGroupDemo.inputWithButton },
+  render: (args) => args.html,
 };
 
-export const selectWithButton: StoryObj<RoleGroupDemoArgsType> = {
-  args: RoleGroupDemoArgs.selectWithButton,
-  render: (args) => RoleGroupDemo.selectWithButton(args),
+export const selectWithButton: StoryObj = {
+  args: { html: RoleGroupDemo.selectWithButton },
+  render: (args) => args.html,
 };
 
-export const multipleInputs: StoryObj<RoleGroupDemoArgsType> = {
-  args: RoleGroupDemoArgs.multipleInputs,
-  render: (args) => RoleGroupDemo.multipleInputs(args),
+export const multipleInputs: StoryObj = {
+  args: { html: RoleGroupDemo.multipleInputs },
+  render: (args) => args.html,
 };
 
-export const paginationExample: StoryObj<RoleGroupDemoArgsType> = {
-  args: RoleGroupDemoArgs.paginationExample,
-  render: (args) => RoleGroupDemo.paginationExample(args),
+export const paginationExample: StoryObj = {
+  args: { html: RoleGroupDemo.paginationExample },
+  render: (args) => args.html,
 };
 
-export const newsletterExample: StoryObj<RoleGroupDemoArgsType> = {
-  args: RoleGroupDemoArgs.newsletterExample,
-  render: (args) => RoleGroupDemo.newsletterExample(args),
+export const newsletterExample: StoryObj = {
+  args: { html: RoleGroupDemo.newsletterExample },
+  render: (args) => args.html,
 };

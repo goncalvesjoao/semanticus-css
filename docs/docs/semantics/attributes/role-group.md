@@ -22,28 +22,28 @@ Use `role="group"` to create connected groups of buttons or form elements. For s
 
 ### Basic Group
 
-<HtmlPreviewer :code="RoleGroupDemo.basic()" />
+<HtmlPreviewer :code="RoleGroupDemo.basic" />
 
 ## Input Groups
 
 ### Input with Button
 
-<HtmlPreviewer :code="RoleGroupDemo.inputWithButton()" />
+<HtmlPreviewer :code="RoleGroupDemo.inputWithButton" />
 
 ### Select with Button
 
-<HtmlPreviewer :code="RoleGroupDemo.selectWithButton()" />
+<HtmlPreviewer :code="RoleGroupDemo.selectWithButton" />
 
 ### Multiple Inputs
 
-<HtmlPreviewer :code="RoleGroupDemo.multipleInputs()" />
+<HtmlPreviewer :code="RoleGroupDemo.multipleInputs" />
 
 ## Pagination Groups
 
-<HtmlPreviewer :code="RoleGroupDemo.paginationExample()" />
+<HtmlPreviewer :code="RoleGroupDemo.paginationExample" />
 
 ## Practical Examples
 
 ### Newsletter Signup
 
-<HtmlPreviewer :code="RoleGroupDemo.newsletterExample()" />
+<HtmlPreviewer :code="RoleGroupDemo.newsletterExample" />
