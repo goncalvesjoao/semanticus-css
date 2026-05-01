@@ -3,8 +3,7 @@ title: 'role="button"'
 ---
 
 <script setup>
-const example1Html = `<div role="button" tabindex="0">Div as button</div>
-`;
+import { RoleButtonDemo } from "@demos/semantics/attributes";
 </script>
 
 # [role="button"]
@@ -15,4 +14,4 @@ This is useful when a non-button element (e.g. `<div>`, `<span>`) needs to behav
 
 ## Basic Role Button
 
-<HtmlPreviewer :code="example1Html" />
+<HtmlPreviewer :code="RoleButtonDemo.basic()" />

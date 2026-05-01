@@ -3,17 +3,7 @@ title: progress
 ---
 
 <script setup>
-const example1Html = `<progress value="0" max="100"></progress>
-<progress value="50" max="100"></progress>
-<progress value="100" max="100"></progress>
-`;
-const example3Html = `<progress></progress>
-`;
-const example4Html = `<label>
-  Upload progress
-  <progress value="50" max="100">50%</progress>
-</label>
-`;
+import { ProgressDemo } from "@demos/semantics/elements";
 </script>
 
 # &lt;progress&gt;
@@ -26,12 +16,12 @@ Pair with a `<label>` to give it an accessible name for screen readers.
 
 ## Basic Progress
 
-<HtmlPreviewer :code="example1Html" />
+<HtmlPreviewer :code="ProgressDemo.basicProgress()" />
 
 ## Indeterminate Progress
 
-<HtmlPreviewer :code="example3Html" />
+<HtmlPreviewer :code="ProgressDemo.indeterminate()" />
 
 ## Progress with Label
 
-<HtmlPreviewer :code="example4Html" />
+<HtmlPreviewer :code="ProgressDemo.withLabel()" />

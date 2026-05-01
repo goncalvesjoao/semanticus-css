@@ -3,16 +3,7 @@ title: small
 ---
 
 <script setup>
-const helperHtml = `<input
-  type="email"
-  name="email"
-  placeholder="Email"
-  autocomplete="email"
-  aria-label="Email"
-  aria-describedby="email-helper"
-/>
-<small id="email-helper">We'll never share your email with anyone else.</small>
-`;
+import { SmallDemo } from "@demos/semantics/elements";
 </script>
 
 # &lt;small&gt;
@@ -23,4 +14,4 @@ Use `aria-describedby` to associate it with the input.
 
 ## Helper Text
 
-<HtmlPreviewer :code="helperHtml" />
+<HtmlPreviewer :code="SmallDemo.helperText()" />

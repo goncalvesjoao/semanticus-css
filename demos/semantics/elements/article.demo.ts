@@ -16,6 +16,40 @@ export const ArticleDemoArgs = {
     class: "",
     slot: HgroupDemo.default(),
   },
+  basicCard: `<article class="card">
+  <h3>Card Title</h3>
+  <p>Card content goes here.</p>
+</article>
+`,
+  cardWithHeader: `<article class="card">
+  <header>
+    <h3>Card Title</h3>
+  </header>
+  <p>Card content.</p>
+</article>
+`,
+  cardWithFooter: `<article class="card">
+  <p>Card content.</p>
+  <footer>
+    <button class="secondary">Cancel</button>
+    <button>Confirm</button>
+  </footer>
+</article>
+`,
+  completeCard: `<article class="card">
+  <header>
+    <hgroup>
+      <h3>Card Title</h3>
+      <p>Subtitle</p>
+    </hgroup>
+  </header>
+  <p>Card content goes here with some more text.</p>
+  <footer>
+    <button class="secondary">Cancel</button>
+    <button>Confirm</button>
+  </footer>
+</article>
+`,
   multipleParagraphs: {
     class: "",
     slot: `<h2>Hello World</h2>
@@ -38,5 +72,21 @@ export const ArticleDemo = {
 
   multipleParagraphs(args: ArticleDemoArgsType = {}) {
     return this.render({ ...ArticleDemoArgs.multipleParagraphs, ...args });
+  },
+
+  basicCard() {
+    return ArticleDemoArgs.basicCard;
+  },
+
+  cardWithHeader() {
+    return ArticleDemoArgs.cardWithHeader;
+  },
+
+  cardWithFooter() {
+    return ArticleDemoArgs.cardWithFooter;
+  },
+
+  completeCard() {
+    return ArticleDemoArgs.completeCard;
   },
 };

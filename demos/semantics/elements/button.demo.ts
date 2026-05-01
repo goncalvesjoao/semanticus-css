@@ -1,31 +1,28 @@
-// demos/semantics/button.demo.ts
-
-type ButtonArgs = Record<string, string> & {
-  label?: string;
-  variant?: "primary" | "secondary" | "ghost";
-  size?: "sm" | "md" | "lg";
-};
-
-const base = ({
-  label = "Button",
-  variant = "primary",
-  size = "md",
-}: ButtonArgs) => {
-  return `<button class="btn-${variant} btn-${size}">${label}</button>`;
-};
-
 export const ButtonDemo = {
-  base,
+  basic() {
+    return `<button>Button</button>
+`;
+  },
 
-  primary: () => base({ variant: "primary", label: "Primary" }),
+  formButtons() {
+    return `<input type="submit" value="Submit">
+<input type="button" value="Input Button">
+`;
+  },
 
-  secondary: () => base({ variant: "secondary", label: "Secondary" }),
+  resetButton() {
+    return `<input type="reset" value="Reset">
+`;
+  },
 
-  sizes: () => `
-    ${base({ size: "sm", label: "Small" })}
-    ${base({ size: "md", label: "Medium" })}
-    ${base({ size: "lg", label: "Large" })}
-  `,
-
-  playground: (args: ButtonArgs) => base(args),
+  loginForm() {
+    return `<form>
+  <label for="email">Email</label>
+  <input type="email" id="email" placeholder="you@example.com">
+  <label for="password">Password</label>
+  <input type="password" id="password" placeholder="Password">
+  <button type="submit">Sign In</button>
+</form>
+`;
+  },
 };

@@ -45,3 +45,35 @@ export const PageLinks: StoryObj<NavDemoArgsType> = {
     return NavDemo.pageLinks(args);
   },
 };
+
+export const BasicSyntax: StoryObj = {
+  render: () => NavDemo.basicSyntax(),
+};
+
+export const ContrastLinks: StoryObj = {
+  render: () => NavDemo.contrastLinks(),
+};
+
+export const IconButtons: StoryObj = {
+  render: () => NavDemo.iconButtons(),
+};
+
+export const WithButton: StoryObj = {
+  render: () => NavDemo.withButton(),
+};
+
+export const WithDropdown: StoryObj = {
+  render: () => NavDemo.withDropdown(),
+};
+
+export const VerticalInAside: StoryObj = {
+  render: () => NavDemo.verticalInAside(),
+};
+
+export const Breadcrumb: StoryObj = {
+  render: () => NavDemo.breadcrumb(),
+};
+
+export const Overflow: StoryObj = {
+  render: () => NavDemo.overflow(),
+};

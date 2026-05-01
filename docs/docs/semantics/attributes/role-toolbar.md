@@ -3,12 +3,7 @@ title: 'role="toolbar"'
 ---
 
 <script setup>
-const example1Html = `<div role="toolbar">
-  <button>Bold</button>
-  <button>Italic</button>
-  <button>Underline</button>
-</div>
-`;
+import { RoleToolbarDemo } from "@demos/semantics/attributes";
 </script>
 
 # [role="toolbar"]
@@ -19,4 +14,4 @@ You can use `role="toolbar"` to display elements in a grid.
 
 ## Basic Toolbar
 
-<HtmlPreviewer :code="example1Html" />
+<HtmlPreviewer :code="RoleToolbarDemo.basic()" />

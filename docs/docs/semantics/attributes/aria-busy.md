@@ -3,27 +3,7 @@ title: 'aria-busy="true"'
 ---
 
 <script setup>
-const example1Html = `<article class="card" aria-busy="true">
-  Loading content...
-</article>
-`;
-const example2Html = `<button aria-busy="true" disabled>Loading...</button>
-`;
-const example3Html = `<article class="card" aria-busy="true">
-  <header>
-    <h3>Loading Title</h3>
-  </header>
-  <p>Loading content...</p>
-</article>
-`;
-const example4Html = `<form aria-busy="true">
-  <label>Name</label>
-  <input type="text" disabled>
-  <label>Email</label>
-  <input type="email" disabled>
-  <button disabled>Submit</button>
-</form>
-`;
+import { AriaBusyDemo } from "@demos/semantics/attributes";
 </script>
 
 # [aria-busy]
@@ -34,19 +14,19 @@ Use it on any container or interactive element to communicate a loading state.
 
 ## Basic Loading
 
-<HtmlPreviewer :code="example1Html" />
+<HtmlPreviewer :code="AriaBusyDemo.basicLoading()" />
 
 ## Loading Button
 
-<HtmlPreviewer :code="example2Html" />
+<HtmlPreviewer :code="AriaBusyDemo.loadingButton()" />
 
 ## Loading Card
 
-<HtmlPreviewer :code="example3Html" />
+<HtmlPreviewer :code="AriaBusyDemo.loadingCard()" />
 
 ## Loading Form
 
-<HtmlPreviewer :code="example4Html" />
+<HtmlPreviewer :code="AriaBusyDemo.loadingForm()" />
 
 ## Best Practices
 

@@ -31,3 +31,19 @@ export const MultipleParagraphs: StoryObj<ArticleDemoArgsType> = {
     return ArticleDemo.multipleParagraphs(args);
   },
 };
+
+export const BasicCard: StoryObj = {
+  render: () => ArticleDemo.basicCard(),
+};
+
+export const CardWithHeader: StoryObj = {
+  render: () => ArticleDemo.cardWithHeader(),
+};
+
+export const CardWithFooter: StoryObj = {
+  render: () => ArticleDemo.cardWithFooter(),
+};
+
+export const CompleteCard: StoryObj = {
+  render: () => ArticleDemo.completeCard(),
+};

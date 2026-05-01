@@ -3,40 +3,7 @@ title: article
 ---
 
 <script setup>
-const example1Html = `<article class="card">
-  <h3>Card Title</h3>
-  <p>Card content goes here.</p>
-</article>
-`;
-const example2Html = `<article class="card">
-  <header>
-    <h3>Card Title</h3>
-  </header>
-  <p>Card content.</p>
-</article>
-`;
-const example3Html = `<article class="card">
-  <p>Card content.</p>
-  <footer>
-    <button class="secondary">Cancel</button>
-    <button>Confirm</button>
-  </footer>
-</article>
-`;
-const example4Html = `<article class="card">
-  <header>
-    <hgroup>
-      <h3>Card Title</h3>
-      <p>Subtitle</p>
-    </hgroup>
-  </header>
-  <p>Card content goes here with some more text.</p>
-  <footer>
-    <button class="secondary">Cancel</button>
-    <button>Confirm</button>
-  </footer>
-</article>
-`;
+import { ArticleDemo } from "@demos/semantics/elements";
 </script>
 
 # &lt;article&gt;
@@ -58,19 +25,19 @@ By default, the `<article>` element has no visual styling. To create a card-like
 
 ## Basic Card
 
-<HtmlPreviewer :code="example1Html" />
+<HtmlPreviewer :code="ArticleDemo.basicCard()" />
 
 ## Card with Header
 
-<HtmlPreviewer :code="example2Html" />
+<HtmlPreviewer :code="ArticleDemo.cardWithHeader()" />
 
 ## Card with Footer
 
-<HtmlPreviewer :code="example3Html" />
+<HtmlPreviewer :code="ArticleDemo.cardWithFooter()" />
 
 ## Complete Card
 
-<HtmlPreviewer :code="example4Html" />
+<HtmlPreviewer :code="ArticleDemo.completeCard()" />
 
 ## Semantic vs Visual
 

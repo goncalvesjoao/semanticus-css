@@ -3,27 +3,7 @@ title: 'role="search"'
 ---
 
 <script setup>
-const example1Html = `<form role="search">
-  <input type="search" placeholder="Search...">
-  <button type="submit">Search</button>
-</form>
-`;
-const example2Html = `<form role="search">
-  <input type="search" placeholder="Search products...">
-  <button type="submit" aria-label="Search">→</button>
-</form>
-`;
-const example3Html = `<form role="search">
-  <select aria-label="Category">
-    <option>All Categories</option>
-    <option>Products</option>
-    <option>Services</option>
-    <option>Support</option>
-  </select>
-  <input type="search" placeholder="Search...">
-  <button type="submit">Go</button>
-</form>
-`;
+import { RoleSearchDemo } from "@demos/semantics/attributes";
 </script>
 
 # [role="search"]
@@ -34,13 +14,12 @@ Screen readers expose it as a "search" landmark, allowing users to jump directly
 
 ## Basic Search
 
-<HtmlPreviewer :code="example1Html" />
+<HtmlPreviewer :code="RoleSearchDemo.basic()" />
 
 ## Search with Icon Button
 
-<HtmlPreviewer :code="example2Html" />
+<HtmlPreviewer :code="RoleSearchDemo.withIconButton()" />
 
 ## Filter Search
 
-<HtmlPreviewer :code="example3Html" />
-
+<HtmlPreviewer :code="RoleSearchDemo.filterSearch()" />

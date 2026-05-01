@@ -3,21 +3,7 @@ title: button
 ---
 
 <script setup>
-const example1Html = `<button>Button</button>
-`;
-const example4Html = `<input type="submit" value="Submit">
-<input type="button" value="Input Button">
-`;
-const example5Html = `<input type="reset" value="Reset">
-`;
-const example10Html = `<form>
-  <label for="email">Email</label>
-  <input type="email" id="email" placeholder="you@example.com">
-  <label for="password">Password</label>
-  <input type="password" id="password" placeholder="Password">
-  <button type="submit">Sign In</button>
-</form>
-`;
+import { ButtonDemo } from "@demos/semantics/elements";
 </script>
 
 # &lt;button&gt;
@@ -28,7 +14,7 @@ Use `type="submit"` for form submission, `type="reset"` to clear a form, without
 
 ## Basic Button
 
-<HtmlPreviewer :code="example1Html" />
+<HtmlPreviewer :code="ButtonDemo.basic()" />
 
 For `.secondary`, `.contrast` and `.ghost` styles, see [Button Variants](/variants/components/buttons).
 
@@ -38,14 +24,14 @@ On how to turn non-button elements into buttons, see [[role="button"]](/docs/sem
 
 `type="submit"` and `type="button"` inputs are also displayed as buttons. All form buttons are `width: 100%;` by default, to match with the other form elements.
 
-<HtmlPreviewer :code="example4Html" />
+<HtmlPreviewer :code="ButtonDemo.formButtons()" />
 
 Reset inputs have the secondary style by default.
 
-<HtmlPreviewer :code="example5Html" />
+<HtmlPreviewer :code="ButtonDemo.resetButton()" />
 
 ## Practical Examples
 
 ### Login Form
 
-<HtmlPreviewer :code="example10Html" />
+<HtmlPreviewer :code="ButtonDemo.loginForm()" />
