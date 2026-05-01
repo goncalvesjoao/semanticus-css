@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/html";
-import { LayoutDemo } from "@demos/layout.demo";
+import * as LayoutDemo from "@demos/layout.demo";
 
 const meta: Meta = {
   title: "Composites/Layout",

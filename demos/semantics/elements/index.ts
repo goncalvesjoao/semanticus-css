@@ -9,6 +9,7 @@ export * as HeaderDemo from "./header.demo";
 export * as HgroupDemo from "./hgroup.demo";
 export * as InputDemo from "./input.demo";
 export * as LabelDemo from "./label.demo";
+export * as MainDemo from "./main.demo";
 export * as NavDemo from "./nav.demo";
 export * as ProgressDemo from "./progress.demo";
 export * as SelectDemo from "./select.demo";

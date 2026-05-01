@@ -3,117 +3,57 @@ import * as HeaderDemo from "@demos/semantics/elements/header.demo";
 import * as FooterDemo from "@demos/semantics/elements/footer.demo";
 import * as ArticleDemo from "@demos/semantics/elements/article.demo";
 
-export const MainDemoArgs = {
-  default: {
-    class: "",
-    slot: `<h2>Hello World</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.</p>`,
-  },
-};
+export function basic(attrs: Record<string, string> = {}) {
+  return renderElement("main", attrs, `<h2>Hello World</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.</p>`);
+}
 
-export const MainDemo = {
-  render: renderElement.bind(null, "main"),
+export function withHeader(attrs: Record<string, string> = {}) {
+  const { headerClass, ...restArgs } = attrs;
 
-  default(args: MainDemoArgsType = {}) {
-    return this.render({ ...MainDemoArgs.default, ...args });
-  },
+  return renderElement("main", restArgs, `${HeaderDemo.basic({ class: headerClass })}
+${basic()}`);
+}
 
-  withHeader(args: MainDemoArgsType & { headerClass?: string } = {}) {
-    const { headerClass, ...restArgs } = args;
+export function withFooter(attrs: Record<string, string> = {}) {
+  const { footerClass, ...restArgs } = attrs;
 
-    return this.render({
-      ...MainDemoArgs.default,
-      ...restArgs,
-      slot: `${HeaderDemo.basic({ class: headerClass })}
-${MainDemoArgs.default.slot}`,
-    });
-  },
+  return renderElement("main", restArgs, `${basic()}
+${FooterDemo.basic({ class: footerClass })}`);
+}
 
-  withFooter(args: MainDemoArgsType & { footerClass?: string } = {}) {
-    const { footerClass, ...restArgs } = args;
+export function withHeaderPlusFooter(attrs: Record<string, string> = {}) {
+  const { headerClass, footerClass, ...restArgs } = attrs;
 
-    return this.render({
-      ...MainDemoArgs.default,
-      ...restArgs,
-      slot: `${MainDemoArgs.default.slot}
-${FooterDemo.basic({ class: footerClass })}`,
-    });
-  },
+  return renderElement("main", restArgs, `${HeaderDemo.basic({ class: headerClass })}
+${basic()}
+${FooterDemo.basic({ class: footerClass })}`);
+}
 
-  withHeaderPlusFooter(
-    args: MainDemoArgsType & {
-      headerClass?: string;
-      footerClass?: string;
-    } = {},
-  ) {
-    const { headerClass, footerClass, ...restArgs } = args;
+export function withArticle(attrs: Record<string, string> = {}) {
+  const { articleClass, ...restArgs } = attrs;
 
-    return this.render({
-      ...MainDemoArgs.default,
-      ...restArgs,
-      slot: `${HeaderDemo.basic({ class: headerClass })}
-${MainDemoArgs.default.slot}
-${FooterDemo.basic({ class: footerClass })}`,
-    });
-  },
+  return renderElement("main", restArgs, ArticleDemo.basic({ class: articleClass }));
+}
 
-  withArticle(args: MainDemoArgsType & { articleClass?: string } = {}) {
-    const { articleClass, ...restArgs } = args;
+export function withHeaderPlusArticle(attrs: Record<string, string> = {}) {
+  const { headerClass, articleClass, ...restArgs } = attrs;
 
-    return this.render({
-      ...MainDemoArgs.default,
-      ...restArgs,
-      slot: `${ArticleDemo.basic({ class: articleClass })}`,
-    });
-  },
+  return renderElement("main", restArgs, `${HeaderDemo.basic({ class: headerClass })}
+${ArticleDemo.basic({ class: articleClass })}`);
+}
 
-  withHeaderPlusArticle(
-    args: MainDemoArgsType & {
-      articleClass?: string;
-      headerClass?: string;
-    } = {},
-  ) {
-    const { articleClass, headerClass, ...restArgs } = args;
+export function withArticlePlusFooter(attrs: Record<string, string> = {}) {
+  const { articleClass, footerClass, ...restArgs } = attrs;
 
-    return this.render({
-      ...MainDemoArgs.default,
-      ...restArgs,
-      slot: `${HeaderDemo.basic({ class: headerClass })}
-${ArticleDemo.basic({ class: articleClass })}`,
-    });
-  },
+  return renderElement("main", restArgs, `${ArticleDemo.basic({ class: articleClass })}
+${FooterDemo.basic({ class: footerClass })}`);
+}
 
-  withArticlePlusFooter(
-    args: MainDemoArgsType & {
-      articleClass?: string;
-      footerClass?: string;
-    } = {},
-  ) {
-    const { articleClass, footerClass, ...restArgs } = args;
+export function withHeaderPlusArticlePlusFooter(attrs: Record<string, string> = {}) {
+  const { headerClass, articleClass, footerClass, ...restArgs } = attrs;
 
-    return this.render({
-      ...MainDemoArgs.default,
-      ...restArgs,
-      slot: `${ArticleDemo.basic({ class: articleClass })}
-${FooterDemo.basic({ class: footerClass })}`,
-    });
-  },
-
-  withHeaderPlusArticlePlusFooter(
-    args: MainDemoArgsType & {
-      articleClass?: string;
-      headerClass?: string;
-      footerClass?: string;
-    } = {},
-  ) {
-    const { articleClass, headerClass, footerClass, ...restArgs } = args;
-
-    return this.render({
-      ...MainDemoArgs.default,
-      ...restArgs,
-      slot: `${HeaderDemo.basic({ class: headerClass })}
+  return renderElement("main", restArgs, `${HeaderDemo.basic({ class: headerClass })}
 ${ArticleDemo.basic({ class: articleClass })}
-${FooterDemo.basic({ class: footerClass })}`,
-    });
-  },
-};
+${FooterDemo.basic({ class: footerClass })}`);
+}
